@@ -112,6 +112,10 @@
         "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.1.0\\res\\drawable-xxhdpi\\common_signin_btn_text_focus_light.9.png"
     },
     {
+        "merged": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\splash_image.png",
+        "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\drawable-xxhdpi\\splash_image.png"
+    },
+    {
         "merged": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\common_signin_btn_text_normal_light.9.png",
         "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.1.0\\res\\drawable-xxhdpi\\common_signin_btn_text_normal_light.9.png"
     },
@@ -202,6 +206,10 @@
     {
         "merged": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_plusone_medium_off_client.png",
         "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-plus\\8.1.0\\res\\drawable-xxhdpi\\ic_plusone_medium_off_client.png"
+    },
+    {
+        "merged": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\splash.png",
+        "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\drawable-xxhdpi\\splash.png"
     },
     {
         "merged": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\abc_scrubber_track_mtrl_alpha.9.png",

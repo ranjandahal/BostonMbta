@@ -8,7 +8,8 @@
     
     <android.support.v7.widget.SearchView
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="50dp"
+        android:onClick="search"/>
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
@@ -53,6 +54,12 @@
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:name="com.google.android.gms.maps.MapFragment" />
+    <Button
+        android:text="Test only"
+        android:layout_marginBottom="100dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="end"/>
 <!--  
   map:cameraBearing="112.5"
   map:cameraTargetLat="42.314083"

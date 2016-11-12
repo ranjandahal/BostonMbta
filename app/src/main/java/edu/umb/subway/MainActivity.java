@@ -14,9 +14,12 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -36,6 +39,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     public static final String URL_PIC = "http://openweathermap.org/img/w/";
     public static final String URL_JSON = "http://api.openweathermap.org/data/2.5/weather?q=";
     public static final String APPID = "&APPID=f9a0da7858696d1453d0faa23006c2d9";
+    private static final LatLngBounds MAPBOUNDARY = new LatLngBounds(new LatLng(0,0),new LatLng(0,0));
     public static String mbta_key = "";
     public static final String IMG_EXTENSION = ".png";
     private JSONObject jsonObject = null;
@@ -43,6 +47,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 	private GoogleMap mMap;
     private int mtype=0;
     private GroundOverlayOptions overlayOptions;
+
+    private StationMarker stationMarker = new StationMarker();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,31 +125,65 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     */
+
+    public void search(View v){
+        float zoom=(float)Math.random()*10+5;
+        Toast.makeText(getApplicationContext(),"Zoom to "+Float.toString(zoom),Toast.LENGTH_SHORT).show();
+        CameraUpdate mzoom= CameraUpdateFactory.zoomTo(zoom);
+        if (mMap!=null){
+            mMap.animateCamera(mzoom);
+            Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
+            Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
+            //V/Lang-left: LatLngBounds{southwest=lat/lng: (34.20517867359235,-78.68875980377199),
+            // northeast=lat/lng: (49.570917583486406,-63.41445654630661)}
+        }
+    }
+
     @Override
     public void onMapReady(GoogleMap map) {
         this.mMap=map;
-        mMap.moveCamera( CameraUpdateFactory.newLatLngZoom(new LatLng(42.332882, -71.106982) , 11.0f) );
+        map.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
+            @Override
+            public void onCameraChange(CameraPosition cameraPosition) {
+
+                    float maxZoom = 16.0f;
+                    float minZoom = 12.0f;
+
+                    if (cameraPosition.zoom > maxZoom) {
+                        mMap.animateCamera(CameraUpdateFactory.zoomTo(maxZoom));
+                    } else if (cameraPosition.zoom < minZoom) {
+                        mMap.animateCamera(CameraUpdateFactory.zoomTo(minZoom));
+                    }
+                /*LatLng tempCenter = mMap.getCameraPosition().target;;
+                LatLngBounds visibleBounds = mMap.getProjection().getVisibleRegion().latLngBounds;
+                if(!MAPBOUNDARY.contains(visibleBounds.northeast) || !MAPBOUNDARY.contains(visibleBounds.southwest)){
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(lastCenter));
+                }
+                else
+                    lastCenter = tempCenter;*/
+            }
+        });
+        //mMap.setMinZoomPreference(6.0f);
+        mMap.moveCamera( CameraUpdateFactory.newLatLngZoom(new LatLng(42.354459, -71.064090) , 14.0f) );
         Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
         LatLng governmentCenter = new LatLng(42.358840, -71.057960);
 
         GroundOverlayOptions newarkMap = new GroundOverlayOptions()
-                .image(BitmapDescriptorFactory.fromResource(R.drawable.green_circle))
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.green))
                 .position(governmentCenter, 8600f, 6500f);
-        //mMap.addGroundOverlay(newarkMap);
+        mMap.addGroundOverlay(newarkMap);
 
+        mMap.addPolyline(stationMarker.getPolylineOptions());
         Marker melbourne = mMap.addMarker(new MarkerOptions()
                 .position(governmentCenter)
                 .title("Melbourne"));
+                //.icon(BitmapDescriptorFactory.fromResource(R.drawable.green)));
                 //.snippet("Population: 4,137,400");
                 //.icon(BitmapDescriptorFactory.fromResource(R.drawable.green_circle)));
         /*mMap.addPolygon(new PolygonOptions()
                 .add(new LatLng(0, 0), new LatLng(0, 5), new LatLng(3, 5), new LatLng(3, 0), new LatLng(0, 0))
                 .addHole(new LatLng(1, 1), new LatLng(1, 2), new LatLng(2, 2), new LatLng(2, 1), new LatLng(1, 1))
                 .fillColor(Color.BLUE));*/
-
-        map.addMarker(new MarkerOptions()
-                .position(new LatLng(0, 0))
-                .title("Marker"));
     }
 
     /*public void display(View view) {

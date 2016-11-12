@@ -21,7 +21,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="edu.umb.subway.MainActivity"
+            android:name="edu.umb.subway.SplashActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,7 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".MainActivity"></activity>
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyC30ey4AgQbnLuw3F2BLJWOD-uk00rsIRM"
             />

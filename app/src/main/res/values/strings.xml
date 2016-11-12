@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">HelloAndroid</string>
+    <string name="app_name">Boston Subway</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="button_text">Submit</string>
     <string name="title_activity_display_message">My Message</string>
+    <string name="mbta_base_url">http://realtime.mbta.com/developer/api/v2/</string>
     <string name="mbta_key">QCKjXYs2HEOBVVdfx_CmFg</string>
+    <string name="description">Boston Subway</string>
 </resources>
