@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
-    <Button
+    <!--<Button
         android:id="@+id/b1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
             android:layout_alignBottom="@+id/b1"
             android:layout_toRightOf="@+id/b3"
             android:text="mark"
-            android:onClick="b4"/>
+            android:onClick="b4"/>-->
 
 </RelativeLayout>
 <fragment  

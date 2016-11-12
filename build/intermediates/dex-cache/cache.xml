@@ -39,105 +39,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\8.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="993834cb17d07d51b92db89d2c330243592ebf77">
-        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-games-8.1.0_52bd4a7e82ba913419721667f61a0b525d3ae751.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\8.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="325788a04b436a0bccbc5b4c54cf0f12ebdcbd2d">
-        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wallet-8.1.0_3cc95732e4b74a6d16911679a538ac92d64fb7ba.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="041d93cf0533591c29d1d7263b2fa114dbfb20bd">
-        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-nearby-8.1.0_4ac7c5e5ad6cfe29043b512829fcfd4c736040bd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="6b927e6199a375940506cd2faba6d0729471bba1">
-        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_f2286be5eab17d2d9bb448dd3fdd6c5637ec2fba.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
-        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-8.1.0_36f7880a0e5cabeb2f6f1e6fb61901f9539a7d42.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="dcb5b75baf05d92e61d5706737200ee55949f97b">
-        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gcm-8.1.0_5d073736d3031addc7ee304e097abc65919997f8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.0_99a50c2b4ee92779e202ab039e081de312d60179.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d93480da1d303122ee67dc3bc23e6297bdef9951">
-        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-panorama-8.1.0_9a18cec3dbe2ffbec3b0e749bbb3d6b764665f5f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\8.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="3178362320bcf51228835b60ff978efadfd1f783">
-        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-cast-8.1.0_fb64f46149f7586fe08bf0b129bd5c16bf617d33.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0_ae016b5d1abcc82926f97ef84da274a9c02e0fa6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="97f3b099801a9ad9d70e835b9125273e986eb68d">
-        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wearable-8.1.0_59f0a0454a3b6e2c54159910d75282f9bdd98f83.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -201,12 +102,93 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="993834cb17d07d51b92db89d2c330243592ebf77">
+        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-games-8.1.0_52bd4a7e82ba913419721667f61a0b525d3ae751.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="325788a04b436a0bccbc5b4c54cf0f12ebdcbd2d">
+        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wallet-8.1.0_3cc95732e4b74a6d16911679a538ac92d64fb7ba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="041d93cf0533591c29d1d7263b2fa114dbfb20bd">
+        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-nearby-8.1.0_4ac7c5e5ad6cfe29043b512829fcfd4c736040bd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f5629f071f1154b75dd65ec991c3be02f54ac05b">
+        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_f2286be5eab17d2d9bb448dd3fdd6c5637ec2fba.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.1"
         sha1="9cf8c0ef60847621c7ad00b4f78dbfc9daba4af2">
         <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-fitness-8.1.0_7f867e63bd780d50c6d97430c8bd2d3fdcd32478.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-8.1.0_36f7880a0e5cabeb2f6f1e6fb61901f9539a7d42.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dcb5b75baf05d92e61d5706737200ee55949f97b">
+        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gcm-8.1.0_5d073736d3031addc7ee304e097abc65919997f8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.0_99a50c2b4ee92779e202ab039e081de312d60179.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d93480da1d303122ee67dc3bc23e6297bdef9951">
+        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-panorama-8.1.0_9a18cec3dbe2ffbec3b0e749bbb3d6b764665f5f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3178362320bcf51228835b60ff978efadfd1f783">
+        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-cast-8.1.0_fb64f46149f7586fe08bf0b129bd5c16bf617d33.jar" />
     </item>
     <item
         is-multidex="false"
@@ -243,6 +225,24 @@
         revision="23.0.1"
         sha1="ae1fc17d49503639771b824eeb6cee54d29d33b8">
         <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\instant-run_fca2da08918f14c1fca32b01684abc07a98a7089.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0_ae016b5d1abcc82926f97ef84da274a9c02e0fa6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="97f3b099801a9ad9d70e835b9125273e986eb68d">
+        <dex dex="C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wearable-8.1.0_59f0a0454a3b6e2c54159910d75282f9bdd98f83.jar" />
     </item>
     <item
         is-multidex="false"

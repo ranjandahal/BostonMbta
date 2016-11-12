@@ -2,7 +2,7 @@
 manifest
 ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:2:1-39:12
 	package
-		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:3:5-30
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:3:5-29
 		INJECTED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -90,12 +90,12 @@ MERGED from [com.google.android.gms:play-services-wearable:8.1.0] C:\Users\Ranja
 		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:20:9-45
 	android:theme
 		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:22:9-40
-activity#edu.umb.cs443_1.MainActivity
+activity#edu.umb.subway.MainActivity
 ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:23:9-31:20
 	android:label
 		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:25:13-45
 	android:name
-		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:24:13-41
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:24:13-55
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:26:13-30:29
 action#android.intent.action.MAIN
