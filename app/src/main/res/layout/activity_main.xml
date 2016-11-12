@@ -1,0 +1,70 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <android.support.v7.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="type"
+        android:onClick="b1"/>
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/b1"
+            android:layout_toRightOf="@+id/b1"
+            android:text="move"
+            android:onClick="b2"/>
+
+        <Button
+            android:id="@+id/b3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/b1"
+            android:layout_toRightOf="@+id/b2"
+            android:text="zoom"
+            android:onClick="b3"/>
+
+        <Button
+            android:id="@+id/b4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/b1"
+            android:layout_toRightOf="@+id/b3"
+            android:text="mark"
+            android:onClick="b4"/>
+
+</RelativeLayout>
+<fragment  
+          android:id="@+id/map"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:name="com.google.android.gms.maps.MapFragment" />
+<!--  
+  map:cameraBearing="112.5"
+  map:cameraTargetLat="42.314083"
+  map:cameraTargetLng="-71.037929"
+  map:cameraTilt="30"
+  map:cameraZoom="13"
+  map:mapType="normal"
+  map:uiCompass="false"
+  map:uiRotateGestures="true"
+  map:uiScrollGestures="false"
+  map:uiTiltGestures="true"
+  map:uiZoomControls="false"
+  map:uiZoomGestures="true"/>
+-->
+</LinearLayout>
