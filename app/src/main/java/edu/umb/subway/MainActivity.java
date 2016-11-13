@@ -15,14 +15,11 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.BitmapDescriptor;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 
 import org.json.JSONObject;
@@ -57,7 +54,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private StationMarker stationMarker;
 
     //Database
-    protected mbtaDBHandler myDBHelper;
+    protected DBHandlerMbta myDBHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +62,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         setContentView(R.layout.activity_main);
 
         stationMarker = new StationMarker();
-        myDBHelper = new mbtaDBHandler(getApplicationContext());
+        myDBHelper = new DBHandlerMbta(getApplicationContext());
         File path = getApplicationContext().getDatabasePath("db_mbta");
         stationsList = myDBHelper.getAllStation("blue");
 

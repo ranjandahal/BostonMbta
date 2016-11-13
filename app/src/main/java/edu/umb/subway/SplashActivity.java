@@ -9,7 +9,6 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import org.json.JSONObject;
@@ -28,14 +27,14 @@ public class SplashActivity extends AppCompatActivity {
     private static String mbta_base_url = "";
     private JSONObject jsonObject = null;
     public final static String DEBUG_TAG="edu.umb.cs443.MYMSG";
-    public static mbtaDBHandler dbHandler;
+    public static DBHandlerMbta dbHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_layout);
         mbta_key = getString(R.string.mbta_key);
         mbta_base_url = getString(R.string.mbta_base_url);
-        dbHandler = new mbtaDBHandler(getApplicationContext());
+        dbHandler = new DBHandlerMbta(getApplicationContext());
         dbHandler.initialSetup();
 
         //new WebserviceCaller().execute();

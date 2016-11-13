@@ -14,7 +14,7 @@ import java.util.List;
  * Created by Bikesh on 11/12/2016.
  */
 
-public class mbtaDBHandler extends SQLiteOpenHelper {
+public class DBHandlerMbta extends SQLiteOpenHelper {
 
     //Defining the database and Table
     private static final int DATABASE_VERSION = 1; //Database version
@@ -34,7 +34,7 @@ public class mbtaDBHandler extends SQLiteOpenHelper {
 //    private static final String sfavorite= "favorite";
 
     //
-    public mbtaDBHandler(Context context){
+    public DBHandlerMbta(Context context){
         super (context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
