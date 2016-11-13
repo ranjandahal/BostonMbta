@@ -3,6 +3,7 @@ package edu.umb.subway;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -154,22 +155,22 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onMapReady(GoogleMap map) {
-        this.mMap=map;
+        this.mMap = map;
 
         stationMarker.addMarkers(mMap, stationsList);
-        polyline = mMap.addPolyline(stationMarker.addPolyLine());
+        polyline = mMap.addPolyline(stationMarker.addPolyLine(ContextCompat.getColor(getApplicationContext(), R.color.blue)));
 
-        map.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
+        mMap.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
             @Override
             public void onCameraChange(CameraPosition cameraPosition) {
-                    float maxZoom = 16.0f;
-                    float minZoom = 12.0f;
+                float maxZoom = 16.0f;
+                float minZoom = 12.0f;
 
-                    if (cameraPosition.zoom > maxZoom) {
-                        mMap.animateCamera(CameraUpdateFactory.zoomTo(maxZoom));
-                    } else if (cameraPosition.zoom < minZoom) {
-                        mMap.animateCamera(CameraUpdateFactory.zoomTo(minZoom));
-                    }
+                if (cameraPosition.zoom > maxZoom) {
+                    mMap.animateCamera(CameraUpdateFactory.zoomTo(maxZoom));
+                } else if (cameraPosition.zoom < minZoom) {
+                    mMap.animateCamera(CameraUpdateFactory.zoomTo(minZoom));
+                }
                 /*LatLng tempCenter = mMap.getCameraPosition().target;;
                 LatLngBounds visibleBounds = mMap.getProjection().getVisibleRegion().latLngBounds;
                 if(!MAPBOUNDARY.contains(visibleBounds.northeast) || !MAPBOUNDARY.contains(visibleBounds.southwest)){
@@ -179,27 +180,16 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     lastCenter = tempCenter;*/
             }
         });
+
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                return false;
+            }
+        });
         //mMap.setMinZoomPreference(6.0f);
-        mMap.moveCamera( CameraUpdateFactory.newLatLngZoom(new LatLng(42.354459, -71.064090) , 14.0f) );
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(42.354459, -71.064090), 14.0f));
         Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
-        LatLng governmentCenter = new LatLng(42.358840, -71.057960);
-
-        GroundOverlayOptions newarkMap = new GroundOverlayOptions()
-                .image(BitmapDescriptorFactory.fromResource(R.drawable.green))
-                .position(governmentCenter, 8600f, 6500f);
-        //mMap.addGroundOverlay(newarkMap);
-
-        //mMap.addPolyline(stationMarker.getPolylineOptions());
-//        Marker melbourne = mMap.addMarker(new MarkerOptions()
-//                .position(governmentCenter)
-//                .title("Melbourne")
-//                .icon(BitmapDescriptorFactory.fromResource(R.drawable.green)));
-//                //.snippet("Population: 4,137,400");
-                //.icon(BitmapDescriptorFactory.fromResource(R.drawable.green_circle)));
-        /*mMap.addPolygon(new PolygonOptions()
-                .add(new LatLng(0, 0), new LatLng(0, 5), new LatLng(3, 5), new LatLng(3, 0), new LatLng(0, 0))
-                .addHole(new LatLng(1, 1), new LatLng(1, 2), new LatLng(2, 2), new LatLng(2, 1), new LatLng(1, 1))
-                .fillColor(Color.BLUE));*/
     }
 
     /*public void display(View view) {

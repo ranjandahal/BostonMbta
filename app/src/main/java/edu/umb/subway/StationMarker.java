@@ -43,9 +43,9 @@ public class StationMarker {
         return polylineOptions;
     }
 
-    public PolylineOptions addPolyLine(){
+    public PolylineOptions addPolyLine(int color){
         return polylineOptions.addAll(latLng)
-                        .color(Color.BLUE)
+                        .color(color)
                         .width(20)
                         .visible(true)
                         .zIndex(100);
@@ -63,7 +63,8 @@ public class StationMarker {
             marker = mMap.addMarker(new MarkerOptions()
                     .position(ltlg)
                     .title(stationsList.get(0).getName())
-                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.green)));
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.blue))
+                    .anchor(0.5f, 0.5f));
             markerList.add(marker);
         }
 //        for (Stations st:stationsList) {
