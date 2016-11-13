@@ -1,10 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\menu\\display_message.xml",
-        "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\menu\\display_message.xml"
+        "merged": "C:\\javatest\\AndroidStudioProject\\MyApplication\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\menu\\display_message.xml",
+        "source": "C:\\javatest\\AndroidStudioProject\\MyApplication\\GoogleMap\\app\\src\\main\\res\\menu\\display_message.xml"
     },
     {
-        "merged": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\menu\\main.xml"
+        "merged": "C:\\javatest\\AndroidStudioProject\\MyApplication\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\javatest\\AndroidStudioProject\\MyApplication\\GoogleMap\\app\\src\\main\\res\\menu\\main.xml"
     }
 ]

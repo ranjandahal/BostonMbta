@@ -22,16 +22,19 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
 
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.List;
 
 
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback{
@@ -43,17 +46,27 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     public static String mbta_key = "";
     public static final String IMG_EXTENSION = ".png";
     private JSONObject jsonObject = null;
+    private List<Stations> stationsList;
 
 	private GoogleMap mMap;
     private int mtype=0;
     private GroundOverlayOptions overlayOptions;
+    private Polyline polyline;
 
-    private StationMarker stationMarker = new StationMarker();
+    private StationMarker stationMarker;
+
+    //Database
+    protected mbtaDBHandler myDBHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        stationMarker = new StationMarker();
+        myDBHelper = new mbtaDBHandler(getApplicationContext());
+        File path = getApplicationContext().getDatabasePath("db_mbta");
+        stationsList = myDBHelper.getAllStation("blue");
 
         MapFragment mFragment=((MapFragment) getFragmentManager().findFragmentById(R.id.map));
         mFragment.getMapAsync(this);
@@ -142,10 +155,13 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap map) {
         this.mMap=map;
+
+        stationMarker.addMarkers(mMap, stationsList);
+        polyline = mMap.addPolyline(stationMarker.addPolyLine());
+
         map.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
             @Override
             public void onCameraChange(CameraPosition cameraPosition) {
-
                     float maxZoom = 16.0f;
                     float minZoom = 12.0f;
 
@@ -171,14 +187,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         GroundOverlayOptions newarkMap = new GroundOverlayOptions()
                 .image(BitmapDescriptorFactory.fromResource(R.drawable.green))
                 .position(governmentCenter, 8600f, 6500f);
-        mMap.addGroundOverlay(newarkMap);
+        //mMap.addGroundOverlay(newarkMap);
 
-        mMap.addPolyline(stationMarker.getPolylineOptions());
-        Marker melbourne = mMap.addMarker(new MarkerOptions()
-                .position(governmentCenter)
-                .title("Melbourne"));
-                //.icon(BitmapDescriptorFactory.fromResource(R.drawable.green)));
-                //.snippet("Population: 4,137,400");
+        //mMap.addPolyline(stationMarker.getPolylineOptions());
+//        Marker melbourne = mMap.addMarker(new MarkerOptions()
+//                .position(governmentCenter)
+//                .title("Melbourne")
+//                .icon(BitmapDescriptorFactory.fromResource(R.drawable.green)));
+//                //.snippet("Population: 4,137,400");
                 //.icon(BitmapDescriptorFactory.fromResource(R.drawable.green_circle)));
         /*mMap.addPolygon(new PolygonOptions()
                 .add(new LatLng(0, 0), new LatLng(0, 5), new LatLng(3, 5), new LatLng(3, 0), new LatLng(0, 0))

@@ -28,15 +28,17 @@ public class SplashActivity extends AppCompatActivity {
     private static String mbta_base_url = "";
     private JSONObject jsonObject = null;
     public final static String DEBUG_TAG="edu.umb.cs443.MYMSG";
-
+    public static mbtaDBHandler dbHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_layout);
         mbta_key = getString(R.string.mbta_key);
         mbta_base_url = getString(R.string.mbta_base_url);
+        dbHandler = new mbtaDBHandler(getApplicationContext());
+        dbHandler.initialSetup();
 
-        new WebserviceCaller().execute();
+        //new WebserviceCaller().execute();
         new Handler().postDelayed(new Runnable() {
             /*
              * Showing splash screen with a timer. This will be useful when you
