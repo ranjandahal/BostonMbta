@@ -30,6 +30,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"></activity>
+        <activity android:name=".DialogActivity"></activity>
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyC30ey4AgQbnLuw3F2BLJWOD-uk00rsIRM"
             />

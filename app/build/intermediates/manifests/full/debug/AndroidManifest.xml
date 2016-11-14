@@ -39,6 +39,7 @@
             </intent-filter>
         </activity>
         <activity android:name="edu.umb.subway.MainActivity" />
+        <activity android:name="edu.umb.subway.DialogActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

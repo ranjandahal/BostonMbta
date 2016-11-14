@@ -1,9 +1,14 @@
 package edu.umb.subway;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.content.res.ResourcesCompat;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,6 +20,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
@@ -49,7 +56,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 	private GoogleMap mMap;
     private int mtype=0;
     private GroundOverlayOptions overlayOptions;
-    private Polyline polyline;
+    private Polyline polylineBlue, polylineGreenB,polylineGreenC,polylineGreenD,
+                     polylineGreenE, polylineRedA, polylineRedB, polylineOrange;
 
     private StationMarker stationMarker;
 
@@ -61,10 +69,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        stationMarker = new StationMarker();
+        stationMarker = new StationMarker(ContextCompat.getColor(this,R.color.blue),ContextCompat.getColor(this,R.color.red),
+                                          ContextCompat.getColor(this,R.color.orange), ContextCompat.getColor(this,R.color.green));
         myDBHelper = new DBHandlerMbta(getApplicationContext());
-        File path = getApplicationContext().getDatabasePath("db_mbta");
-        stationsList = myDBHelper.getAllStation("blue");
+        stationsList = myDBHelper.getAllStation("");
 
         MapFragment mFragment=((MapFragment) getFragmentManager().findFragmentById(R.id.map));
         mFragment.getMapAsync(this);
@@ -134,7 +142,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     .position(new LatLng(42.313895, -71.038833)));
         }
     }
-
     */
 
     public void search(View v){
@@ -154,13 +161,25 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap map) {
         this.mMap = map;
 
-        stationMarker.addMarkers(mMap, stationsList);
-        polyline = mMap.addPolyline(stationMarker.addPolyLine(ContextCompat.getColor(getApplicationContext(), R.color.blue)));
+        Drawable drawable = ResourcesCompat.getDrawable(getResources(), R.drawable.markers, null);
+
+        stationMarker.addMarkers(mMap, stationsList, drawable);
+        polylineBlue = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.blue), "blue", ""));
+
+        polylineRedA = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.red), "red", "A"));
+        polylineRedB = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.red), "red", "B"));
+
+        polylineGreenB = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.green), "green", "B"));
+        polylineGreenC = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.green), "green", "C"));
+        polylineGreenD = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.green), "green", "D"));
+        polylineGreenE = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.green), "green", "E"));
+
+        polylineOrange = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.orange), "orange", ""));
 
         mMap.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
             @Override
             public void onCameraChange(CameraPosition cameraPosition) {
-                float maxZoom = 16.0f;
+                float maxZoom = 20.0f;
                 float minZoom = 12.0f;
 
                 if (cameraPosition.zoom > maxZoom) {
@@ -181,11 +200,26 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
-                return false;
+                marker.hideInfoWindow();
+
+                String[] stationId = marker.getTitle().split(",");
+                Intent dialogIntent = new Intent(MainActivity.this, DialogActivity.class);
+
+                dialogIntent.putExtra("station_id", stationId[0]);
+                dialogIntent.putExtra("station_name", stationId[1]);
+                startActivity(dialogIntent);
+
+                return true;
             }
         });
-        //mMap.setMinZoomPreference(6.0f);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(42.354459, -71.064090), 14.0f));
+
+        mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+            @Override
+            public void onInfoWindowClick(Marker marker) {
+                marker.hideInfoWindow();
+            }
+        });
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(42.354459, -71.064090), 12.0f));
         Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
     }
 

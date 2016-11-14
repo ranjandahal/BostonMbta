@@ -22,7 +22,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class SplashActivity extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 2000;
+    private static int SPLASH_TIME_OUT = 1000;
     private static String mbta_key = "";
     private static String mbta_base_url = "";
     private JSONObject jsonObject = null;
@@ -37,7 +37,6 @@ public class SplashActivity extends AppCompatActivity {
         dbHandler = new DBHandlerMbta(getApplicationContext());
         dbHandler.initialSetup();
 
-        //new WebserviceCaller().execute();
         new Handler().postDelayed(new Runnable() {
             /*
              * Showing splash screen with a timer. This will be useful when you

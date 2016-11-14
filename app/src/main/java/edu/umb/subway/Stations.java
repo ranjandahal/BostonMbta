@@ -1,5 +1,7 @@
 package edu.umb.subway;
 
+import org.w3c.dom.ProcessingInstruction;
+
 /**
  * Created by Ranjan on 11/12/2016.
  */
@@ -11,24 +13,17 @@ public class Stations {
     private Double lat;
     private Double lng;
     private int rank;
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    //    private  String webServiceName;
+    private String route;
     private  String color;
+
+//    private  String webServiceName;
 //    private  String message;
 //    private  Boolean fsavorite;
 
     private Stations()
     {}
     public Stations(String stationID, String name, double lat,
-                    double lng, int rank, String color)
+                    double lng, int rank, String color, String route)
     {
         this.stationID = stationID;
         this.name = name;
@@ -36,6 +31,7 @@ public class Stations {
         this.lng = lng;
         this.rank = rank;
         this.color = color;
+        this.route = route;
 //        this.webServiceName = webServiceName;
 //        this.color = color;
 //        this.message = message;
@@ -48,6 +44,7 @@ public class Stations {
     public  void setStationID(String stationID) {
         this.stationID = stationID;
     }
+
     public  Double getLat() {
         return lat;
     }
@@ -78,6 +75,18 @@ public class Stations {
 
     public  void setRank(int rank) {
         this.rank = rank;
+    }
+
+    public String getRoute() { return route; }
+
+    public void setRoute(String route) { this.route = route; }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public  Stations getInstance() {

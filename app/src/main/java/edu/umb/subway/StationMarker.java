@@ -1,9 +1,26 @@
 package edu.umb.subway;
 
+import android.app.Fragment;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.content.res.ResourcesCompat;
 import android.util.Log;
-
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import edu.umb.external.*;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
@@ -19,66 +36,218 @@ import java.util.List;
  * Created by Ranjan on 11/12/2016.
  */
 
-public class StationMarker {
+public class StationMarker{
     public static List<Marker> markerList;
-    public static List<LatLng> latLng;
+    public static List<LatLng> blueLatLng, greenLatLngB,
+                                greenLatLngC,greenLatLngD, greenLatLngE,
+                                redLatLngA, redLatLngB, orangeLatLng;
     public static PolylineOptions polylineOptions;
+    int blue, red, orange, green;
 
-    public StationMarker(){
+    private TextDrawable textDrawable;
+    private TextDrawable.Builder builder;
+
+    public StationMarker(int blue, int red, int orange, int green){
+        this.blue = blue;
+        this.red = red;
+        this.orange = orange;
+        this.green = green;
+
         polylineOptions = new PolylineOptions();
         markerList = new ArrayList<Marker>();
-        latLng = new ArrayList<LatLng>();
-//        polylineOptions = new PolylineOptions()
-//                .add(new LatLng(42.349907596228419, -71.077975453851138), new LatLng(42.353021315373091, -71.064602140703201) ,
-//                     new LatLng(42.356203268361703, -71.062309835191911),new LatLng(42.359296597794511, -71.059458668220898))
-//                .color(Color.GREEN)
-//                .width(20)
-//                .visible(true)
-//                .zIndex(100);// Same longitude, and 16km to the south
-//                //.add(new LatLng(37.35, -122.0)); // Closes the polyline.
-
+        blueLatLng = new ArrayList<LatLng>();
+        greenLatLngB = new ArrayList<LatLng>();
+        greenLatLngC = new ArrayList<LatLng>();
+        greenLatLngD = new ArrayList<LatLng>();
+        greenLatLngE = new ArrayList<LatLng>();
+        redLatLngA = new ArrayList<LatLng>();
+        redLatLngB = new ArrayList<LatLng>();
+        orangeLatLng = new ArrayList<LatLng>();
     }
 
     public PolylineOptions getPolylineOptions(){
         return polylineOptions;
     }
 
-    public PolylineOptions addPolyLine(int color){
-        return polylineOptions.addAll(latLng)
+    public PolylineOptions getPolyLine(int color, String colorName, String route){
+        polylineOptions = new PolylineOptions();
+        if(colorName.equalsIgnoreCase("blue")) {
+            return polylineOptions.addAll(blueLatLng)
+                    .color(color)
+                    .width(25)
+                    .visible(true)
+                    .zIndex(100);
+        }
+        else if(colorName.equalsIgnoreCase("red")){
+            if(route.equalsIgnoreCase("A"))
+                return polylineOptions.addAll(redLatLngA)
+                    .color(color)
+                    .width(25)
+                    .visible(true)
+                    .zIndex(100);
+            else if(route.equalsIgnoreCase("B"))
+                return polylineOptions.addAll(redLatLngB)
                         .color(color)
-                        .width(20)
+                        .width(25)
                         .visible(true)
                         .zIndex(100);
+        }
+        else if(colorName.equalsIgnoreCase("green")){
+            if(route.equalsIgnoreCase("B"))
+                return polylineOptions.addAll(greenLatLngB)
+                    .color(color)
+                    .width(32)
+                    .visible(true)
+                    .zIndex(100);
+            if(route.equalsIgnoreCase("C"))
+                return polylineOptions.addAll(greenLatLngC)
+                        .color(color)
+                        .width(32)
+                        .visible(true)
+                        .zIndex(100);
+            if(route.equalsIgnoreCase("D"))
+                return polylineOptions.addAll(greenLatLngD)
+                        .color(color)
+                        .width(32)
+                        .visible(true)
+                        .zIndex(100);
+            if(route.equalsIgnoreCase("E"))
+                return polylineOptions.addAll(greenLatLngE)
+                        .color(color)
+                        .width(32)
+                        .visible(true)
+                        .zIndex(100);
+        }
+        else {
+            return polylineOptions.addAll(orangeLatLng)
+                    .color(color)
+                    .width(20)
+                    .visible(true)
+                    .zIndex(100);
+        }
+        return null;
     }
 
-    public void addMarkers(GoogleMap mMap, List<Stations> stationsList){
-        Marker marker;
-        LatLng ltlg;
-        for(int count = 0; count < stationsList.size(); count++){
-            //Log.v("Stop", stationsList.get(count).getName());
-            ltlg = new LatLng(stationsList.get(count).getLat(), stationsList.get(count).getLng());
-            latLng.add(ltlg);
+    public void addMarkers(GoogleMap mMap, List<Stations> stationsList, Drawable drawable){
+        Marker marker = null;
 
-            //if(st.getColor().equals("blue"))
-            marker = mMap.addMarker(new MarkerOptions()
-                    .position(ltlg)
-                    .title(stationsList.get(0).getName())
-                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.blue))
-                    .anchor(0.5f, 0.5f));
+        LatLng ltlg;
+        Canvas canvas = new Canvas();
+        Paint paint = new Paint();
+        BitmapDescriptor bitmapDescriptor;
+        Rect bounds = new Rect();
+        String textToDraw;
+        Paint.FontMetrics fm = new Paint.FontMetrics();
+        paint.setTextSize(30.0f);
+        paint.getFontMetrics(fm);
+        paint.setTextAlign(Paint.Align.CENTER);
+
+        for (Stations st:stationsList) {
+            ltlg = new LatLng(st.getLat(), st.getLng());
+            textToDraw = st.getName().length() > 15?st.getName().substring(0,15):st.getName();
+
+            paint.getTextBounds(textToDraw, 0, textToDraw.length(), bounds);
+
+            int heightT = bounds.height();
+            int widthT = bounds.width();
+
+            int width = widthT + 20; //getResources().getDimensionPixelOffset(R.dimen.marker_width);
+            int height = heightT + 20; //getResources().getDimensionPixelOffset(R.dimen.marker_height);
+
+            drawable.setBounds(0, 0, width, height);
+            Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+            canvas.setBitmap(bitmap);
+
+            if(st.getColor().equals("blue")) {
+                blueLatLng.add(ltlg);
+                canvas.drawColor(blue);
+                paint.setColor(Color.WHITE);
+                canvas.drawText(textToDraw, 80, 30, paint);
+                bitmapDescriptor = BitmapDescriptorFactory.fromBitmap(bitmap);
+
+                marker = mMap.addMarker(new MarkerOptions()
+                        .position(ltlg)
+                        .title(st.getStationID() + "," + st.getName())
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.blue))
+                        .anchor(0.5f, 0.5f));
+                marker = mMap.addMarker(new MarkerOptions()
+                        .position(ltlg)
+                        .title(st.getStationID() + "," + st.getName())
+                        .icon(BitmapDescriptorFactory.fromBitmap(bitmap))
+                        .anchor(0,0));
+            }
+            else if(st.getColor().equals("red")){
+                if(st.getRoute().contains("B"))
+                    redLatLngB.add(ltlg);
+                if(st.getRoute().contains("A"))
+                    redLatLngA.add(ltlg);
+
+                canvas.drawColor(red);
+                paint.setColor(Color.WHITE);
+                canvas.drawText(textToDraw, 80, 30, paint);
+                bitmapDescriptor = BitmapDescriptorFactory.fromBitmap(bitmap);
+
+                marker = mMap.addMarker(new MarkerOptions()
+                        .position(ltlg)
+                        .title(st.getStationID() + "," + st.getName())
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.red))
+                        .anchor(0.5f, 0.5f));
+
+                marker = mMap.addMarker(new MarkerOptions()
+                        .position(ltlg)
+                        .title(st.getStationID() + "," + st.getName())
+                        .icon(BitmapDescriptorFactory.fromBitmap(bitmap))
+                        .anchor(0,0));
+            }
+            else if(st.getColor().equals("green")){
+                if(st.getRoute().contains("B"))
+                    greenLatLngB.add(ltlg);
+                if(st.getRoute().contains("C"))
+                    greenLatLngC.add(ltlg);
+                if(st.getRoute().contains("D"))
+                    greenLatLngD.add(ltlg);
+                if(st.getRoute().contains("E"))
+                    greenLatLngE.add(ltlg);
+
+                canvas.drawColor(green);
+                paint.setColor(Color.WHITE);
+                canvas.drawText(textToDraw, 80, 30, paint);
+                bitmapDescriptor = BitmapDescriptorFactory.fromBitmap(bitmap);
+
+                marker = mMap.addMarker(new MarkerOptions()
+                        .position(ltlg)
+                        .title(st.getStationID() + "," + st.getName())
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.green))
+                        .anchor(0.5f, 0.5f));
+
+                marker = mMap.addMarker(new MarkerOptions()
+                        .position(ltlg)
+                        .title(st.getStationID() + "," + st.getName())
+                        .icon(BitmapDescriptorFactory.fromBitmap(bitmap))
+                        .anchor(0,0));
+            }
+            else{
+                orangeLatLng.add(ltlg);
+
+                canvas.drawColor(orange);
+                paint.setColor(Color.WHITE);
+                canvas.drawText(textToDraw, 80, 30, paint);
+                bitmapDescriptor = BitmapDescriptorFactory.fromBitmap(bitmap);
+
+                marker = mMap.addMarker(new MarkerOptions()
+                        .position(ltlg)
+                        .title(st.getStationID() + "," + st.getName())
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.orange))
+                        .anchor(0.5f, 0.5f));
+
+                marker = mMap.addMarker(new MarkerOptions()
+                        .position(ltlg)
+                        .title(st.getStationID() + "," + st.getName())
+                        .icon(BitmapDescriptorFactory.fromBitmap(bitmap))
+                        .anchor(0,0));
+            }
             markerList.add(marker);
         }
-//        for (Stations st:stationsList) {
-//            Log.v("Stop", st.getName());
-//            ltlg = new LatLng(st.getLat(), st.getLng());
-//            latLng.add(ltlg);
-//
-//            //if(st.getColor().equals("blue"))
-//                marker = mMap.addMarker(new MarkerOptions()
-//                    .position(ltlg)
-//                    .title(st.getName())
-//                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.green)));
-//            markerList.add(marker);
-//        }
     }
 }
 
