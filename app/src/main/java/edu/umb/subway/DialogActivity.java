@@ -28,6 +28,7 @@ import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
@@ -37,6 +38,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DialogActivity extends Activity {
     public final static String DEBUG_TAG="edu.umb.cs443.MYMSG";
@@ -46,6 +49,7 @@ public class DialogActivity extends Activity {
     private String mbtaKey;
     private JSONObject jsonObject = null;
     private TextView stopName;
+    private List<StopInfomation> stopInformation;  // = new ArrayList<StopInfomation>();;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +59,7 @@ public class DialogActivity extends Activity {
         stationName = bundle.getString("station_name");
         baseURL = getResources().getString(R.string.mbta_base_url);
         mbtaKey = getResources().getString(R.string.mbta_key);
-
+        stopInformation = new ArrayList<StopInfomation>();
         stopName = (TextView)findViewById(R.id.stop_name);
 
         ConnectivityManager connMgr = (ConnectivityManager)
@@ -138,7 +142,22 @@ public class DialogActivity extends Activity {
     public void parseJSONObject(JSONObject jsonObject){
         try {
             long time;
-
+            String mode = jsonObject.getJSONArray("mode").getJSONObject(0).getString("mode_name").toString();
+            if(mode.equalsIgnoreCase("subway")){
+                JSONArray jsonSubway = jsonObject.getJSONArray("mode").getJSONObject(0).getJSONArray("route");
+                for (int routeCounter = 0; routeCounter < jsonSubway.length(); routeCounter++) {
+                    JSONArray jsonRoute = jsonSubway.getJSONObject(routeCounter).getJSONArray("direction");
+                    for(int directionCounter = 0; directionCounter < jsonRoute.length(); directionCounter++){
+                        JSONArray jsonTrip = jsonRoute.getJSONObject(directionCounter).getJSONArray("trip");
+                        for(int tripCounter = 0; tripCounter < jsonTrip.length(); tripCounter++){
+                            stopInformation.add(new StopInfomation(
+                                                    jsonTrip.getJSONObject(tripCounter).getString("trip_headsign"),
+                                                    jsonTrip.getJSONObject(tripCounter).getInt("pre_away"),
+                                                    jsonTrip.getJSONObject(tripCounter).getInt("trip_headsign")));
+                        }
+                    }
+                }
+            }
             /*temp = jsonObject.getJSONObject("main").getDouble("temp") - 273.0;
             //Set temperature value
             tempTextView.setText(String.format("%.1fC" ,temp));
