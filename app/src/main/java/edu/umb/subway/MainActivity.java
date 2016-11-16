@@ -50,26 +50,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends FragmentActivity implements OnMapReadyCallback{
-    public final static String DEBUG_TAG="edu.umb.cs443.MYMSG";
-    private static final LatLngBounds MAPBOUNDARY = new LatLngBounds(new LatLng(0,0),new LatLng(0,0));
-    private static final LatLng CENTER = new LatLng(42.326075, -71.084983);
-    private static final float MIN_ZOOM = 11.0f;
-    private static final float MAX_ZOOM = 20.0f;
-    private static final float SEARCH_ZOOM = 14.5f;
-
+public class MainActivity extends FragmentActivity implements OnMapReadyCallback, ZoomLevels{
     private static float currentZoom;
     private static LatLng currentLocation;
     private static boolean configChanged;
-    public static String mbta_key = "";
-    public static final String IMG_EXTENSION = ".png";
-    private JSONObject jsonObject = null;
+
+    //private JSONObject jsonObject = null;
     private static List<Stations> stationsList;
     public static List<Marker> markerList;
 
 	private GoogleMap mMap;
-    private int mtype=0;
-    private GroundOverlayOptions overlayOptions;
+    //private int mtype=0;
+    //private GroundOverlayOptions overlayOptions;
     private Polyline polylineBlue, polylineGreenB,polylineGreenC,polylineGreenD,
                      polylineGreenE, polylineRedA, polylineRedB, polylineOrange;
 
@@ -234,7 +226,15 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 if (cameraPosition.zoom > MAX_ZOOM) {
                     mMap.animateCamera(CameraUpdateFactory.zoomTo(MAX_ZOOM));
                 } else if (cameraPosition.zoom < MIN_ZOOM) {
-                    mMap.animateCamera(CameraUpdateFactory.zoomTo(MIN_ZOOM));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CENTER, MIN_ZOOM));
+                }
+                for (Marker mk: markerList){
+                    //if(cameraPosition.zoom == )
+                }
+                if (cameraPosition.zoom >= MIN_ZOOM && cameraPosition.zoom <= LEVEL_ONE_ZOOM) {
+                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CENTER, MIN_ZOOM));
+                }
+                else if (cameraPosition.zoom < MIN_ZOOM) {
                     mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CENTER, MIN_ZOOM));
                 }
 
@@ -270,7 +270,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         marker.hideInfoWindow();
 
         String[] stationId = marker.getTitle().split(",");
-        Intent dialogIntent = new Intent(MainActivity.this, DialogActivity.class);
+        Intent dialogIntent = new Intent(this, DialogActivity.class);
 
         dialogIntent.putExtra("station_id", stationId[0]);
         dialogIntent.putExtra("station_name", stationId[1]);
@@ -323,7 +323,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
      * Uses AsyncTask to create a task away from the main UI thread. This task
      * takes json data url and download the content.
      */
-    private class WebserviceCaller extends AsyncTask<String, Void, JSONObject> {
+    /*private class WebserviceCaller extends AsyncTask<String, Void, JSONObject> {
         public JSONObject doInBackground(String... params) {
             HttpURLConnection urlConnection = null;
             URL url = null;
@@ -355,13 +355,13 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             }
             return (jsonObject);
         }
-
+*/
         /**
          * json data gets parsed to get temperature, log and lat values. A new AsyncTask
          * gets call inside this method to download image.
          * @param result Json data
          */
-        protected void onPostExecute(JSONObject result) {
+        /*protected void onPostExecute(JSONObject result) {
             if(result!=null) {
                 parseJSONObject(result);
                 //Make image download call once all the data gets parsed
@@ -369,7 +369,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             else{
                 Log.i(DEBUG_TAG, "returned bitmap is null");}
         }
-    }
+    }*/
 
     /**
      * Takes in Json data and parse it to usable information for this app purpose

@@ -22,9 +22,11 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.Chronometer;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,7 +50,8 @@ public class DialogActivity extends Activity {
     private String baseURL;
     private String mbtaKey;
     private JSONObject jsonObject = null;
-    private TextView stopName;
+    private TextView stopName, destination, distanceAway, timer;
+    //private Chronometer timer;
     private List<StopInfomation> stopInformation;  // = new ArrayList<StopInfomation>();;
 
     @Override
@@ -65,13 +68,17 @@ public class DialogActivity extends Activity {
         mbtaKey = getResources().getString(R.string.mbta_key);
         stopInformation = new ArrayList<StopInfomation>();
         stopName = (TextView)findViewById(R.id.stop_name);
+        destination = (TextView)findViewById(R.id.destination);
+        distanceAway = (TextView)findViewById(R.id.distance_away);
+        timer = (TextView) findViewById(R.id.timer);
+
+        stopName.setText(stationName);
 
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
-            //Remove all the space from the city or zipcode
-            new WebserviceCaller().execute("predictionsbystop", stationId);
+            new WebserviceCaller().execute("predictionsbystop", "&stop=", stationId);
         } else {
             stopName.setText("No network connection available");
             Toast.makeText(getApplicationContext(), "No network connection available", Toast.LENGTH_SHORT);
@@ -96,7 +103,7 @@ public class DialogActivity extends Activity {
             URL url = null;
             InputStream inStream = null;
             try {
-                url = new URL(baseURL + "?api_key=" + params[0] + mbtaKey + "&" + params[1] + "&format=json");
+                url = new URL(baseURL + params[0] + "?api_key=" + mbtaKey + params[1] + params[2] + "&format=json");
                 urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("GET");
                 urlConnection.connect();
@@ -108,6 +115,7 @@ public class DialogActivity extends Activity {
                 }
                 jsonObject = (JSONObject) new JSONTokener(response).nextValue();
             } catch (Exception e) {
+                Log.v("Error API call", e.getMessage());
             } finally {
                 if (inStream != null) {
                     try {
@@ -154,10 +162,24 @@ public class DialogActivity extends Activity {
                             stopInformation.add(new StopInfomation(
                                                     jsonTrip.getJSONObject(tripCounter).getString("trip_headsign"),
                                                     jsonTrip.getJSONObject(tripCounter).getInt("pre_away"),
-                                                    jsonTrip.getJSONObject(tripCounter).getInt("trip_headsign")));
+                                                    1,
+                                                    false));
                         }
                     }
                 }
+            }
+            if(stopInformation.size() > 0){
+                destination.setText(stopInformation.get(0).getDestination());
+                timer.setText(stopInformation.get(0).getTimeAway());
+                new CountDownTimer(stopInformation.get(0).getTimeAway(), 1000) {
+
+                    public void onTick(long millisUntilFinished) {
+                        timer.setText("" + millisUntilFinished);
+                    }
+                    public void onFinish() {
+                        timer.setText("done!");
+                    }
+                }.start();
             }
             /*temp = jsonObject.getJSONObject("main").getDouble("temp") - 273.0;
             //Set temperature value
@@ -169,6 +191,8 @@ public class DialogActivity extends Activity {
 
             //Set image name value for next image download Async task.
             imageName = jsonObject.getJSONArray("weather").getJSONObject(0).getString("icon");*/
-        }catch (Exception ex){}
+        }catch (Exception e){
+            Log.v("Error JSON parse", e.getMessage());
+        }
     }
 }

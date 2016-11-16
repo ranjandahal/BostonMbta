@@ -123,7 +123,7 @@ public class StationMarker{
         Rect bounds = new Rect();
         String textToDraw;
         Paint.FontMetrics fm = new Paint.FontMetrics();
-        paint.setTextSize(30.0f);
+        paint.setTextSize(40.0f);
         paint.getFontMetrics(fm);
         paint.setTextAlign(Paint.Align.CENTER);
 
@@ -137,7 +137,7 @@ public class StationMarker{
             int widthT = bounds.width();
 
             int width = widthT + 20; //getResources().getDimensionPixelOffset(R.dimen.marker_width);
-            int height = heightT + 20; //getResources().getDimensionPixelOffset(R.dimen.marker_height);
+            int height = heightT + 25; //getResources().getDimensionPixelOffset(R.dimen.marker_height);
 
             drawable.setBounds(0, 0, width, height);
             Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
@@ -160,7 +160,8 @@ public class StationMarker{
                         .title(st.getStationID() + "," + st.getName())
                         .icon(BitmapDescriptorFactory.fromBitmap(bitmap))
                         .anchor(0,0)
-                        .alpha(0.7f));
+                        .alpha(0.7f)
+                        .visible(false));
             }
             else if(st.getColor().equals("red")){
                 if(st.getRoute().contains("B"))
@@ -184,7 +185,8 @@ public class StationMarker{
                         .title(st.getStationID() + "," + st.getName())
                         .icon(BitmapDescriptorFactory.fromBitmap(bitmap))
                         .anchor(0,0)
-                        .alpha(0.7f));
+                        .alpha(0.7f)
+                        .visible(false));
             }
             else if(st.getColor().equals("green")){
                 if(st.getRoute().contains("B"))
@@ -212,7 +214,8 @@ public class StationMarker{
                         .title(st.getStationID() + "," + st.getName())
                         .icon(BitmapDescriptorFactory.fromBitmap(bitmap))
                         .anchor(0,0)
-                        .alpha(0.7f));
+                        .alpha(0.7f)
+                        .visible(false));
             }
             else{
                 orangeLatLng.add(ltlg);
@@ -233,7 +236,8 @@ public class StationMarker{
                         .title(st.getStationID() + "," + st.getName())
                         .icon(BitmapDescriptorFactory.fromBitmap(bitmap))
                         .anchor(0,0)
-                        .alpha(0.7f));
+                        .alpha(0.7f)
+                        .visible(false));
             }
             markerList.add(marker);
         }

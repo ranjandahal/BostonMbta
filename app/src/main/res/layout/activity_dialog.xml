@@ -16,9 +16,9 @@ limitations under the License.
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="350dp"
+    android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:background="@color/green"
+    android:background="@color/light_blue"
     android:padding="5dp">
 
     <GridLayout android:layout_width="match_parent"
@@ -38,22 +38,45 @@ limitations under the License.
             android:paddingBottom="12dip"
             />
         <TextView
-            android:text="Arriving In: "
+            android:text="Destination Stop"
             android:gravity="center_horizontal"
             android:textSize="@dimen/font_medium"
             android:layout_columnSpan="2"
             android:layout_column="0"
             android:layout_row="1"
+            android:id="@+id/destination"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/light_yellow"
             />
-         <Chronometer
-             android:id="@+id/timer"
-             android:layout_columnSpan="2"
-             android:layout_column="2"
-             android:layout_row="1"
-             android:layout_gravity="center_horizontal"
-             android:textColor="@color/light_yellow"/>
+        <TextView
+            android:text="Timer"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/font_medium"
+            android:layout_columnSpan="2"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:id="@+id/timer"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/light_yellow"
+            />
+         <!--<Chronometer-->
+             <!--android:id="@+id/timer"-->
+             <!--android:layout_columnSpan="2"-->
+             <!--android:layout_column="2"-->
+             <!--android:layout_row="1"-->
+             <!--android:layout_gravity="center_horizontal"-->
+             <!--android:textColor="@color/light_yellow"/>-->
+        <TextView
+            android:id="@+id/distance_away"
+            android:text="Distance Away"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/font_medium"
+            android:layout_columnSpan="1"
+            android:layout_column="4"
+            android:layout_row="1"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/light_yellow"
+            />
         <TextView
             android:text="Remaining Stop: "
             android:gravity="center_horizontal"

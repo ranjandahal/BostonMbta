@@ -20,6 +20,7 @@ public class Stations {
     private int rank;
     private String route;
     private  String color;
+    private float zoomLevel;
 
 //    private  String webServiceName;
 //    private  String message;
@@ -28,7 +29,8 @@ public class Stations {
     private Stations()
     {}
     public Stations(String stationID, String name, double lat,
-                    double lng, int rank, String color, String route)
+                    double lng, int rank, String color, String route,
+                    float zoomLevel)
     {
         this.stationID = stationID;
         this.name = name;
@@ -37,6 +39,7 @@ public class Stations {
         this.rank = rank;
         this.color = color;
         this.route = route;
+        this.zoomLevel = zoomLevel;
 //        this.webServiceName = webServiceName;
 //        this.color = color;
 //        this.message = message;
@@ -109,4 +112,11 @@ public class Stations {
         return null;
     }
 
+    public float getZoomLevel() { return zoomLevel;}
+
+    public void setZoomLevel(float zoomLevel) { this.zoomLevel = zoomLevel;}
+
+    public class FavoriteStations{
+
+    }
 }

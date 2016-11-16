@@ -8,15 +8,17 @@ public class StopInfomation {
     private String destination;
     private int timeAway;
     private int color;
+    private boolean favorite;
 
-    private StopInfomation(){
-    }
+    private StopInfomation(){}
 
-    public StopInfomation(String destination, int timeAway, int color){
+    public StopInfomation(String destination, int timeAway, int color, boolean favorite){
         this.destination = destination;
         this.timeAway = timeAway;
         this.color = color;
+        this.favorite = favorite;
     }
+
     public String getDestination() {
         return destination;
     }
@@ -41,7 +43,7 @@ public class StopInfomation {
         this.color = color;
     }
 
+    public boolean isFavorite() { return favorite;}
 
-
-
+    public void setFavorite(boolean favorite) { this.favorite = favorite;}
 }
