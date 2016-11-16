@@ -19,7 +19,8 @@ public class DBHandlerMbta extends SQLiteOpenHelper {
     //Defining the database and Table
     private static final int DATABASE_VERSION = 1; //Database version
     private static final String DATABASE_NAME = "db_mbta"; //Datbase Name
-    private static final String DATABASE_TABLE = "tblStation"; //Databse Table Name
+    private static final String DATABASE_TABLE_STATION = "tblStation"; //Databse Table Name
+    private static final String DATABASE_TABLE_FAVORITE = "tblFavorite"; //Databse Table Name
 
     //Defining the column names for the table
     private static final String sid= "stationID";
@@ -27,24 +28,22 @@ public class DBHandlerMbta extends SQLiteOpenHelper {
     private static final String slatitude = "lat";
     private static final String slongitude= "long";
     private static final String sRank = "rank";
-
-//    private static final String swebservicename = "webServiceName";
     private static final String sColor= "color";
     private static final String sRoute= "route";
+    private static final String sDestination= "route";
 //    private static final String smessage= "message";
 //    private static final String sfavorite= "favorite";
 
     //
     public DBHandlerMbta(Context context){
         super (context, DATABASE_NAME, null, DATABASE_VERSION);
-        //onUpgrade(getWritableDatabase(), 1, 2);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         //onUpgrade(db, 1, 2);
         try {
-            String table = "CREATE TABLE " + DATABASE_TABLE + "("
+            String table = "CREATE TABLE " + DATABASE_TABLE_STATION + "("
                     + sid + " STRING, "
                     + sname + " TEXT, "
                     + slatitude + " REAL, "
@@ -56,13 +55,25 @@ public class DBHandlerMbta extends SQLiteOpenHelper {
                     + " );";
 
             db.execSQL(table);
+
+            table = "CREATE TABLE " + DATABASE_TABLE_FAVORITE + "("
+                    + sid + " STRING, "
+                    + sname + " TEXT, "
+                    + sColor + " TEXT, "
+                    + sDestination + " TEXT, "
+                    + "PRIMARY KEY (" + sid + "," + sColor + "," + sname + ")"
+                    + " );";
+
+            db.execSQL(table);
+
         }catch (Exception ex){}
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // DROP OLDER TABLE IF EXISTS
-        db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE);
+        db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE_STATION);
+        db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE_FAVORITE);
 
         // CREATE TABLE AGAIN
         onCreate(db);
@@ -84,7 +95,7 @@ public class DBHandlerMbta extends SQLiteOpenHelper {
             values.put(sColor, color);
             values.put(sRoute, route);
             // Inserting Row
-            myAddStationdb.insert(DATABASE_TABLE, null, values);
+            myAddStationdb.insert(DATABASE_TABLE_STATION, null, values);
         }catch(Exception ex) {
             Log.v("Insert Error", ex.getMessage());
         }
@@ -94,11 +105,10 @@ public class DBHandlerMbta extends SQLiteOpenHelper {
     }
 
     //Reading Records
-    public Stations getStation(int pSid)
-    {
+    public Stations getStation(int pSid) {
         SQLiteDatabase myGetStationdb = this.getReadableDatabase();
         Cursor cursor = myGetStationdb.query(
-                DATABASE_TABLE, new String[]
+                DATABASE_TABLE_STATION, new String[]
                         {sid,sname, slatitude,slongitude, sRank, sColor, sRoute}, sid + " = ?",
                 new String[] { String.valueOf(pSid) }, null, null, null, null);
         if (cursor != null)
@@ -123,9 +133,9 @@ public class DBHandlerMbta extends SQLiteOpenHelper {
         // Select All Query
         String selectQuery = "none";
         if (color.equals("none") || color.length() == 0)
-            selectQuery = "SELECT * FROM " + DATABASE_TABLE + " ORDER BY RANK";
+            selectQuery = "SELECT * FROM " + DATABASE_TABLE_STATION + " ORDER BY RANK";
         else
-            selectQuery = "SELECT * FROM " + DATABASE_TABLE + " WHERE color = '" + color + "' ORDER BY RANK";
+            selectQuery = "SELECT * FROM " + DATABASE_TABLE_STATION + " WHERE color = '" + color + "' ORDER BY RANK";
 
         SQLiteDatabase allStationdb = this.getReadableDatabase(); //.getWritableDatabase();
         Cursor cursor = allStationdb.rawQuery(selectQuery, null);
@@ -158,20 +168,19 @@ public class DBHandlerMbta extends SQLiteOpenHelper {
         values.put(sColor,stations.getColor());
         values.put(sRoute,stations.getRoute());
     // updating row
-        return updateStationdb.update(DATABASE_TABLE, values, sid + " = ?",
+        return updateStationdb.update(DATABASE_TABLE_STATION, values, sid + " = ?",
                 new String[]{String.valueOf(stations.getStationID())});
     }
 
     //Deleting a station
     public void deleteStation(Stations stations) {
         SQLiteDatabase deleteStationdb = this.getWritableDatabase();
-        deleteStationdb.delete(DATABASE_TABLE, sid + " = ?",
+        deleteStationdb.delete(DATABASE_TABLE_STATION, sid + " = ?",
                 new String[] { String.valueOf(stations.getStationID()) });
         deleteStationdb.close();
     }
 
-    public void initialSetup()
-    {
+    public void initialSetup() {
         if(getAllStation("none").isEmpty()) {
             //Blue lines
             addStation("place-wondl", "Wonderland", 42.41342, -70.991648, 1, "blue", "none");
@@ -312,5 +321,13 @@ public class DBHandlerMbta extends SQLiteOpenHelper {
             addStation("place-bckhl", "Back of the Hill", 42.330139, -71.111313, 64, "green", "E");
             addStation("place-hsmnl", "Heath Street", 42.328681, -71.110559, 65, "green", "E");
         }
+    }
+
+    public String[] getStationsArray(List<Stations> stationsArrayList){
+        String[] stationNames = new String[stationsArrayList.size()]; // = new StringBuilder();
+        for (int count = 0; count < stationsArrayList.size(); count++ ){//Stations st: stationsArrayList) {
+            stationNames[count] = stationsArrayList.get(count).getName();
+        }
+        return stationNames;
     }
 }

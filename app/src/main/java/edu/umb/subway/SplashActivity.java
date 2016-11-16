@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Window;
 
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -32,6 +33,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_layout);
+
         mbta_key = getString(R.string.mbta_key);
         mbta_base_url = getString(R.string.mbta_base_url);
         dbHandler = new DBHandlerMbta(getApplicationContext());

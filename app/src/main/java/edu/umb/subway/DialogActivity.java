@@ -55,6 +55,10 @@ public class DialogActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Bundle bundle = getIntent().getExtras();
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity_dialog);
+
         stationId = bundle.getString("station_id");
         stationName = bundle.getString("station_name");
         baseURL = getResources().getString(R.string.mbta_base_url);
@@ -72,9 +76,6 @@ public class DialogActivity extends Activity {
             stopName.setText("No network connection available");
             Toast.makeText(getApplicationContext(), "No network connection available", Toast.LENGTH_SHORT);
         }
-
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_dialog);
     }
 
     /**

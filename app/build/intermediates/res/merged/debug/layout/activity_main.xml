@@ -1,20 +1,34 @@
-<LinearLayout 
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" 
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
     
-    <android.support.v7.widget.SearchView
+    <!--<android.support.v7.widget.SearchView
+        android:id="@+id/search_bar"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:onClick="search"/>
-    <RelativeLayout
+        android:layout_height="40dp"
+        android:onClick="search"/>-->
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Search"
+        android:textStyle="normal"
+        android:id="@+id/autocomplete"
+        android:layout_gravity="center"
+        android:dropDownVerticalOffset="5dp"
+        android:dropDownWidth="wrap_content"
+        android:inputType="textAutoComplete|textAutoCorrect"
+        android:visibility="gone"
+        />
+    <!--<RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
-    <!--<Button
+    <Button
         android:id="@+id/b1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,32 +60,60 @@
             android:layout_alignBottom="@+id/b1"
             android:layout_toRightOf="@+id/b3"
             android:text="mark"
-            android:onClick="b4"/>-->
+            android:onClick="b4"/>
 
-</RelativeLayout>
-<fragment  
-          android:id="@+id/map"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:name="com.google.android.gms.maps.MapFragment" />
+</RelativeLayout>-->
+    <ImageView
+        android:text="LT"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="showSearch"
+        android:src="@drawable/search"
+        android:id="@+id/lt"
+        android:visibility="visible"/>
+    <!--<Button-->
+        <!--android:text="LT"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--android:layout_marginLeft="25dp"-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:onClick="showSearch"-->
+        <!--android:id="@+id/lt"/>-->
     <Button
-        android:text="Test only"
-        android:layout_marginBottom="100dp"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="end"/>
-<!--  
-  map:cameraBearing="112.5"
-  map:cameraTargetLat="42.314083"
-  map:cameraTargetLng="-71.037929"
-  map:cameraTilt="30"
-  map:cameraZoom="13"
-  map:mapType="normal"
-  map:uiCompass="false"
-  map:uiRotateGestures="true"
-  map:uiScrollGestures="false"
-  map:uiTiltGestures="true"
-  map:uiZoomControls="false"
-  map:uiZoomGestures="true"/>
--->
-</LinearLayout>
+        android:text="RT"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/rt"/>
+    <Button
+        android:text="LB"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/lb"/>
+    <Button
+        android:text="RB"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/rb"/>
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_below="@+id/autocomplete"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/info_fragment" />
+</RelativeLayout>

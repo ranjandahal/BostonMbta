@@ -1,6 +1,11 @@
 package edu.umb.subway;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import org.w3c.dom.ProcessingInstruction;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Ranjan on 11/12/2016.
@@ -95,4 +100,13 @@ public class Stations {
         }
         return instance;
     }
+
+    public static LatLng getLatLng(List<Stations> stationsList, String stationName){
+        for (Stations st:stationsList){
+            if(st.getName().equalsIgnoreCase(stationName))
+                return new LatLng(st.getLat(), st.getLng());
+        }
+        return null;
+    }
+
 }

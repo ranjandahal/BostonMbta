@@ -13,6 +13,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdate;
@@ -39,19 +46,26 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback{
     public final static String DEBUG_TAG="edu.umb.cs443.MYMSG";
-    public static final String URL_PIC = "http://openweathermap.org/img/w/";
-    public static final String URL_JSON = "http://api.openweathermap.org/data/2.5/weather?q=";
-    public static final String APPID = "&APPID=f9a0da7858696d1453d0faa23006c2d9";
     private static final LatLngBounds MAPBOUNDARY = new LatLngBounds(new LatLng(0,0),new LatLng(0,0));
+    private static final LatLng CENTER = new LatLng(42.326075, -71.084983);
+    private static final float MIN_ZOOM = 11.0f;
+    private static final float MAX_ZOOM = 20.0f;
+    private static final float SEARCH_ZOOM = 14.5f;
+
+    private static float currentZoom;
+    private static LatLng currentLocation;
+    private static boolean configChanged;
     public static String mbta_key = "";
     public static final String IMG_EXTENSION = ".png";
     private JSONObject jsonObject = null;
-    private List<Stations> stationsList;
+    private static List<Stations> stationsList;
+    public static List<Marker> markerList;
 
 	private GoogleMap mMap;
     private int mtype=0;
@@ -60,15 +74,28 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                      polylineGreenE, polylineRedA, polylineRedB, polylineOrange;
 
     private StationMarker stationMarker;
-
+    private Button rt, lb, rb;
+    private ImageView lt;
     //Database
     protected DBHandlerMbta myDBHelper;
+    private AutoCompleteTextView autoCompleteTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Restore saved values
+        if (savedInstanceState != null) {
+            currentLocation = new LatLng(savedInstanceState.getDouble("lat"),savedInstanceState.getDouble("lng")) ;
+            currentZoom = savedInstanceState.getFloat("zoom");
+            configChanged = true;
+        }
+        else {
+            currentLocation = new LatLng(0,0);
+            currentZoom = MIN_ZOOM;
+            configChanged = false;
+        }
         stationMarker = new StationMarker(ContextCompat.getColor(this,R.color.blue),ContextCompat.getColor(this,R.color.red),
                                           ContextCompat.getColor(this,R.color.orange), ContextCompat.getColor(this,R.color.green));
         myDBHelper = new DBHandlerMbta(getApplicationContext());
@@ -76,6 +103,64 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         MapFragment mFragment=((MapFragment) getFragmentManager().findFragmentById(R.id.map));
         mFragment.getMapAsync(this);
+
+        lt = (ImageView)findViewById(R.id.lt);
+        rt = (Button)findViewById(R.id.rt);
+        lb = (Button)findViewById(R.id.lb);
+        rb = (Button)findViewById(R.id.rb);
+        autoCompleteTextView = (AutoCompleteTextView)findViewById(R.id.autocomplete);
+
+        ArrayAdapter<String> autocompleteAdapter = new ArrayAdapter<String>(getApplicationContext(),
+                                                    //android.R.layout.simple_dropdown_item_1line,
+                                                    R.layout.autocomplete_layout,
+                                                    myDBHelper.getStationsArray(stationsList));
+        autoCompleteTextView.setAdapter(autocompleteAdapter);
+
+        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String stationName = autoCompleteTextView.getText().toString();
+
+                if (view != null) {
+                    InputMethodManager imm = (InputMethodManager)getSystemService(getApplicationContext().INPUT_METHOD_SERVICE);
+                    imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
+                    //imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                    autoCompleteTextView.clearFocus();
+                }
+                for (Marker mk: markerList){
+                    if(mk.getTitle().split(",")[1].equalsIgnoreCase(stationName)){
+                        mMap.animateCamera(CameraUpdateFactory.zoomIn());
+                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mk.getPosition(), SEARCH_ZOOM));
+                        viewStationDetail(mk);
+                        break;
+                    }
+                }
+            }
+        });
+    }
+
+    protected void showSearch(View view){
+        /*view.animate()
+                .translationY(view.getHeight())
+                .alpha(1.0f)
+                .setDuration(300);*/
+        if(autoCompleteTextView.getVisibility() == View.GONE)
+            autoCompleteTextView.setVisibility(View.VISIBLE);
+        else
+            autoCompleteTextView.setVisibility(View.GONE);
+    }
+    /**
+     * Save data when orientation changes to restore later.
+     * @param outState
+     */
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        // Save the current article selection in case we need to recreate the fragment
+        outState.putDouble("lat", mMap.getCameraPosition().target.latitude);
+        outState.putDouble("lng", mMap.getCameraPosition().target.longitude);
+        outState.putFloat("zoom", mMap.getCameraPosition().zoom);
     }
 
     @Override
@@ -96,74 +181,41 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
         return super.onOptionsItemSelected(item);
     }
-    
-    /*public void b1(View v){
-
-    	if (mMap!=null){
-            if (mtype==0) {
-                mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-                mtype = 1;
-            }else if(mtype==1){
-                mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-                mtype=2;
-            }else{
-                mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                mtype=0;
-            }
-        }
-    }
-
-    public void b2(View v){
-        CameraUpdate umb= CameraUpdateFactory.newLatLng(new LatLng(42.313895, -71.038833));
-        Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
-        if (mMap!=null){
-            mMap.moveCamera(umb);
-        }
-    }
-
-    public void b3(View v){
-        float zoom=(float)Math.random()*10+5;
-        Toast.makeText(getApplicationContext(),"Zoom to "+Float.toString(zoom),Toast.LENGTH_SHORT).show();
-        CameraUpdate mzoom= CameraUpdateFactory.zoomTo(zoom);
-        if (mMap!=null){
-            mMap.animateCamera(mzoom);
-            Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
-            Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
-            //V/Lang-left: LatLngBounds{southwest=lat/lng: (34.20517867359235,-78.68875980377199),
-            // northeast=lat/lng: (49.570917583486406,-63.41445654630661)}
-        }
-    }
-
-    public void b4(View v){
-
-        if (mMap!=null){
-            mMap.addMarker(new MarkerOptions()
-                    .title("UMass Boston")
-                    .position(new LatLng(42.313895, -71.038833)));
-        }
-    }
-    */
-
-    public void search(View v){
-        float zoom=(float)Math.random()*10+5;
-        Toast.makeText(getApplicationContext(),"Zoom to "+Float.toString(zoom),Toast.LENGTH_SHORT).show();
-        CameraUpdate mzoom= CameraUpdateFactory.zoomTo(zoom);
-        if (mMap!=null){
-            mMap.animateCamera(mzoom);
-            Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
-            Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
-            //V/Lang-left: LatLngBounds{southwest=lat/lng: (34.20517867359235,-78.68875980377199),
-            // northeast=lat/lng: (49.570917583486406,-63.41445654630661)}
-        }
-    }
 
     @Override
     public void onMapReady(GoogleMap map) {
         this.mMap = map;
+        mMap.setMyLocationEnabled(true);
+        if(configChanged)
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, currentZoom));
+        else
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CENTER, MIN_ZOOM));
 
+        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+            @Override
+            public void onMapClick(LatLng latLng) {
+                for (Marker mk: markerList){
+                    if(mk.getPosition().latitude != latLng.latitude && mk.getPosition().longitude != latLng.longitude){
+                        if(lt.getVisibility() == View.GONE){
+                            lt.setVisibility(View.VISIBLE);
+                            rt.setVisibility(View.VISIBLE);
+                            rb.setVisibility(View.VISIBLE);
+                            lb.setVisibility(View.VISIBLE);
+                        }
+                        else{
+                            lt.setVisibility(View.GONE);
+                            rt.setVisibility(View.GONE);
+                            rb.setVisibility(View.GONE);
+                            lb.setVisibility(View.GONE);
+                        }
+                        break;
+                    }
+                }
+            }
+        });
         Drawable drawable = ResourcesCompat.getDrawable(getResources(), R.drawable.markers, null);
 
-        stationMarker.addMarkers(mMap, stationsList, drawable);
+        markerList = stationMarker.addMarkers(mMap, stationsList, drawable);
         polylineBlue = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.blue), "blue", ""));
 
         polylineRedA = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.red), "red", "A"));
@@ -179,14 +231,13 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
             @Override
             public void onCameraChange(CameraPosition cameraPosition) {
-                float maxZoom = 20.0f;
-                float minZoom = 12.0f;
-
-                if (cameraPosition.zoom > maxZoom) {
-                    mMap.animateCamera(CameraUpdateFactory.zoomTo(maxZoom));
-                } else if (cameraPosition.zoom < minZoom) {
-                    mMap.animateCamera(CameraUpdateFactory.zoomTo(minZoom));
+                if (cameraPosition.zoom > MAX_ZOOM) {
+                    mMap.animateCamera(CameraUpdateFactory.zoomTo(MAX_ZOOM));
+                } else if (cameraPosition.zoom < MIN_ZOOM) {
+                    mMap.animateCamera(CameraUpdateFactory.zoomTo(MIN_ZOOM));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CENTER, MIN_ZOOM));
                 }
+
                 /*LatLng tempCenter = mMap.getCameraPosition().target;;
                 LatLngBounds visibleBounds = mMap.getProjection().getVisibleRegion().latLngBounds;
                 if(!MAPBOUNDARY.contains(visibleBounds.northeast) || !MAPBOUNDARY.contains(visibleBounds.southwest)){
@@ -200,15 +251,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
-                marker.hideInfoWindow();
-
-                String[] stationId = marker.getTitle().split(",");
-                Intent dialogIntent = new Intent(MainActivity.this, DialogActivity.class);
-
-                dialogIntent.putExtra("station_id", stationId[0]);
-                dialogIntent.putExtra("station_name", stationId[1]);
-                startActivity(dialogIntent);
-
+                viewStationDetail(marker);
                 return true;
             }
         });
@@ -219,10 +262,20 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 marker.hideInfoWindow();
             }
         });
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(42.354459, -71.064090), 12.0f));
+
         Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
     }
 
+    public void viewStationDetail(Marker marker){
+        marker.hideInfoWindow();
+
+        String[] stationId = marker.getTitle().split(",");
+        Intent dialogIntent = new Intent(MainActivity.this, DialogActivity.class);
+
+        dialogIntent.putExtra("station_id", stationId[0]);
+        dialogIntent.putExtra("station_name", stationId[1]);
+        startActivity(dialogIntent);
+    }
     /*public void display(View view) {
         final TextView msgTextView = (TextView) findViewById(R.id.textView);
         EditText msgTextField = (EditText) findViewById(R.id.editText);
@@ -276,8 +329,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             URL url = null;
             InputStream inStream = null;
             try {
-
-                url = new URL(URL_JSON + params[0] + APPID);
+                url = new URL(params[0]);
                 urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("GET");
                 urlConnection.connect();
@@ -337,4 +389,51 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             imageName = jsonObject.getJSONArray("weather").getJSONObject(0).getString("icon");*/
         }catch (Exception ex){}
     }
+
+    /*public void b1(View v){
+
+    	if (mMap!=null){
+            if (mtype==0) {
+                mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+                mtype = 1;
+            }else if(mtype==1){
+                mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+                mtype=2;
+            }else{
+                mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                mtype=0;
+            }
+        }
+    }
+
+    public void b2(View v){
+        CameraUpdate umb= CameraUpdateFactory.newLatLng(new LatLng(42.313895, -71.038833));
+        Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
+        if (mMap!=null){
+            mMap.moveCamera(umb);
+        }
+    }
+
+    public void b3(View v){
+        float zoom=(float)Math.random()*10+5;
+        Toast.makeText(getApplicationContext(),"Zoom to "+Float.toString(zoom),Toast.LENGTH_SHORT).show();
+        CameraUpdate mzoom= CameraUpdateFactory.zoomTo(zoom);
+        if (mMap!=null){
+            mMap.animateCamera(mzoom);
+            Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
+            Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
+            //V/Lang-left: LatLngBounds{southwest=lat/lng: (34.20517867359235,-78.68875980377199),
+            // northeast=lat/lng: (49.570917583486406,-63.41445654630661)}
+        }
+    }
+
+    public void b4(View v){
+
+        if (mMap!=null){
+            mMap.addMarker(new MarkerOptions()
+                    .title("UMass Boston")
+                    .position(new LatLng(42.313895, -71.038833)));
+        }
+    }
+    */
 }

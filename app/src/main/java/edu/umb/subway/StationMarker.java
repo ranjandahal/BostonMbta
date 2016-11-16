@@ -1,23 +1,11 @@
 package edu.umb.subway;
 
-import android.app.Fragment;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.res.ResourcesCompat;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import edu.umb.external.*;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptor;
@@ -25,11 +13,8 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
-
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -128,7 +113,7 @@ public class StationMarker{
         return null;
     }
 
-    public void addMarkers(GoogleMap mMap, List<Stations> stationsList, Drawable drawable){
+    public List<Marker> addMarkers(GoogleMap mMap, List<Stations> stationsList, Drawable drawable){
         Marker marker = null;
 
         LatLng ltlg;
@@ -174,7 +159,8 @@ public class StationMarker{
                         .position(ltlg)
                         .title(st.getStationID() + "," + st.getName())
                         .icon(BitmapDescriptorFactory.fromBitmap(bitmap))
-                        .anchor(0,0));
+                        .anchor(0,0)
+                        .alpha(0.7f));
             }
             else if(st.getColor().equals("red")){
                 if(st.getRoute().contains("B"))
@@ -197,7 +183,8 @@ public class StationMarker{
                         .position(ltlg)
                         .title(st.getStationID() + "," + st.getName())
                         .icon(BitmapDescriptorFactory.fromBitmap(bitmap))
-                        .anchor(0,0));
+                        .anchor(0,0)
+                        .alpha(0.7f));
             }
             else if(st.getColor().equals("green")){
                 if(st.getRoute().contains("B"))
@@ -224,7 +211,8 @@ public class StationMarker{
                         .position(ltlg)
                         .title(st.getStationID() + "," + st.getName())
                         .icon(BitmapDescriptorFactory.fromBitmap(bitmap))
-                        .anchor(0,0));
+                        .anchor(0,0)
+                        .alpha(0.7f));
             }
             else{
                 orangeLatLng.add(ltlg);
@@ -244,10 +232,12 @@ public class StationMarker{
                         .position(ltlg)
                         .title(st.getStationID() + "," + st.getName())
                         .icon(BitmapDescriptorFactory.fromBitmap(bitmap))
-                        .anchor(0,0));
+                        .anchor(0,0)
+                        .alpha(0.7f));
             }
             markerList.add(marker);
         }
+        return markerList;
     }
 }
 

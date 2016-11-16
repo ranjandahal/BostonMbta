@@ -19,7 +19,7 @@ limitations under the License.
     android:layout_width="350dp"
     android:layout_height="200dp"
     android:background="@color/green"
-    android:padding="5dip">
+    android:padding="5dp">
 
     <GridLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
