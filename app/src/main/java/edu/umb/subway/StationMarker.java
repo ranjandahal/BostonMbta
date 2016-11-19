@@ -1,6 +1,7 @@
 package edu.umb.subway;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -9,6 +10,7 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.content.res.ResourcesCompat;
 
 import edu.umb.external.*;
 import com.google.android.gms.maps.GoogleMap;
@@ -151,7 +153,7 @@ public class StationMarker{
             int height = heightT + 25; //getResources().getDimensionPixelOffset(R.dimen.marker_height);
 
             drawable.setBounds(0, 0, width, height);
-
+            //drawable.draw(canvas);
             Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
             canvas.setBitmap(bitmap);
             paint.setColor(Color.WHITE);
@@ -163,19 +165,23 @@ public class StationMarker{
                 if(st.getColor().contains(",") && st.getColor().contains("orange")) {
                     drawable = ContextCompat.getDrawable(context, R.drawable.blue_orange_title);
                     drawable.draw(canvas);
+                    //drawable.draw(canvas);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.blue_orange);
                 }
                 else if(st.getColor().contains(",") && st.getColor().contains("green")) {
                     drawable = ContextCompat.getDrawable(context, R.drawable.green_blue_title);
                     drawable.draw(canvas);
+                    //canvas.setBitmap(R.drawable.green_blue_title);
+                    //drawable.draw(canvas);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.green_blue);
                 }
                 else{
                     canvas.drawColor(blue);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.blue);
                 }
+                drawable.draw(canvas);
                 canvas.drawText(textToDraw, xPos, yPos, paint);
-                bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.blue);
+                //bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.blue);
             }
             else if(st.getColor().startsWith("red")){
                 if(st.getRoute().contains("B"))
@@ -186,19 +192,22 @@ public class StationMarker{
                 if(st.getColor().contains(",") && st.getColor().contains("orange")) {
                     drawable = ContextCompat.getDrawable(context, R.drawable.orange_red_title);
                     drawable.draw(canvas);
+                    //drawable.draw(canvas);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.orange_red);
                 }
                 else if(st.getColor().contains(",") && st.getColor().contains("green")) {
                     drawable = ContextCompat.getDrawable(context, R.drawable.green_red_title);
                     drawable.draw(canvas);
+                    //drawable.draw(canvas);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.green_red);
                 }
                 else{
                     canvas.drawColor(red);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.red);
                 }
+                drawable.draw(canvas);
                 canvas.drawText(textToDraw, xPos, yPos, paint);
-                bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.red);
+                //bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.red);
             }
             else if(st.getColor().startsWith("green")){
                 if(st.getRoute().contains("B"))
@@ -213,16 +222,19 @@ public class StationMarker{
                 if(st.getColor().contains(",") && st.getColor().contains("orange")) {
                     drawable = ContextCompat.getDrawable(context, R.drawable.green_orange_title);
                     drawable.draw(canvas);
+                    //drawable.draw(canvas);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.green_orange);
                 }
                 else if(st.getColor().contains(",") && st.getColor().contains("red")) {
                     drawable = ContextCompat.getDrawable(context, R.drawable.green_red_title);
                     drawable.draw(canvas);
+                    //drawable.draw(canvas);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.green_red);
                 }
                 else if(st.getColor().contains(",") && st.getColor().contains("blue")){
                     drawable = ContextCompat.getDrawable(context, R.drawable.green_blue_title);
                     drawable.draw(canvas);
+                    //drawable.draw(canvas);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.green_blue);
                 }
                 else{
@@ -232,32 +244,35 @@ public class StationMarker{
                 drawable.draw(canvas);
                 canvas.drawText(textToDraw, 80, 30, paint);
             }
-            else{
+            else if(st.getColor().startsWith("orange")){
                 orangeLatLng.add(ltlg);
 
-                canvas.drawColor(orange);
-                canvas.drawText(textToDraw, 80, 30, paint);
+                //canvas.drawColor(orange);
+                //canvas.drawText(textToDraw, 80, 30, paint);
 
                 if(st.getColor().contains(",") && st.getColor().contains("red")) {
                     drawable = ContextCompat.getDrawable(context, R.drawable.orange_red_title);
                     drawable.draw(canvas);
+                    //drawable.draw(canvas);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.orange_red);
                 }
                 else if(st.getColor().contains(",") && st.getColor().contains("blue")) {
                     drawable = ContextCompat.getDrawable(context, R.drawable.blue_orange_title);
                     drawable.draw(canvas);
+                    //drawable.draw(canvas);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.blue_orange);
                 }
                 else if(st.getColor().contains(",") && st.getColor().contains("green")) {
                     drawable = ContextCompat.getDrawable(context, R.drawable.green_orange_title);
                     drawable.draw(canvas);
+                    //drawable.draw(canvas);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.green_orange);
                 }
                 else {
                     canvas.drawColor(orange);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.orange);
                 }
-
+                drawable.draw(canvas);
                 canvas.drawText(textToDraw, 80, 30, paint);
             }
             marker = mMap.addMarker(new MarkerOptions()
@@ -270,7 +285,7 @@ public class StationMarker{
                     .title(st.getStationID() + "," + st.getName() + "," + zoomLevel)
                     //.zIndex(1)
                     .icon(BitmapDescriptorFactory.fromBitmap(bitmap))
-                    .anchor(-0.1f,0)
+                    .anchor(-0.08f,0)
                     //.alpha(0.7f)
                     .visible(false));
 

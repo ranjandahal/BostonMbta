@@ -139,6 +139,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         view.requestFocus();
         inputMethodManager.showSoftInput(view, 0);
     }
+
     protected void showSearch(View view){
         view.animate().alpha(1.0f)
                 .setDuration(400);
@@ -215,7 +216,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 }
             }
         });
-        Drawable drawable = ResourcesCompat.getDrawable(getResources(), R.drawable.markers, null);
+        Drawable drawable = ResourcesCompat.getDrawable(getResources(), R.drawable.empty_marker, null);
 
         markerList = stationMarker.addMarkers(mMap, stationsList, drawable);
         polylineBlue = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.blue), "blue", ""));
