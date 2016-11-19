@@ -11,8 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Window;
-import android.widget.Toast;
 
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -134,16 +132,16 @@ public class SplashActivity extends AppCompatActivity {
     protected void setupZoomLevels(int screenSize){
         switch(screenSize) {
             case Configuration.SCREENLAYOUT_SIZE_XLARGE:
-                ZoomLevels.MIN_ZOOM = 11.8f;
+                Properties.MIN_ZOOM = 11.8f;
                 break;
             case Configuration.SCREENLAYOUT_SIZE_LARGE:
-                ZoomLevels.MIN_ZOOM = 11.0f;
+                Properties.MIN_ZOOM = 11.0f;
                 break;
             case Configuration.SCREENLAYOUT_SIZE_NORMAL:
-                ZoomLevels.MIN_ZOOM = 10.5f;
+                Properties.MIN_ZOOM = 10.5f;
                 break;
             case Configuration.SCREENLAYOUT_SIZE_SMALL:
-                ZoomLevels.MIN_ZOOM = 10.0f;
+                Properties.MIN_ZOOM = 10.0f;
                 break;
             default:
         }

@@ -1,47 +1,58 @@
 package edu.umb.subway;
 
-import android.content.Intent;
-import android.content.res.Configuration;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
+import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.annotation.FloatRange;
+import android.os.CountDownTimer;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.res.ResourcesCompat;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.BitmapDescriptor;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
-import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.Polyline;
+
+import org.json.JSONArray;
 import org.json.JSONObject;
+import org.json.JSONTokener;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends FragmentActivity implements OnMapReadyCallback{
+public class MainActivity extends FragmentActivity implements OnMapReadyCallback{//, GoogleMap.InfoWindowAdapter{
+    public String BASE_URL;
+    public String MBTA_KEY;
     private static float currentZoom;
     private static LatLng currentLocation;
     private static boolean configChanged;
@@ -62,7 +73,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     //Database
     protected DBHandlerMbta myDBHelper;
     private AutoCompleteTextView autoCompleteTextView;
-
+    private List<StopInfomation> stopInformationList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,9 +87,12 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
         else {
             currentLocation = new LatLng(0,0);
-            currentZoom = ZoomLevels.MIN_ZOOM;
+            currentZoom = Properties.MIN_ZOOM;
             configChanged = false;
         }
+        BASE_URL = getApplicationContext().getResources().getString(R.string.mbta_base_url);
+        MBTA_KEY = getApplicationContext().getResources().getString(R.string.mbta_key);
+        stopInformationList = new ArrayList<StopInfomation>();
         stationMarker = new StationMarker(ContextCompat.getColor(this,R.color.blue),ContextCompat.getColor(this,R.color.red),
                                           ContextCompat.getColor(this,R.color.orange), ContextCompat.getColor(this,R.color.green),
                                             getApplicationContext());
@@ -95,8 +109,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         autoCompleteTextView = (AutoCompleteTextView)findViewById(R.id.autocomplete);
 
         ArrayAdapter<Object> autocompleteAdapter = new ArrayAdapter<Object>(getApplicationContext(),
-                                                    //android.R.layout.simple_dropdown_item_1line,
-                                                    R.layout.autocomplete_layout,
+                                                    android.R.layout.simple_dropdown_item_1line,
+                                                    //R.layout.autocomplete_layout,
                                                     myDBHelper.getStationsArray(stationsList));
         autoCompleteTextView.setAdapter(autocompleteAdapter);
 
@@ -112,8 +126,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 for (Marker mk: markerList){
                     if(mk.getTitle().split(",")[1].equalsIgnoreCase(stationName)){
                         mMap.animateCamera(CameraUpdateFactory.zoomIn());
-                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mk.getPosition(), ZoomLevels.SEARCH_ZOOM));
-                        //viewStationDetail(mk);
+                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mk.getPosition(), Properties.SEARCH_ZOOM));
+                        viewStationDetail(mk);
                         break;
                     }
                 }
@@ -192,7 +206,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         if(configChanged)
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, currentZoom));
         else
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ZoomLevels.CENTER, ZoomLevels.MIN_ZOOM));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Properties.CENTER, Properties.MIN_ZOOM));
 
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
@@ -234,10 +248,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
             @Override
             public void onCameraChange(CameraPosition cameraPosition) {
-                if (cameraPosition.zoom > ZoomLevels.MAX_ZOOM) {
-                    mMap.animateCamera(CameraUpdateFactory.zoomTo(ZoomLevels.MAX_ZOOM));
-                } else if (cameraPosition.zoom < ZoomLevels.MIN_ZOOM) {
-                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ZoomLevels.CENTER, ZoomLevels.MIN_ZOOM));
+                if (cameraPosition.zoom > Properties.MAX_ZOOM) {
+                    mMap.animateCamera(CameraUpdateFactory.zoomTo(Properties.MAX_ZOOM));
+                } else if (cameraPosition.zoom < Properties.MIN_ZOOM) {
+                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Properties.CENTER, Properties.MIN_ZOOM));
                 }
                 for (Marker mk: markerList){
                     if(cameraPosition.zoom >= Float.parseFloat(mk.getTitle().split(",")[2])){
@@ -279,64 +293,119 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         marker.hideInfoWindow();
 
         String[] stationId = marker.getTitle().split(",");
-        Intent dialogIntent = new Intent(this, DialogActivity.class);
-
-        dialogIntent.putExtra("station_id", stationId[0]);
-        dialogIntent.putExtra("station_name", stationId[1]);
-        startActivity(dialogIntent);
+        stopInformationList.clear();
+        ConnectivityManager connMgr = (ConnectivityManager)
+                getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        if (networkInfo != null && networkInfo.isConnected()) {
+            new WebserviceCaller().execute(BASE_URL + "predictionsbystop?api_key=" + MBTA_KEY + "&stop=" + stationId[0] + "&format=json");
+        }else {
+            Toast.makeText(getApplicationContext(), "No network connection available", Toast.LENGTH_SHORT);
+        }
+        //Intent dialogIntent = new Intent(this, DialogActivity.class);
+//
+//        dialogIntent.putExtra("station_id", stationId[0]);
+//        dialogIntent.putExtra("station_name", stationId[1]);
+//        startActivity(dialogIntent);
     }
-    /*public void display(View view) {
-        final TextView msgTextView = (TextView) findViewById(R.id.textView);
-        EditText msgTextField = (EditText) findViewById(R.id.editText);
 
-        msgTextView.setText(msgTextField.getText());
-        msgTextField.setText(null);
+    /*@Override
+    public View getInfoWindow(Marker marker) {
+        return null;
+        //return prepareInfoView(marker);
+    }
 
-        HashMap<String, String> params = new HashMap<String, String>();
-        params.put("api_key", "QCKjXYs2HEOBVVdfx_CmFg");
-        params.put("stop","place-sbbsta");
-        params.put("format","json");
+    @Override
+    public View getInfoContents(Marker marker) {
+        //return null;
+        return prepareInfoView(marker);
 
-        StringBuilder urlString = new StringBuilder();
-        urlString.append("http://realtime.mbta.com/developer/api/v2/predictionsbystop");
-
-        urlString.append("?api_key=").append("QCKjXYs2HEOBVVdfx_CmFg");
-        urlString.append("&stop=").append("place-sstat");
-        urlString.append("&format=").append("json");
-
-        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        //locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0,);
-        JsonObjectRequest jsObjRequest = new JsonObjectRequest
-                (Request.Method.GET, urlString.toString(), new JSONObject(params), new Response.Listener<JSONObject>() {
-
-                    @Override
-                    public void onResponse(JSONObject response){
-                        msgTextView.setText("Response: " + response.toString());
-                        Log.v("Response", response.toString().substring(0,10));
-                        Toast.makeText(getApplicationContext(), response.toString().substring(0,10),Toast.LENGTH_LONG);
-                    }
-                },  new Response.ErrorListener() {
-
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        // TODO Auto-generated method stub
-                        msgTextView.setText("Error: " + error.getMessage());
-                        Toast.makeText(getApplicationContext(), "Error",Toast.LENGTH_LONG);
-                    }
-                });
-        MySingleton.getInstance(this).addToRequestQueue(jsObjRequest);
-        //Toast.makeText(getApplicationContext(), jsObjRequest.getBody().toString(),Toast.LENGTH_LONG);
     }*/
+
+    private void setFragments(Marker marker){
+        LinearLayout infoView =  (LinearLayout)findViewById(R.id.infowindow_layout); // new LinearLayout(MainActivity.this);
+//        LinearLayout.LayoutParams infoViewParams = new LinearLayout.LayoutParams(
+//                LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+//        infoView.setOrientation(LinearLayout.HORIZONTAL);
+//        infoView.setLayoutParams(infoViewParams);
+        FrameLayout fmLayout = (FrameLayout)findViewById(R.id.info_fragment);
+        FragmentManager fm = getSupportFragmentManager();
+        TextView stationName = (TextView)findViewById(R.id.station_name);
+        TextView stationInfo = (TextView)findViewById(R.id.station_info);
+        StationInfoFragment stationFrag;
+        String[] stationId = marker.getTitle().split(",");
+        if (stopInformationList.size() > 0) {
+            stationInfo.setVisibility(View.GONE);
+            for (StopInfomation si: stopInformationList) {
+                //FrameLayout frameLayout = new FrameLayout(MainActivity.this);
+                //frameLayout.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                //        ViewGroup.LayoutParams.WRAP_CONTENT));
+                stationFrag = new StationInfoFragment();
+                fm.beginTransaction()
+                        .add(R.id.info_fragment, stationFrag, "Station");
+
+                TextView destination = (TextView) findViewById(R.id.destination);
+                final TextView timer = (TextView) findViewById(R.id.timer);
+                TextView distanceAway = (TextView)findViewById(R.id.distance_away);
+                TextView remaininStop = (TextView)findViewById(R.id.remaining_stop);
+                ImageView favImage = (ImageView)findViewById(R.id.fav_image);
+                ImageView infoImage = (ImageView)findViewById(R.id.info_image);
+
+                timer.setText("");
+                destination.setText(si.getDestination());
+                favImage.setImageResource(R.drawable.fav_on); //getResources().getDrawable(R.drawable.fav_off));
+                infoImage.setImageResource(R.drawable.fav_off);
+                new CountDownTimer(si.getTimeAway()*1000, 1000) {
+                    public void onTick(long millisUntilFinished) {
+                        timer.setText(String.format("%02d", millisUntilFinished/(60*1000)) + ":"
+                                + String.format("%02d", (millisUntilFinished%(60*1000))/1000));
+                    }
+                    public void onFinish() {
+                        timer.setText("Arrived!");
+                    }
+                }.start();
+            }
+            fm.beginTransaction().commit();
+        }
+        else {
+            stationName.setText(stationId[1]);
+            stationInfo.setText("No information is found");
+            stationInfo.setVisibility(View.VISIBLE);
+        }
+
+        /*ImageView infoImageView = new ImageView(MainActivity.this);
+        //Drawable drawable = getResources().getDrawable(R.mipmap.ic_launcher);
+        Drawable drawable = getResources().getDrawable(android.R.drawable.ic_dialog_map);
+        infoImageView.setImageDrawable(drawable);
+        infoView.addView(infoImageView);
+
+        LinearLayout subInfoView = new LinearLayout(MainActivity.this);
+        LinearLayout.LayoutParams subInfoViewParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        subInfoView.setOrientation(LinearLayout.VERTICAL);
+        subInfoView.setLayoutParams(subInfoViewParams);
+
+        TextView subInfoLat = new TextView(MainActivity.this);
+        subInfoLat.setText("Lat: " + marker.getPosition().latitude);
+        TextView subInfoLnt = new TextView(MainActivity.this);
+        subInfoLnt.setText("Lnt: " + marker.getPosition().longitude);
+        subInfoView.addView(subInfoLat);
+        subInfoView.addView(subInfoLnt);
+        infoView.addView(subInfoView);*/
+
+        //return infoView;
+    }
 
     /**
      * Uses AsyncTask to create a task away from the main UI thread. This task
      * takes json data url and download the content.
      */
-    /*private class WebserviceCaller extends AsyncTask<String, Void, JSONObject> {
+    private class WebserviceCaller extends AsyncTask<String, Void, JSONObject> {
         public JSONObject doInBackground(String... params) {
             HttpURLConnection urlConnection = null;
             URL url = null;
             InputStream inStream = null;
+            String temp, response = "";
             try {
                 url = new URL(params[0]);
                 urlConnection = (HttpURLConnection) url.openConnection();
@@ -344,12 +413,13 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 urlConnection.connect();
                 inStream = urlConnection.getInputStream();
                 BufferedReader bReader = new BufferedReader(new InputStreamReader(inStream));
-                String temp, response = "";
+                ;
                 while ((temp = bReader.readLine()) != null) {
                     response += temp;
                 }
-                jsonObject = (JSONObject) new JSONTokener(response).nextValue();
+                return (JSONObject) new JSONTokener(response).nextValue();
             } catch (Exception e) {
+                Log.v("Error API call", e.getMessage());
             } finally {
                 if (inStream != null) {
                     try {
@@ -362,43 +432,57 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     urlConnection.disconnect();
                 }
             }
-            return (jsonObject);
+            return null;
         }
-*/
+
         /**
          * json data gets parsed to get temperature, log and lat values. A new AsyncTask
          * gets call inside this method to download image.
+         *
          * @param result Json data
          */
-        /*protected void onPostExecute(JSONObject result) {
-            if(result!=null) {
+        protected void onPostExecute(JSONObject result) {
+            if (result != null) {
                 parseJSONObject(result);
-                //Make image download call once all the data gets parsed
+            } else {
+                Log.i(Properties.DEBUG_TAG, "returned bitmap is null");
             }
-            else{
-                Log.i(DEBUG_TAG, "returned bitmap is null");}
         }
-    }*/
+    }
 
     /**
      * Takes in Json data and parse it to usable information for this app purpose
+     *
      * @param jsonObject
      */
-    public void parseJSONObject(JSONObject jsonObject){
+    public void parseJSONObject(JSONObject jsonObject) {
         try {
-            /*temp = jsonObject.getJSONObject("main").getDouble("temp") - 273.0;
-            //Set temperature value
-            tempTextView.setText(String.format("%.1fC" ,temp));
-
-            //Get lattitude and longitude values
-            lat = jsonObject.getJSONObject("coord").getDouble("lat");
-            lon = jsonObject.getJSONObject("coord").getDouble("lon");
-
-            //Set image name value for next image download Async task.
-            imageName = jsonObject.getJSONArray("weather").getJSONObject(0).getString("icon");*/
-        }catch (Exception ex){}
+            long time;
+            String mode = jsonObject.getJSONArray("mode").getJSONObject(0).getString("mode_name").toString();
+            if (mode.equalsIgnoreCase("subway")) {
+                JSONArray jsonRoute = jsonObject.getJSONArray("mode").getJSONObject(0).getJSONArray("route");
+                for (int routeCounter = 0; routeCounter < jsonRoute.length(); routeCounter++) {
+                    JSONArray jsonDirection = jsonRoute.getJSONObject(routeCounter).getJSONArray("direction");
+                    for (int directionCounter = 0; directionCounter < jsonDirection.length(); directionCounter++) {
+                        JSONArray jsonTrip = jsonDirection.getJSONObject(directionCounter).getJSONArray("trip");
+                        for (int tripCounter = 0; tripCounter < jsonTrip.length(); tripCounter++) {
+                            if(StopInfomation.checkDuplicateDestination(stopInformationList,
+                                        jsonTrip.getJSONObject(tripCounter).getString("trip_headsign"))){
+                                stopInformationList.add(
+                                        new StopInfomation(
+                                                jsonTrip.getJSONObject(tripCounter).getString("trip_headsign"),
+                                                jsonTrip.getJSONObject(tripCounter).getInt("pre_away"),
+                                                1,
+                                                false));
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (Exception e) {
+            Log.v("Error JSON parse", e.getMessage());
+        }
     }
-
     /*public void b1(View v){
 
     	if (mMap!=null){

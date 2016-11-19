@@ -8,6 +8,7 @@
     <string name="mbta_base_url">http://realtime.mbta.com/developer/api/v2/</string>
     <string name="mbta_key">QCKjXYs2HEOBVVdfx_CmFg</string>
     <string name="description">Boston Subway</string>
+    <string name="noinfo_message">No information found</string>
 
     <string name="button_name">Click Me!</string>
     <string name="hint_msg">Type in Something</string>

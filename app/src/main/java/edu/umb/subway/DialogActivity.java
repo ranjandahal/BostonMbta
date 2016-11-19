@@ -53,7 +53,7 @@ public class DialogActivity extends Activity {
     private String mbtaKey;
     private JSONObject jsonObject = null;
     private TextView stopName, destination, distanceAway, timer;
-    //private Chronometer timer;
+    private Chronometer timerChrono;
     private List<StopInfomation> stopInformation;  // = new ArrayList<StopInfomation>();;
 
     @Override
@@ -73,6 +73,7 @@ public class DialogActivity extends Activity {
         destination = (TextView) findViewById(R.id.destination);
         distanceAway = (TextView) findViewById(R.id.distance_away);
         timer = (TextView) findViewById(R.id.timer);
+        timerChrono = (Chronometer) findViewById(R.id.timerChrono);
 
         stopName.setText(stationName);
 
@@ -159,46 +160,42 @@ public class DialogActivity extends Activity {
             long time;
             String mode = jsonObject.getJSONArray("mode").getJSONObject(0).getString("mode_name").toString();
             if (mode.equalsIgnoreCase("subway")) {
-                JSONArray jsonSubway = jsonObject.getJSONArray("mode").getJSONObject(0).getJSONArray("route");
-                for (int routeCounter = 0; routeCounter < jsonSubway.length(); routeCounter++) {
-                    JSONArray jsonRoute = jsonSubway.getJSONObject(routeCounter).getJSONArray("direction");
-                    for (int directionCounter = 0; directionCounter < jsonRoute.length(); directionCounter++) {
-                        JSONArray jsonTrip = jsonRoute.getJSONObject(directionCounter).getJSONArray("trip");
+                JSONArray jsonRoute = jsonObject.getJSONArray("mode").getJSONObject(0).getJSONArray("route");
+                for (int routeCounter = 0; routeCounter < jsonRoute.length(); routeCounter++) {
+                    JSONArray jsonDirection = jsonRoute.getJSONObject(routeCounter).getJSONArray("direction");
+                    for (int directionCounter = 0; directionCounter < jsonDirection.length(); directionCounter++) {
+                        JSONArray jsonTrip = jsonDirection.getJSONObject(directionCounter).getJSONArray("trip");
                         for (int tripCounter = 0; tripCounter < jsonTrip.length(); tripCounter++) {
-                            stopInformation.add(
-                                    new StopInfomation(
-                                            jsonTrip.getJSONObject(tripCounter).getString("trip_headsign"),
-                                            jsonTrip.getJSONObject(tripCounter).getInt("pre_away"),
-                                            1,
-                                            false));
+                            if(tripCounter == 0 || (tripCounter > 0 &&
+                                    !stopInformation.get(tripCounter-1).getDestination().equalsIgnoreCase(
+                                                    jsonTrip.getJSONObject(tripCounter).getString("trip_headsign")))){
+                                stopInformation.add(
+                                        new StopInfomation(
+                                                jsonTrip.getJSONObject(tripCounter).getString("trip_headsign"),
+                                                jsonTrip.getJSONObject(tripCounter).getInt("pre_away"),
+                                                1,
+                                                false));
+                            }
                         }
                     }
                 }
             }
             if (stopInformation.size() > 0) {
+                timer.setText("");
                 destination.setText(stopInformation.get(0).getDestination());
-                timer.setText(stopInformation.get(0).getTimeAway());
-                new CountDownTimer(stopInformation.get(0).getTimeAway(), 1000) {
-
+                new CountDownTimer(stopInformation.get(0).getTimeAway()*1000, 1000) {
                     public void onTick(long millisUntilFinished) {
-                        timer.setText("" + millisUntilFinished);
+                        timer.setText(String.format("%02d", millisUntilFinished/(60*1000)) + ":"
+                                + String.format("%02d", (millisUntilFinished%(60*1000))/1000));
                     }
-
                     public void onFinish() {
-                        timer.setText("done!");
+                        timer.setText("Arrived!");
                     }
                 }.start();
             }
-            /*temp = jsonObject.getJSONObject("main").getDouble("temp") - 273.0;
-            //Set temperature value
-            tempTextView.setText(String.format("%.1fC" ,temp));
-
-            //Get lattitude and longitude values
-            lat = jsonObject.getJSONObject("coord").getDouble("lat");
-            lon = jsonObject.getJSONObject("coord").getDouble("lon");
-
-            //Set image name value for next image download Async task.
-            imageName = jsonObject.getJSONArray("weather").getJSONObject(0).getString("icon");*/
+            else{
+                destination.setText("No information found");
+            }
         } catch (Exception e) {
             Log.v("Error JSON parse", e.getMessage());
         }

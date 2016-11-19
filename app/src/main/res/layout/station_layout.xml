@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/light_blue"
+    android:padding="5dp">
+
+    <GridLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:useDefaultMargins="true"
+        android:alignmentMode="alignBounds"
+        android:columnOrderPreserved="false"
+        android:columnCount="6"
+        android:layout_gravity="center_vertical">
+        <TextView
+            android:text="D Stop"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/font_small_medium"
+            android:layout_columnSpan="2"
+            android:layout_column="0"
+            android:id="@+id/destination"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/light_yellow"
+            />
+        <TextView
+            android:text="Timer"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/font_small_medium"
+            android:layout_columnSpan="1"
+            android:layout_column="2"
+            android:id="@+id/timer"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/light_yellow"
+            />
+        <TextView
+            android:id="@+id/distance_away"
+            android:text="D Away"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/font_small_medium"
+            android:layout_columnSpan="1"
+            android:layout_column="3"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/light_yellow"
+            />
+        <TextView
+            android:text="R Stop"
+            android:id="@+id/remaining_stop"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/font_small_medium"
+            android:layout_columnSpan="1"
+            android:layout_column="4"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/light_yellow"
+            />
+        <ImageButton android:background="@drawable/favorite"
+            android:id="@+id/fav_image"
+            android:layout_gravity="center"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_columnSpan="1"
+            android:layout_column="5" />
+        <ImageButton android:background="@drawable/favorite"
+            android:id="@+id/info_image"
+            android:layout_gravity="center"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_columnSpan="1"
+            android:layout_column="5" />
+    </GridLayout>
+</LinearLayout>
+

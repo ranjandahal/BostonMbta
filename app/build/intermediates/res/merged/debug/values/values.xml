@@ -267,6 +267,7 @@
     <dimen name="font_large">44dp</dimen>
     <dimen name="font_medium">20dp</dimen>
     <dimen name="font_small">10dp</dimen>
+    <dimen name="font_small_medium">15dp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
@@ -388,6 +389,7 @@
     <string name="mr_media_route_controller_stop">Stop casting</string>
     <string name="mr_system_route_name">System</string>
     <string name="mr_user_route_category_name">Devices</string>
+    <string name="noinfo_message">No information found</string>
     <string name="on_activity_created">onActivityCreated</string>
     <string name="on_attach">onAttach</string>
     <string name="on_create">onCreate</string>

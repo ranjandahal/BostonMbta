@@ -1,5 +1,7 @@
 package edu.umb.subway;
 
+import java.util.List;
+
 /**
  * Created by Ranjan on 11/13/2016.
  */
@@ -46,4 +48,12 @@ public class StopInfomation {
     public boolean isFavorite() { return favorite;}
 
     public void setFavorite(boolean favorite) { this.favorite = favorite;}
+
+    public static boolean checkDuplicateDestination(List<StopInfomation> stopInfomationList, String destination){
+        for (StopInfomation si:stopInfomationList) {
+            if(si.getDestination().equalsIgnoreCase(destination))
+                return true;
+        }
+        return false;
+    }
 }
