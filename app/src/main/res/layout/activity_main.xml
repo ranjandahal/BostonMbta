@@ -6,24 +6,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true">
-    
-    <!--<android.support.v7.widget.SearchView
-        android:id="@+id/search_bar"
+    <fragment
+        android:id="@+id/map"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:onClick="search"/>-->
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.MapFragment" />
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
     <AutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:hint="Search"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="3dp"
+        android:hint="Search Stations"
+        android:background="@drawable/border"
         android:textStyle="normal"
         android:id="@+id/autocomplete"
+        android:layout_marginTop="15dp"
         android:layout_gravity="center"
         android:dropDownVerticalOffset="5dp"
         android:dropDownWidth="wrap_content"
         android:inputType="textAutoComplete|textAutoCorrect"
         android:visibility="gone"
-        />
+        android:focusableInTouchMode="true" />
     <!--<RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
@@ -65,7 +76,7 @@
 </RelativeLayout>-->
     <ImageView
         android:text="LT"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="65dp"
         android:layout_marginLeft="25dp"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -83,7 +94,7 @@
         <!--android:id="@+id/lt"/>-->
     <Button
         android:text="RT"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="65dp"
         android:layout_marginRight="25dp"
         android:layout_alignParentRight="true"
         android:layout_width="50dp"
@@ -91,7 +102,7 @@
         android:id="@+id/rt"/>
     <Button
         android:text="LB"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="40dp"
         android:layout_marginLeft="25dp"
         android:layout_alignParentBottom="true"
         android:layout_width="50dp"
@@ -99,21 +110,16 @@
         android:id="@+id/lb"/>
     <Button
         android:text="RB"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="40dp"
         android:layout_marginRight="25dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/rb"/>
-    <fragment
-        android:id="@+id/map"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.google.android.gms.maps.MapFragment"
-        android:layout_below="@+id/autocomplete"/>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/info_fragment" />
+    </RelativeLayout>
 </RelativeLayout>

@@ -13,7 +13,8 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:launchMode="singleTask">
         <activity
             android:name="edu.umb.subway.SplashActivity"
             android:label="@string/app_name" >
@@ -22,8 +23,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".DialogActivity"></activity>
+        <activity android:name=".MainActivity" android:launchMode="singleTask"></activity>
+        <activity android:name=".DialogActivity" android:launchMode="singleTask"></activity>
+        <receiver
+            android:name="edu.umb.subway.OutgoingReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" >
+                </action>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="edu.umb.subway.IncomingReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="edu.umb.cs443.intent.action.TEST" >
+                </action>
+            </intent-filter>
+        </receiver>
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyC30ey4AgQbnLuw3F2BLJWOD-uk00rsIRM" />
     </application>

@@ -4,6 +4,7 @@ package edu.umb.subway;
  * Created by Ranjan on 11/12/2016.
  */
 
+import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
+import android.widget.Toast;
 
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -23,12 +25,14 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class SplashActivity extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 1000;
+    private static int SPLASH_TIME_OUT = 2000;
     private static String mbta_key = "";
     private static String mbta_base_url = "";
     private JSONObject jsonObject = null;
     public final static String DEBUG_TAG="edu.umb.cs443.MYMSG";
     public static DBHandlerMbta dbHandler;
+    public static int screenSize;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +43,8 @@ public class SplashActivity extends AppCompatActivity {
         dbHandler = new DBHandlerMbta(getApplicationContext());
         dbHandler.initialSetup();
 
+        setupZoomLevels(getResources().getConfiguration().screenLayout &
+                Configuration.SCREENLAYOUT_SIZE_MASK);
         new Handler().postDelayed(new Runnable() {
             /*
              * Showing splash screen with a timer. This will be useful when you
@@ -49,6 +55,7 @@ public class SplashActivity extends AppCompatActivity {
                 // This method will be executed once the timer is over
                 // Start your app main activity
                 Intent mainActivity = new Intent(SplashActivity.this, MainActivity.class);
+                mainActivity.putExtra("screen_size", screenSize);
                 startActivity(mainActivity);
 
                 // close this activity
@@ -57,10 +64,6 @@ public class SplashActivity extends AppCompatActivity {
         }, SPLASH_TIME_OUT);
     }
 
-    /*Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
-    }*/
     private class WebserviceCaller extends AsyncTask<String, Void, JSONObject> {
         public JSONObject doInBackground(String... params) {
             HttpURLConnection urlConnection = null;
@@ -126,5 +129,33 @@ public class SplashActivity extends AppCompatActivity {
             //Set image name value for next image download Async task.
             imageName = jsonObject.getJSONArray("weather").getJSONObject(0).getString("icon");*/
         }catch (Exception ex){}
+    }
+
+    protected void setupZoomLevels(int screenSize){
+        switch(screenSize) {
+            case Configuration.SCREENLAYOUT_SIZE_XLARGE:
+                ZoomLevels.MIN_ZOOM = 11.8f;
+                break;
+            case Configuration.SCREENLAYOUT_SIZE_LARGE:
+                ZoomLevels.MIN_ZOOM = 11.0f;
+                break;
+            case Configuration.SCREENLAYOUT_SIZE_NORMAL:
+                ZoomLevels.MIN_ZOOM = 10.5f;
+                break;
+            case Configuration.SCREENLAYOUT_SIZE_SMALL:
+                ZoomLevels.MIN_ZOOM = 10.0f;
+                break;
+            default:
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();  // Always call the superclass method first
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();  // Always call the superclass method first
     }
 }

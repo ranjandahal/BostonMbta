@@ -1,11 +1,13 @@
 package edu.umb.subway;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.FloatRange;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.res.ResourcesCompat;
@@ -35,22 +37,11 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.Polyline;
-
 import org.json.JSONObject;
-import org.json.JSONTokener;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends FragmentActivity implements OnMapReadyCallback, ZoomLevels{
+public class MainActivity extends FragmentActivity implements OnMapReadyCallback{
     private static float currentZoom;
     private static LatLng currentLocation;
     private static boolean configChanged;
@@ -85,11 +76,12 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
         else {
             currentLocation = new LatLng(0,0);
-            currentZoom = MIN_ZOOM;
+            currentZoom = ZoomLevels.MIN_ZOOM;
             configChanged = false;
         }
         stationMarker = new StationMarker(ContextCompat.getColor(this,R.color.blue),ContextCompat.getColor(this,R.color.red),
-                                          ContextCompat.getColor(this,R.color.orange), ContextCompat.getColor(this,R.color.green));
+                                          ContextCompat.getColor(this,R.color.orange), ContextCompat.getColor(this,R.color.green),
+                                            getApplicationContext());
         myDBHelper = new DBHandlerMbta(getApplicationContext());
         stationsList = myDBHelper.getAllStation("");
 
@@ -102,7 +94,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         rb = (Button)findViewById(R.id.rb);
         autoCompleteTextView = (AutoCompleteTextView)findViewById(R.id.autocomplete);
 
-        ArrayAdapter<String> autocompleteAdapter = new ArrayAdapter<String>(getApplicationContext(),
+        ArrayAdapter<Object> autocompleteAdapter = new ArrayAdapter<Object>(getApplicationContext(),
                                                     //android.R.layout.simple_dropdown_item_1line,
                                                     R.layout.autocomplete_layout,
                                                     myDBHelper.getStationsArray(stationsList));
@@ -114,16 +106,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 String stationName = autoCompleteTextView.getText().toString();
 
                 if (view != null) {
-                    InputMethodManager imm = (InputMethodManager)getSystemService(getApplicationContext().INPUT_METHOD_SERVICE);
-                    imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
-                    //imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                    hideSoftKeyboard();
                     autoCompleteTextView.clearFocus();
                 }
                 for (Marker mk: markerList){
                     if(mk.getTitle().split(",")[1].equalsIgnoreCase(stationName)){
                         mMap.animateCamera(CameraUpdateFactory.zoomIn());
-                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mk.getPosition(), SEARCH_ZOOM));
-                        viewStationDetail(mk);
+                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mk.getPosition(), ZoomLevels.SEARCH_ZOOM));
+                        //viewStationDetail(mk);
                         break;
                     }
                 }
@@ -131,15 +121,35 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         });
     }
 
+    /**
+     * Hides the soft keyboard
+     */
+    public void hideSoftKeyboard() {
+        if(getCurrentFocus()!=null) {
+            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        }
+    }
+
+    /**
+     * Shows the soft keyboard
+     */
+    public void showSoftKeyboard(View view) {
+        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        view.requestFocus();
+        inputMethodManager.showSoftInput(view, 0);
+    }
     protected void showSearch(View view){
-        /*view.animate()
-                .translationY(view.getHeight())
-                .alpha(1.0f)
-                .setDuration(300);*/
-        if(autoCompleteTextView.getVisibility() == View.GONE)
+        view.animate().alpha(1.0f)
+                .setDuration(400);
+        if(autoCompleteTextView.getVisibility() == View.GONE) {
             autoCompleteTextView.setVisibility(View.VISIBLE);
-        else
+            showSoftKeyboard(view);
+        }
+        else {
             autoCompleteTextView.setVisibility(View.GONE);
+            hideSoftKeyboard();
+        }
     }
     /**
      * Save data when orientation changes to restore later.
@@ -181,14 +191,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         if(configChanged)
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, currentZoom));
         else
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CENTER, MIN_ZOOM));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ZoomLevels.CENTER, ZoomLevels.MIN_ZOOM));
 
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {
                 for (Marker mk: markerList){
                     if(mk.getPosition().latitude != latLng.latitude && mk.getPosition().longitude != latLng.longitude){
-                        if(lt.getVisibility() == View.GONE){
+                        if(rt.getVisibility() == View.GONE){
                             lt.setVisibility(View.VISIBLE);
                             rt.setVisibility(View.VISIBLE);
                             rb.setVisibility(View.VISIBLE);
@@ -223,19 +233,17 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
             @Override
             public void onCameraChange(CameraPosition cameraPosition) {
-                if (cameraPosition.zoom > MAX_ZOOM) {
-                    mMap.animateCamera(CameraUpdateFactory.zoomTo(MAX_ZOOM));
-                } else if (cameraPosition.zoom < MIN_ZOOM) {
-                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CENTER, MIN_ZOOM));
+                if (cameraPosition.zoom > ZoomLevels.MAX_ZOOM) {
+                    mMap.animateCamera(CameraUpdateFactory.zoomTo(ZoomLevels.MAX_ZOOM));
+                } else if (cameraPosition.zoom < ZoomLevels.MIN_ZOOM) {
+                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ZoomLevels.CENTER, ZoomLevels.MIN_ZOOM));
                 }
                 for (Marker mk: markerList){
-                    //if(cameraPosition.zoom == )
-                }
-                if (cameraPosition.zoom >= MIN_ZOOM && cameraPosition.zoom <= LEVEL_ONE_ZOOM) {
-                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CENTER, MIN_ZOOM));
-                }
-                else if (cameraPosition.zoom < MIN_ZOOM) {
-                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CENTER, MIN_ZOOM));
+                    if(cameraPosition.zoom >= Float.parseFloat(mk.getTitle().split(",")[2])){
+                        mk.setVisible(true);
+                    }
+                    else
+                        mk.setVisible(false);
                 }
 
                 /*LatLng tempCenter = mMap.getCameraPosition().target;;

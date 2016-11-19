@@ -117,6 +117,13 @@ public class Stations {
     public void setZoomLevel(float zoomLevel) { this.zoomLevel = zoomLevel;}
 
     public class FavoriteStations{
+    }
 
+    public int hashcode() {
+        return 1;
+    }
+
+    public boolean equals(Stations st) {
+        return this.name.equalsIgnoreCase(st.getName());
     }
 }

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:2:1-30:12
+ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:2:1-49:12
 	package
 		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:3:5-29
 		INJECTED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml
@@ -56,7 +56,7 @@ MERGED from [com.google.android.gms:play-services-maps:8.1.0] C:\Users\Ranjan\De
 	android:required
 		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:11:9-32
 application
-ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:12:5-29:19
+ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:12:5-48:19
 MERGED from [com.google.android.gms:play-services:8.1.0] C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\8.1.0\AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-ads:8.1.0] C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.1.0\AndroidManifest.xml:24:5-32:19
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:20:5-24:19
@@ -84,6 +84,8 @@ MERGED from [com.google.android.gms:play-services-vision:8.1.0] C:\Users\Ranjan\
 MERGED from [com.google.android.gms:play-services-wearable:8.1.0] C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.1.0\AndroidManifest.xml:19:5-20
 	android:label
 		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:15:9-41
+	android:launchMode
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:17:9-40
 	android:allowBackup
 		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:13:9-35
 	android:icon
@@ -91,35 +93,67 @@ MERGED from [com.google.android.gms:play-services-wearable:8.1.0] C:\Users\Ranja
 	android:theme
 		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:16:9-40
 activity#edu.umb.subway.SplashActivity
-ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:17:9-24:20
+ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:18:9-25:20
 	android:label
-		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:19:13-45
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:20:13-45
 	android:name
-		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:18:13-57
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:19:13-57
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:20:13-23:29
+ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:21:13-24:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:21:17-69
+ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:21:25-66
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:23:27-74
 activity#edu.umb.subway.MainActivity
-ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:25:9-59
+ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:26:9-91
+	android:launchMode
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:26:48-79
 	android:name
-		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:25:19-47
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:26:19-47
 activity#edu.umb.subway.DialogActivity
-ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:26:9-61
+ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:27:9-93
+	android:launchMode
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:27:50-81
 	android:name
-		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:26:19-49
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:27:19-49
+receiver#edu.umb.subway.OutgoingReceiver
+ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:28:9-36:20
+	android:enabled
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:30:13-35
+	android:exported
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:31:13-36
+	android:name
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:29:13-59
+intent-filter#android.intent.action.PHONE_STATE
+ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:32:13-35:29
+action#android.intent.action.PHONE_STATE
+ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:33:17-34:26
+	android:name
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:33:25-73
+receiver#edu.umb.subway.IncomingReceiver
+ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:37:9-45:20
+	android:enabled
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:39:13-35
+	android:exported
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:40:13-37
+	android:name
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:38:13-59
+intent-filter#edu.umb.cs443.intent.action.TEST
+ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:41:13-44:29
+action#edu.umb.cs443.intent.action.TEST
+ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:42:17-43:26
+	android:name
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:42:25-72
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:27:9-28:71
+ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:46:9-47:71
 	android:value
-		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:28:13-68
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:47:13-68
 	android:name
-		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:27:20-65
+		ADDED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:46:20-65
 uses-sdk
 INJECTED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.google.android.gms:play-services:8.1.0] C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\8.1.0\AndroidManifest.xml:18:5-42
@@ -176,7 +210,7 @@ ADDED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Ranjan
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:22:13-58
 android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:2:1-30:12 reason: com.google.android.gms.maps requested WRITE_EXTERNAL_STORAGE
+IMPLIED from C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\src\main\AndroidManifest.xml:2:1-49:12 reason: com.google.android.gms.maps requested WRITE_EXTERNAL_STORAGE
 uses-permission#com.google.android.c2dm.permission.RECEIVE
 ADDED from [com.google.android.gms:play-services-gcm:8.1.0] C:\Users\Ranjan\Desktop\UMASS\CS446 Android Development\GoogleMap\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.1.0\AndroidManifest.xml:21:5-82
 	android:name

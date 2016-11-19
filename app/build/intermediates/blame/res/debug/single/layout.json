@@ -36,12 +36,12 @@
         "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
-        "merged": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_alert_dialog_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
         "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
         "merged": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
@@ -172,12 +172,12 @@
         "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_template_media.xml"
-    },
-    {
         "merged": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
         "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",

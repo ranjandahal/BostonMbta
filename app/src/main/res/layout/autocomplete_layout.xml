@@ -2,6 +2,7 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:textColor="@color/white"
-    android:background="@color/green"
-    android:textSize="20sp"/>
+    android:textColor="@color/blue"
+    android:background="@drawable/border"
+    android:textSize="20sp"
+    android:padding="3dp" />
