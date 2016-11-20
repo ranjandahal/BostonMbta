@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.umb.cs443"
+    package="edu.umb.subway"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="15"
+        android:minSdkVersion="19"
         android:targetSdkVersion="23" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -44,7 +44,12 @@
             android:launchMode="singleTask" />
         <activity
             android:name="edu.umb.subway.DialogActivity"
-            android:launchMode="singleTask" />
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity
+            android:name="edu.umb.subway.AlertActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Dialog" />
 
         <receiver
             android:name="edu.umb.subway.OutgoingReceiver"
@@ -60,7 +65,7 @@
             android:enabled="true"
             android:exported="false" >
             <intent-filter>
-                <action android:name="edu.umb.cs443.intent.action.TEST" >
+                <action android:name="edu.umb.subway.intent.action.TEST" >
                 </action>
             </intent-filter>
         </receiver>
@@ -83,7 +88,7 @@
 
         <provider
             android:name="com.google.android.gms.measurement.AppMeasurementContentProvider"
-            android:authorities="edu.umb.cs443.google_measurement_service"
+            android:authorities="edu.umb.subway.google_measurement_service"
             android:exported="false" />
 
         <receiver

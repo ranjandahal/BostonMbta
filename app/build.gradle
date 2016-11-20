@@ -5,8 +5,8 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "edu.umb.cs443"
-        minSdkVersion 15
+        applicationId "edu.umb.subway"
+        minSdkVersion 19
         targetSdkVersion 23
     }
 

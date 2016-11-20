@@ -14,12 +14,14 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@color/light_blue"
-    android:padding="5dp">
+    android:padding="5dp"
+    tools:context=".MainActivity">
 
     <GridLayout android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -125,5 +127,5 @@ limitations under the License.
              android:onClick="finishDialog"
              />
     </GridLayout>
-</LinearLayout>
+</RelativeLayout>
 

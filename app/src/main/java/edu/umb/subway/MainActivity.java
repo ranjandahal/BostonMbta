@@ -1,21 +1,19 @@
 package edu.umb.subway;
 
-import android.content.Context;
+import android.content.Intent;
+import android.graphics.Point;
 import android.graphics.drawable.Drawable;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.res.ResourcesCompat;
 import android.util.Log;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -23,9 +21,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -56,6 +52,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private static float currentZoom;
     private static LatLng currentLocation;
     private static boolean configChanged;
+    private ImageView closeImage;
 
     //private JSONObject jsonObject = null;
     private static List<Stations> stationsList;
@@ -68,12 +65,12 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                      polylineGreenE, polylineRedA, polylineRedB, polylineOrange;
 
     private StationMarker stationMarker;
-    private Button rt, lb, rb;
+    private Button rightTopNormal, rightTopHybrid, rightTopSatellite, lb, rb;
     private ImageView lt;
     //Database
     protected DBHandlerMbta myDBHelper;
     private AutoCompleteTextView autoCompleteTextView;
-    private List<StopInfomation> stopInformationList;
+    private List<StopInformation> stopInformationList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,10 +89,16 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
         BASE_URL = getApplicationContext().getResources().getString(R.string.mbta_base_url);
         MBTA_KEY = getApplicationContext().getResources().getString(R.string.mbta_key);
-        stopInformationList = new ArrayList<StopInfomation>();
+        closeImage = (ImageView)findViewById(R.id.close_image);
+        closeImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((FrameLayout)findViewById(R.id.info_fragment)).setVisibility(View.GONE);
+            }
+        });
+        stopInformationList = new ArrayList<StopInformation>();
         stationMarker = new StationMarker(ContextCompat.getColor(this,R.color.blue),ContextCompat.getColor(this,R.color.red),
-                                          ContextCompat.getColor(this,R.color.orange), ContextCompat.getColor(this,R.color.green),
-                                            getApplicationContext());
+                                          ContextCompat.getColor(this,R.color.orange), ContextCompat.getColor(this,R.color.green));
         myDBHelper = new DBHandlerMbta(getApplicationContext());
         stationsList = myDBHelper.getAllStation("");
 
@@ -103,14 +106,15 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mFragment.getMapAsync(this);
 
         lt = (ImageView)findViewById(R.id.lt);
-        rt = (Button)findViewById(R.id.rt);
+        rightTopNormal = (Button)findViewById(R.id.normal);
+        rightTopHybrid = (Button)findViewById(R.id.hybrid);
+        rightTopSatellite = (Button)findViewById(R.id.satellite);
         lb = (Button)findViewById(R.id.lb);
         rb = (Button)findViewById(R.id.rb);
         autoCompleteTextView = (AutoCompleteTextView)findViewById(R.id.autocomplete);
 
         ArrayAdapter<Object> autocompleteAdapter = new ArrayAdapter<Object>(getApplicationContext(),
-                                                    android.R.layout.simple_dropdown_item_1line,
-                                                    //R.layout.autocomplete_layout,
+                                                    R.layout.autocomplete_layout,
                                                     myDBHelper.getStationsArray(stationsList));
         autoCompleteTextView.setAdapter(autocompleteAdapter);
 
@@ -125,9 +129,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 }
                 for (Marker mk: markerList){
                     if(mk.getTitle().split(",")[1].equalsIgnoreCase(stationName)){
-                        mMap.animateCamera(CameraUpdateFactory.zoomIn());
-                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mk.getPosition(), Properties.SEARCH_ZOOM));
+                        adjustZoomAndAnimateMap(mk);
                         viewStationDetail(mk);
+                        autoCompleteTextView.setText("");
                         break;
                     }
                 }
@@ -213,15 +217,19 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             public void onMapClick(LatLng latLng) {
                 for (Marker mk: markerList){
                     if(mk.getPosition().latitude != latLng.latitude && mk.getPosition().longitude != latLng.longitude){
-                        if(rt.getVisibility() == View.GONE){
+                        if(rightTopNormal.getVisibility() == View.GONE){
                             lt.setVisibility(View.VISIBLE);
-                            rt.setVisibility(View.VISIBLE);
+                            rightTopNormal.setVisibility(View.VISIBLE);
+                            rightTopHybrid.setVisibility(View.VISIBLE);
+                            rightTopSatellite.setVisibility(View.VISIBLE);
                             rb.setVisibility(View.VISIBLE);
                             lb.setVisibility(View.VISIBLE);
                         }
                         else{
                             lt.setVisibility(View.GONE);
-                            rt.setVisibility(View.GONE);
+                            rightTopNormal.setVisibility(View.GONE);
+                            rightTopHybrid.setVisibility(View.GONE);
+                            rightTopSatellite.setVisibility(View.GONE);
                             rb.setVisibility(View.GONE);
                             lb.setVisibility(View.GONE);
                         }
@@ -274,6 +282,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
+                adjustZoomAndAnimateMap(marker);
                 viewStationDetail(marker);
                 return true;
             }
@@ -289,111 +298,84 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
     }
 
+    public void adjustZoomAndAnimateMap(Marker marker){
+        mMap.animateCamera(CameraUpdateFactory.zoomIn());
+        if(mMap.getCameraPosition().zoom < Properties.LEVEL_TWO_ZOOM)
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(marker.getPosition(), Properties.SEARCH_ZOOM));
+        else
+            mMap.animateCamera(CameraUpdateFactory.newLatLng(marker.getPosition()));
+    }
+    public int getColor(String color){
+        if(color.contains("green"))
+            return ContextCompat.getColor(getApplicationContext(), R.color.green);
+        else if(color.contains("red"))
+            return ContextCompat.getColor(getApplicationContext(), R.color.red);
+        else if(color.contains("orange"))
+            return ContextCompat.getColor(getApplicationContext(), R.color.orange);
+        else if(color.contains("blue"))
+            return ContextCompat.getColor(getApplicationContext(), R.color.blue);
+        return 0;
+    }
+
     public void viewStationDetail(Marker marker){
         marker.hideInfoWindow();
 
         String[] stationId = marker.getTitle().split(",");
         stopInformationList.clear();
-        ConnectivityManager connMgr = (ConnectivityManager)
-                getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-        if (networkInfo != null && networkInfo.isConnected()) {
-            new WebserviceCaller().execute(BASE_URL + "predictionsbystop?api_key=" + MBTA_KEY + "&stop=" + stationId[0] + "&format=json");
-        }else {
-            Toast.makeText(getApplicationContext(), "No network connection available", Toast.LENGTH_SHORT);
-        }
-        //Intent dialogIntent = new Intent(this, DialogActivity.class);
-//
-//        dialogIntent.putExtra("station_id", stationId[0]);
-//        dialogIntent.putExtra("station_name", stationId[1]);
-//        startActivity(dialogIntent);
+//        ConnectivityManager connMgr = (ConnectivityManager)
+//                getSystemService(Context.CONNECTIVITY_SERVICE);
+//        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+//        if (networkInfo != null && networkInfo.isConnected()) {
+//            new WebserviceCaller().execute(BASE_URL + "predictionsbystop?api_key=" + MBTA_KEY + "&stop=" + stationId[0] + "&format=json");
+//        }else {
+//            Toast.makeText(getApplicationContext(), "No network connection available", Toast.LENGTH_SHORT);
+//        }
+        Intent dialogIntent = new Intent(this, DialogActivity.class);
+        dialogIntent.putExtra("station_id", stationId[0]);
+        dialogIntent.putExtra("station_name", stationId[1]);
+        dialogIntent.putExtra("color", getColor(stationId[3]));
+        dialogIntent.putExtra("lat", marker.getPosition().latitude);
+        dialogIntent.putExtra("lon", marker.getPosition().longitude);
+        startActivity(dialogIntent);
     }
 
-    /*@Override
-    public View getInfoWindow(Marker marker) {
-        return null;
-        //return prepareInfoView(marker);
-    }
-
-    @Override
-    public View getInfoContents(Marker marker) {
-        //return null;
-        return prepareInfoView(marker);
-
-    }*/
-
-    private void setFragments(Marker marker){
-        LinearLayout infoView =  (LinearLayout)findViewById(R.id.infowindow_layout); // new LinearLayout(MainActivity.this);
-//        LinearLayout.LayoutParams infoViewParams = new LinearLayout.LayoutParams(
-//                LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-//        infoView.setOrientation(LinearLayout.HORIZONTAL);
-//        infoView.setLayoutParams(infoViewParams);
+    private void setFragments(){
         FrameLayout fmLayout = (FrameLayout)findViewById(R.id.info_fragment);
         FragmentManager fm = getSupportFragmentManager();
         TextView stationName = (TextView)findViewById(R.id.station_name);
         TextView stationInfo = (TextView)findViewById(R.id.station_info);
         StationInfoFragment stationFrag;
-        String[] stationId = marker.getTitle().split(",");
+        //String[] stationId = marker.getTitle().split(",");
         if (stopInformationList.size() > 0) {
             stationInfo.setVisibility(View.GONE);
-            for (StopInfomation si: stopInformationList) {
-                //FrameLayout frameLayout = new FrameLayout(MainActivity.this);
-                //frameLayout.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
-                //        ViewGroup.LayoutParams.WRAP_CONTENT));
+            for (StopInformation si: stopInformationList) {
                 stationFrag = new StationInfoFragment();
-                fm.beginTransaction()
-                        .add(R.id.info_fragment, stationFrag, "Station");
-
-                TextView destination = (TextView) findViewById(R.id.destination);
-                final TextView timer = (TextView) findViewById(R.id.timer);
-                TextView distanceAway = (TextView)findViewById(R.id.distance_away);
-                TextView remaininStop = (TextView)findViewById(R.id.remaining_stop);
-                ImageView favImage = (ImageView)findViewById(R.id.fav_image);
-                ImageView infoImage = (ImageView)findViewById(R.id.info_image);
-
-                timer.setText("");
-                destination.setText(si.getDestination());
-                favImage.setImageResource(R.drawable.fav_on); //getResources().getDrawable(R.drawable.fav_off));
-                infoImage.setImageResource(R.drawable.fav_off);
-                new CountDownTimer(si.getTimeAway()*1000, 1000) {
-                    public void onTick(long millisUntilFinished) {
-                        timer.setText(String.format("%02d", millisUntilFinished/(60*1000)) + ":"
-                                + String.format("%02d", (millisUntilFinished%(60*1000))/1000));
-                    }
-                    public void onFinish() {
-                        timer.setText("Arrived!");
-                    }
-                }.start();
+                Bundle bundle = new Bundle();
+                bundle.putString("destination", si.getDestination());
+                bundle.putInt("timeAway", si.getTimeAway());
+                bundle.putInt("color", si.getColor());
+                bundle.putBoolean("favorite", si.isFavorite());
+                //bundle.putString("destination", si.getDestination());
+                //set Fragmentclass Arguments
+                stationFrag.setArguments(bundle);
+                fm.beginTransaction().add(R.id.station_fragment, stationFrag, "Station");
             }
             fm.beginTransaction().commit();
         }
         else {
-            stationName.setText(stationId[1]);
+            //stationName.setText(stationId[1]);
             stationInfo.setText("No information is found");
             stationInfo.setVisibility(View.VISIBLE);
         }
-
-        /*ImageView infoImageView = new ImageView(MainActivity.this);
-        //Drawable drawable = getResources().getDrawable(R.mipmap.ic_launcher);
-        Drawable drawable = getResources().getDrawable(android.R.drawable.ic_dialog_map);
-        infoImageView.setImageDrawable(drawable);
-        infoView.addView(infoImageView);
-
-        LinearLayout subInfoView = new LinearLayout(MainActivity.this);
-        LinearLayout.LayoutParams subInfoViewParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        subInfoView.setOrientation(LinearLayout.VERTICAL);
-        subInfoView.setLayoutParams(subInfoViewParams);
-
-        TextView subInfoLat = new TextView(MainActivity.this);
-        subInfoLat.setText("Lat: " + marker.getPosition().latitude);
-        TextView subInfoLnt = new TextView(MainActivity.this);
-        subInfoLnt.setText("Lnt: " + marker.getPosition().longitude);
-        subInfoView.addView(subInfoLat);
-        subInfoView.addView(subInfoLnt);
-        infoView.addView(subInfoView);*/
-
-        //return infoView;
+        Display display = getWindowManager().getDefaultDisplay();
+        final Point size = new Point();
+        display.getSize(size);
+        int height = size.y;
+        int centerY=height/2;
+        //fmLayout.setLeft(fmLayout.getHeight()-centerY);
+        //fmLayout.setTop(fmLayout.getWidth()-size.x);
+        fmLayout.setVisibility(View.VISIBLE);
+        fmLayout.bringToFront();
     }
 
     /**
@@ -458,75 +440,68 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     public void parseJSONObject(JSONObject jsonObject) {
         try {
             long time;
+            String routeId = "";
+            int color = 0;
             String mode = jsonObject.getJSONArray("mode").getJSONObject(0).getString("mode_name").toString();
             if (mode.equalsIgnoreCase("subway")) {
                 JSONArray jsonRoute = jsonObject.getJSONArray("mode").getJSONObject(0).getJSONArray("route");
                 for (int routeCounter = 0; routeCounter < jsonRoute.length(); routeCounter++) {
+                    routeId = jsonRoute.getJSONObject(routeCounter).getString("route_id");
                     JSONArray jsonDirection = jsonRoute.getJSONObject(routeCounter).getJSONArray("direction");
                     for (int directionCounter = 0; directionCounter < jsonDirection.length(); directionCounter++) {
                         JSONArray jsonTrip = jsonDirection.getJSONObject(directionCounter).getJSONArray("trip");
                         for (int tripCounter = 0; tripCounter < jsonTrip.length(); tripCounter++) {
-                            if(StopInfomation.checkDuplicateDestination(stopInformationList,
+                            if(!StopInformation.checkDuplicateDestination(stopInformationList,
                                         jsonTrip.getJSONObject(tripCounter).getString("trip_headsign"))){
+                                if(routeId.toLowerCase().contains("green"))
+                                    color = ContextCompat.getColor(getApplicationContext(), R.color.green);
+                                else if(routeId.toLowerCase().contains("red"))
+                                    color = ContextCompat.getColor(getApplicationContext(), R.color.red);
+                                else if(routeId.toLowerCase().contains("orange"))
+                                    color = ContextCompat.getColor(getApplicationContext(), R.color.orange);
+                                else if(routeId.toLowerCase().contains("blue"))
+                                    color = ContextCompat.getColor(getApplicationContext(), R.color.blue);
                                 stopInformationList.add(
-                                        new StopInfomation(
+                                        new StopInformation(
                                                 jsonTrip.getJSONObject(tripCounter).getString("trip_headsign"),
                                                 jsonTrip.getJSONObject(tripCounter).getInt("pre_away"),
-                                                1,
+                                                color,
                                                 false));
                             }
                         }
                     }
                 }
             }
+            setFragments();
         } catch (Exception e) {
             Log.v("Error JSON parse", e.getMessage());
         }
     }
-    /*public void b1(View v){
+
+    public void setMapType(View v){
 
     	if (mMap!=null){
-            if (mtype==0) {
+            if (v.getId() == R.id.hybrid) {
                 mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-                mtype = 1;
-            }else if(mtype==1){
+                setupButtonColor((Button)findViewById(R.id.hybrid),(Button)findViewById(R.id.normal), (Button)findViewById(R.id.satellite));
+            }else if(v.getId() == R.id.satellite) {
                 mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-                mtype=2;
+                setupButtonColor((Button)findViewById(R.id.satellite),(Button)findViewById(R.id.normal), (Button)findViewById(R.id.hybrid));
             }else{
                 mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                mtype=0;
+                setupButtonColor((Button)findViewById(R.id.normal),(Button)findViewById(R.id.hybrid), (Button)findViewById(R.id.satellite));
             }
         }
     }
 
-    public void b2(View v){
-        CameraUpdate umb= CameraUpdateFactory.newLatLng(new LatLng(42.313895, -71.038833));
-        Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
-        if (mMap!=null){
-            mMap.moveCamera(umb);
-        }
-    }
+    public void setupButtonColor(Button active, Button inactiveOne, Button inactiveTwo){
+        active.setTextColor(ContextCompat.getColor(this,R.color.white));
+        active.setBackgroundResource(R.color.blue);
 
-    public void b3(View v){
-        float zoom=(float)Math.random()*10+5;
-        Toast.makeText(getApplicationContext(),"Zoom to "+Float.toString(zoom),Toast.LENGTH_SHORT).show();
-        CameraUpdate mzoom= CameraUpdateFactory.zoomTo(zoom);
-        if (mMap!=null){
-            mMap.animateCamera(mzoom);
-            Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
-            Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
-            //V/Lang-left: LatLngBounds{southwest=lat/lng: (34.20517867359235,-78.68875980377199),
-            // northeast=lat/lng: (49.570917583486406,-63.41445654630661)}
-        }
-    }
+        inactiveOne.setTextColor(ContextCompat.getColor(this,R.color.black));
+        inactiveOne.setBackgroundResource(R.color.white);
 
-    public void b4(View v){
-
-        if (mMap!=null){
-            mMap.addMarker(new MarkerOptions()
-                    .title("UMass Boston")
-                    .position(new LatLng(42.313895, -71.038833)));
-        }
+        inactiveTwo.setTextColor(ContextCompat.getColor(this,R.color.black));
+        inactiveTwo.setBackgroundResource(R.color.white);
     }
-    */
 }

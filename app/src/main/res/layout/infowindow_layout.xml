@@ -1,23 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:id="@+id/infowindow_layout">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:id="@+id/station_name"
-        android:textSize="@dimen/font_medium"/>
+        android:textSize="@dimen/font_medium"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@drawable/station_border">
+    </TextView>
+    <ImageButton android:background="@drawable/alert"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:layout_columnSpan="1"
+        android:layout_alignRight="@+id/station_name"
+        android:layout_marginRight="10dp"
+        android:layout_column="4"
+        android:layout_row="3"
+        android:onClick="openAlert"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey"
+        android:id="@+id/line"
+        android:layout_below="@+id/station_name"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/station_info"
         android:textSize="@dimen/font_medium"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_below="@id/line"
+        android:gravity="center"
+        android:background="@color/red"
+        android:textColor="@color/white"/>
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"
-        android:id="@+id/station_fragment">
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/station_fragment_one"
+        android:layout_below="@id/station_info">
     </FrameLayout>
-</LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/station_fragment_two"
+        android:layout_below="@id/station_fragment_one">
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/station_fragment_three"
+        android:layout_below="@id/station_fragment_two">
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/station_fragment_four"
+        android:layout_below="@id/station_fragment_three">
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/station_fragment_five"
+        android:layout_below="@id/station_fragment_four">
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/station_fragment_six"
+        android:layout_below="@id/station_fragment_five">
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/station_fragment_seven"
+        android:layout_below="@id/station_fragment_six">
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/station_fragment_eight"
+        android:layout_below="@id/station_fragment_seven">
+    </FrameLayout>
+</RelativeLayout>

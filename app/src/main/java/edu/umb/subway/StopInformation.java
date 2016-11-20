@@ -6,15 +6,15 @@ import java.util.List;
  * Created by Ranjan on 11/13/2016.
  */
 
-public class StopInfomation {
+public class StopInformation {
     private String destination;
     private int timeAway;
     private int color;
     private boolean favorite;
 
-    private StopInfomation(){}
+    private StopInformation(){}
 
-    public StopInfomation(String destination, int timeAway, int color, boolean favorite){
+    public StopInformation(String destination, int timeAway, int color, boolean favorite){
         this.destination = destination;
         this.timeAway = timeAway;
         this.color = color;
@@ -49,8 +49,8 @@ public class StopInfomation {
 
     public void setFavorite(boolean favorite) { this.favorite = favorite;}
 
-    public static boolean checkDuplicateDestination(List<StopInfomation> stopInfomationList, String destination){
-        for (StopInfomation si:stopInfomationList) {
+    public static boolean checkDuplicateDestination(List<StopInformation> stopInfomationList, String destination){
+        for (StopInformation si:stopInfomationList) {
             if(si.getDestination().equalsIgnoreCase(destination))
                 return true;
         }

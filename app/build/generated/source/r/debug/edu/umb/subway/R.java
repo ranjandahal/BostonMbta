@@ -1761,120 +1761,122 @@ containing a value of this type.
         public static final int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f070007;
     }
     public static final class color {
-        public static final int abc_background_cache_hint_selector_material_dark=0x7f0b0062;
-        public static final int abc_background_cache_hint_selector_material_light=0x7f0b0063;
-        public static final int abc_color_highlight_material=0x7f0b0064;
-        public static final int abc_input_method_navigation_guard=0x7f0b0011;
-        public static final int abc_primary_text_disable_only_material_dark=0x7f0b0065;
-        public static final int abc_primary_text_disable_only_material_light=0x7f0b0066;
-        public static final int abc_primary_text_material_dark=0x7f0b0067;
-        public static final int abc_primary_text_material_light=0x7f0b0068;
-        public static final int abc_search_url_text=0x7f0b0069;
-        public static final int abc_search_url_text_normal=0x7f0b0012;
-        public static final int abc_search_url_text_pressed=0x7f0b0013;
-        public static final int abc_search_url_text_selected=0x7f0b0014;
-        public static final int abc_secondary_text_material_dark=0x7f0b006a;
-        public static final int abc_secondary_text_material_light=0x7f0b006b;
-        public static final int accent_material_dark=0x7f0b0015;
-        public static final int accent_material_light=0x7f0b0016;
-        public static final int background_floating_material_dark=0x7f0b0017;
-        public static final int background_floating_material_light=0x7f0b0018;
-        public static final int background_material_dark=0x7f0b0019;
-        public static final int background_material_light=0x7f0b001a;
+        public static final int abc_background_cache_hint_selector_material_dark=0x7f0b0064;
+        public static final int abc_background_cache_hint_selector_material_light=0x7f0b0065;
+        public static final int abc_color_highlight_material=0x7f0b0066;
+        public static final int abc_input_method_navigation_guard=0x7f0b0013;
+        public static final int abc_primary_text_disable_only_material_dark=0x7f0b0067;
+        public static final int abc_primary_text_disable_only_material_light=0x7f0b0068;
+        public static final int abc_primary_text_material_dark=0x7f0b0069;
+        public static final int abc_primary_text_material_light=0x7f0b006a;
+        public static final int abc_search_url_text=0x7f0b006b;
+        public static final int abc_search_url_text_normal=0x7f0b0014;
+        public static final int abc_search_url_text_pressed=0x7f0b0015;
+        public static final int abc_search_url_text_selected=0x7f0b0016;
+        public static final int abc_secondary_text_material_dark=0x7f0b006c;
+        public static final int abc_secondary_text_material_light=0x7f0b006d;
+        public static final int accent_material_dark=0x7f0b0017;
+        public static final int accent_material_light=0x7f0b0018;
+        public static final int background_floating_material_dark=0x7f0b0019;
+        public static final int background_floating_material_light=0x7f0b001a;
+        public static final int background_material_dark=0x7f0b001b;
+        public static final int background_material_light=0x7f0b001c;
         public static final int black=0x7f0b0000;
         public static final int blue=0x7f0b0001;
-        public static final int bright_foreground_disabled_material_dark=0x7f0b001b;
-        public static final int bright_foreground_disabled_material_light=0x7f0b001c;
-        public static final int bright_foreground_inverse_material_dark=0x7f0b001d;
-        public static final int bright_foreground_inverse_material_light=0x7f0b001e;
-        public static final int bright_foreground_material_dark=0x7f0b001f;
-        public static final int bright_foreground_material_light=0x7f0b0020;
-        public static final int button_material_dark=0x7f0b0021;
-        public static final int button_material_light=0x7f0b0022;
+        public static final int bright_foreground_disabled_material_dark=0x7f0b001d;
+        public static final int bright_foreground_disabled_material_light=0x7f0b001e;
+        public static final int bright_foreground_inverse_material_dark=0x7f0b001f;
+        public static final int bright_foreground_inverse_material_light=0x7f0b0020;
+        public static final int bright_foreground_material_dark=0x7f0b0021;
+        public static final int bright_foreground_material_light=0x7f0b0022;
+        public static final int button_material_dark=0x7f0b0023;
+        public static final int button_material_light=0x7f0b0024;
         public static final int colorAccent=0x7f0b0002;
         public static final int colorPrimary=0x7f0b0003;
         public static final int colorPrimaryDark=0x7f0b0004;
-        public static final int common_action_bar_splitter=0x7f0b0023;
-        public static final int common_signin_btn_dark_text_default=0x7f0b0024;
-        public static final int common_signin_btn_dark_text_disabled=0x7f0b0025;
-        public static final int common_signin_btn_dark_text_focused=0x7f0b0026;
-        public static final int common_signin_btn_dark_text_pressed=0x7f0b0027;
-        public static final int common_signin_btn_default_background=0x7f0b0028;
-        public static final int common_signin_btn_light_text_default=0x7f0b0029;
-        public static final int common_signin_btn_light_text_disabled=0x7f0b002a;
-        public static final int common_signin_btn_light_text_focused=0x7f0b002b;
-        public static final int common_signin_btn_light_text_pressed=0x7f0b002c;
-        public static final int common_signin_btn_text_dark=0x7f0b006c;
-        public static final int common_signin_btn_text_light=0x7f0b006d;
+        public static final int common_action_bar_splitter=0x7f0b0025;
+        public static final int common_signin_btn_dark_text_default=0x7f0b0026;
+        public static final int common_signin_btn_dark_text_disabled=0x7f0b0027;
+        public static final int common_signin_btn_dark_text_focused=0x7f0b0028;
+        public static final int common_signin_btn_dark_text_pressed=0x7f0b0029;
+        public static final int common_signin_btn_default_background=0x7f0b002a;
+        public static final int common_signin_btn_light_text_default=0x7f0b002b;
+        public static final int common_signin_btn_light_text_disabled=0x7f0b002c;
+        public static final int common_signin_btn_light_text_focused=0x7f0b002d;
+        public static final int common_signin_btn_light_text_pressed=0x7f0b002e;
+        public static final int common_signin_btn_text_dark=0x7f0b006e;
+        public static final int common_signin_btn_text_light=0x7f0b006f;
         public static final int dark_blue=0x7f0b0005;
         public static final int dark_green=0x7f0b0006;
         public static final int dark_red=0x7f0b0007;
         public static final int dark_yellow=0x7f0b0008;
-        public static final int dim_foreground_disabled_material_dark=0x7f0b002d;
-        public static final int dim_foreground_disabled_material_light=0x7f0b002e;
-        public static final int dim_foreground_material_dark=0x7f0b002f;
-        public static final int dim_foreground_material_light=0x7f0b0030;
-        public static final int foreground_material_dark=0x7f0b0031;
-        public static final int foreground_material_light=0x7f0b0032;
+        public static final int dim_foreground_disabled_material_dark=0x7f0b002f;
+        public static final int dim_foreground_disabled_material_light=0x7f0b0030;
+        public static final int dim_foreground_material_dark=0x7f0b0031;
+        public static final int dim_foreground_material_light=0x7f0b0032;
+        public static final int foreground_material_dark=0x7f0b0033;
+        public static final int foreground_material_light=0x7f0b0034;
         public static final int green=0x7f0b0009;
-        public static final int highlighted_text_material_dark=0x7f0b0033;
-        public static final int highlighted_text_material_light=0x7f0b0034;
-        public static final int hint_foreground_material_dark=0x7f0b0035;
-        public static final int hint_foreground_material_light=0x7f0b0036;
-        public static final int light_blue=0x7f0b000a;
-        public static final int light_green=0x7f0b000b;
-        public static final int light_red=0x7f0b000c;
-        public static final int light_yellow=0x7f0b000d;
-        public static final int material_blue_grey_800=0x7f0b0037;
-        public static final int material_blue_grey_900=0x7f0b0038;
-        public static final int material_blue_grey_950=0x7f0b0039;
-        public static final int material_deep_teal_200=0x7f0b003a;
-        public static final int material_deep_teal_500=0x7f0b003b;
-        public static final int material_grey_100=0x7f0b003c;
-        public static final int material_grey_300=0x7f0b003d;
-        public static final int material_grey_50=0x7f0b003e;
-        public static final int material_grey_600=0x7f0b003f;
-        public static final int material_grey_800=0x7f0b0040;
-        public static final int material_grey_850=0x7f0b0041;
-        public static final int material_grey_900=0x7f0b0042;
-        public static final int orange=0x7f0b000e;
-        public static final int primary_dark_material_dark=0x7f0b0043;
-        public static final int primary_dark_material_light=0x7f0b0044;
-        public static final int primary_material_dark=0x7f0b0045;
-        public static final int primary_material_light=0x7f0b0046;
-        public static final int primary_text_default_material_dark=0x7f0b0047;
-        public static final int primary_text_default_material_light=0x7f0b0048;
-        public static final int primary_text_disabled_material_dark=0x7f0b0049;
-        public static final int primary_text_disabled_material_light=0x7f0b004a;
-        public static final int red=0x7f0b000f;
-        public static final int ripple_material_dark=0x7f0b004b;
-        public static final int ripple_material_light=0x7f0b004c;
-        public static final int secondary_text_default_material_dark=0x7f0b004d;
-        public static final int secondary_text_default_material_light=0x7f0b004e;
-        public static final int secondary_text_disabled_material_dark=0x7f0b004f;
-        public static final int secondary_text_disabled_material_light=0x7f0b0050;
-        public static final int switch_thumb_disabled_material_dark=0x7f0b0051;
-        public static final int switch_thumb_disabled_material_light=0x7f0b0052;
-        public static final int switch_thumb_material_dark=0x7f0b006e;
-        public static final int switch_thumb_material_light=0x7f0b006f;
-        public static final int switch_thumb_normal_material_dark=0x7f0b0053;
-        public static final int switch_thumb_normal_material_light=0x7f0b0054;
-        public static final int wallet_bright_foreground_disabled_holo_light=0x7f0b0055;
-        public static final int wallet_bright_foreground_holo_dark=0x7f0b0056;
-        public static final int wallet_bright_foreground_holo_light=0x7f0b0057;
-        public static final int wallet_dim_foreground_disabled_holo_dark=0x7f0b0058;
-        public static final int wallet_dim_foreground_holo_dark=0x7f0b0059;
-        public static final int wallet_dim_foreground_inverse_disabled_holo_dark=0x7f0b005a;
-        public static final int wallet_dim_foreground_inverse_holo_dark=0x7f0b005b;
-        public static final int wallet_highlighted_text_holo_dark=0x7f0b005c;
-        public static final int wallet_highlighted_text_holo_light=0x7f0b005d;
-        public static final int wallet_hint_foreground_holo_dark=0x7f0b005e;
-        public static final int wallet_hint_foreground_holo_light=0x7f0b005f;
-        public static final int wallet_holo_blue_light=0x7f0b0060;
-        public static final int wallet_link_text_light=0x7f0b0061;
-        public static final int wallet_primary_text_holo_light=0x7f0b0070;
-        public static final int wallet_secondary_text_holo_dark=0x7f0b0071;
-        public static final int white=0x7f0b0010;
+        public static final int grey=0x7f0b000a;
+        public static final int highlighted_text_material_dark=0x7f0b0035;
+        public static final int highlighted_text_material_light=0x7f0b0036;
+        public static final int hint_foreground_material_dark=0x7f0b0037;
+        public static final int hint_foreground_material_light=0x7f0b0038;
+        public static final int light_blue=0x7f0b000b;
+        public static final int light_green=0x7f0b000c;
+        public static final int light_grey=0x7f0b000d;
+        public static final int light_red=0x7f0b000e;
+        public static final int light_yellow=0x7f0b000f;
+        public static final int material_blue_grey_800=0x7f0b0039;
+        public static final int material_blue_grey_900=0x7f0b003a;
+        public static final int material_blue_grey_950=0x7f0b003b;
+        public static final int material_deep_teal_200=0x7f0b003c;
+        public static final int material_deep_teal_500=0x7f0b003d;
+        public static final int material_grey_100=0x7f0b003e;
+        public static final int material_grey_300=0x7f0b003f;
+        public static final int material_grey_50=0x7f0b0040;
+        public static final int material_grey_600=0x7f0b0041;
+        public static final int material_grey_800=0x7f0b0042;
+        public static final int material_grey_850=0x7f0b0043;
+        public static final int material_grey_900=0x7f0b0044;
+        public static final int orange=0x7f0b0010;
+        public static final int primary_dark_material_dark=0x7f0b0045;
+        public static final int primary_dark_material_light=0x7f0b0046;
+        public static final int primary_material_dark=0x7f0b0047;
+        public static final int primary_material_light=0x7f0b0048;
+        public static final int primary_text_default_material_dark=0x7f0b0049;
+        public static final int primary_text_default_material_light=0x7f0b004a;
+        public static final int primary_text_disabled_material_dark=0x7f0b004b;
+        public static final int primary_text_disabled_material_light=0x7f0b004c;
+        public static final int red=0x7f0b0011;
+        public static final int ripple_material_dark=0x7f0b004d;
+        public static final int ripple_material_light=0x7f0b004e;
+        public static final int secondary_text_default_material_dark=0x7f0b004f;
+        public static final int secondary_text_default_material_light=0x7f0b0050;
+        public static final int secondary_text_disabled_material_dark=0x7f0b0051;
+        public static final int secondary_text_disabled_material_light=0x7f0b0052;
+        public static final int switch_thumb_disabled_material_dark=0x7f0b0053;
+        public static final int switch_thumb_disabled_material_light=0x7f0b0054;
+        public static final int switch_thumb_material_dark=0x7f0b0070;
+        public static final int switch_thumb_material_light=0x7f0b0071;
+        public static final int switch_thumb_normal_material_dark=0x7f0b0055;
+        public static final int switch_thumb_normal_material_light=0x7f0b0056;
+        public static final int wallet_bright_foreground_disabled_holo_light=0x7f0b0057;
+        public static final int wallet_bright_foreground_holo_dark=0x7f0b0058;
+        public static final int wallet_bright_foreground_holo_light=0x7f0b0059;
+        public static final int wallet_dim_foreground_disabled_holo_dark=0x7f0b005a;
+        public static final int wallet_dim_foreground_holo_dark=0x7f0b005b;
+        public static final int wallet_dim_foreground_inverse_disabled_holo_dark=0x7f0b005c;
+        public static final int wallet_dim_foreground_inverse_holo_dark=0x7f0b005d;
+        public static final int wallet_highlighted_text_holo_dark=0x7f0b005e;
+        public static final int wallet_highlighted_text_holo_light=0x7f0b005f;
+        public static final int wallet_hint_foreground_holo_dark=0x7f0b0060;
+        public static final int wallet_hint_foreground_holo_light=0x7f0b0061;
+        public static final int wallet_holo_blue_light=0x7f0b0062;
+        public static final int wallet_link_text_light=0x7f0b0063;
+        public static final int wallet_primary_text_holo_light=0x7f0b0072;
+        public static final int wallet_secondary_text_holo_dark=0x7f0b0073;
+        public static final int white=0x7f0b0012;
     }
     public static final class dimen {
         public static final int abc_action_bar_content_inset_material=0x7f08000d;
@@ -1950,16 +1952,17 @@ containing a value of this type.
         public static final int disabled_alpha_material_light=0x7f080047;
         public static final int font_large=0x7f080048;
         public static final int font_medium=0x7f080049;
-        public static final int font_small=0x7f08004a;
-        public static final int font_small_medium=0x7f08004b;
-        public static final int highlight_alpha_material_colored=0x7f08004c;
-        public static final int highlight_alpha_material_dark=0x7f08004d;
-        public static final int highlight_alpha_material_light=0x7f08004e;
+        public static final int font_medium_small=0x7f08004a;
+        public static final int font_small=0x7f08004b;
+        public static final int font_small_medium=0x7f08004c;
+        public static final int highlight_alpha_material_colored=0x7f08004d;
+        public static final int highlight_alpha_material_dark=0x7f08004e;
+        public static final int highlight_alpha_material_light=0x7f08004f;
         public static final int mr_media_route_controller_art_max_height=0x7f080010;
-        public static final int notification_large_icon_height=0x7f08004f;
-        public static final int notification_large_icon_width=0x7f080050;
-        public static final int notification_subtext_size=0x7f080051;
-        public static final int radius=0x7f080052;
+        public static final int notification_large_icon_height=0x7f080050;
+        public static final int notification_large_icon_width=0x7f080051;
+        public static final int notification_subtext_size=0x7f080052;
+        public static final int radius=0x7f080053;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha=0x7f020000;
@@ -2034,106 +2037,108 @@ containing a value of this type.
         public static final int abc_textfield_search_activated_mtrl_alpha=0x7f020045;
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020046;
         public static final int abc_textfield_search_material=0x7f020047;
-        public static final int blue=0x7f020048;
-        public static final int blue_orange=0x7f020049;
-        public static final int blue_orange_title=0x7f02004a;
-        public static final int border=0x7f02004b;
-        public static final int cast_ic_notification_0=0x7f02004c;
-        public static final int cast_ic_notification_1=0x7f02004d;
-        public static final int cast_ic_notification_2=0x7f02004e;
-        public static final int cast_ic_notification_connecting=0x7f02004f;
-        public static final int cast_ic_notification_on=0x7f020050;
-        public static final int common_full_open_on_phone=0x7f020051;
-        public static final int common_ic_googleplayservices=0x7f020052;
-        public static final int common_signin_btn_icon_dark=0x7f020053;
-        public static final int common_signin_btn_icon_disabled_dark=0x7f020054;
-        public static final int common_signin_btn_icon_disabled_focus_dark=0x7f020055;
-        public static final int common_signin_btn_icon_disabled_focus_light=0x7f020056;
-        public static final int common_signin_btn_icon_disabled_light=0x7f020057;
-        public static final int common_signin_btn_icon_focus_dark=0x7f020058;
-        public static final int common_signin_btn_icon_focus_light=0x7f020059;
-        public static final int common_signin_btn_icon_light=0x7f02005a;
-        public static final int common_signin_btn_icon_normal_dark=0x7f02005b;
-        public static final int common_signin_btn_icon_normal_light=0x7f02005c;
-        public static final int common_signin_btn_icon_pressed_dark=0x7f02005d;
-        public static final int common_signin_btn_icon_pressed_light=0x7f02005e;
-        public static final int common_signin_btn_text_dark=0x7f02005f;
-        public static final int common_signin_btn_text_disabled_dark=0x7f020060;
-        public static final int common_signin_btn_text_disabled_focus_dark=0x7f020061;
-        public static final int common_signin_btn_text_disabled_focus_light=0x7f020062;
-        public static final int common_signin_btn_text_disabled_light=0x7f020063;
-        public static final int common_signin_btn_text_focus_dark=0x7f020064;
-        public static final int common_signin_btn_text_focus_light=0x7f020065;
-        public static final int common_signin_btn_text_light=0x7f020066;
-        public static final int common_signin_btn_text_normal_dark=0x7f020067;
-        public static final int common_signin_btn_text_normal_light=0x7f020068;
-        public static final int common_signin_btn_text_pressed_dark=0x7f020069;
-        public static final int common_signin_btn_text_pressed_light=0x7f02006a;
-        public static final int empty_marker=0x7f02006b;
-        public static final int fav_off=0x7f02006c;
-        public static final int fav_on=0x7f02006d;
-        public static final int favorite=0x7f02006e;
-        public static final int green=0x7f02006f;
-        public static final int green_blue=0x7f020070;
-        public static final int green_blue_title=0x7f020071;
-        public static final int green_circle=0x7f020072;
-        public static final int green_line=0x7f020073;
-        public static final int green_orange=0x7f020074;
-        public static final int green_orange_title=0x7f020075;
-        public static final int green_red=0x7f020076;
-        public static final int green_red_title=0x7f020077;
-        public static final int ic_cast_dark=0x7f020078;
-        public static final int ic_cast_disabled_light=0x7f020079;
-        public static final int ic_cast_light=0x7f02007a;
-        public static final int ic_cast_off_light=0x7f02007b;
-        public static final int ic_cast_on_0_light=0x7f02007c;
-        public static final int ic_cast_on_1_light=0x7f02007d;
-        public static final int ic_cast_on_2_light=0x7f02007e;
-        public static final int ic_cast_on_light=0x7f02007f;
-        public static final int ic_launcher=0x7f020080;
-        public static final int ic_media_pause=0x7f020081;
-        public static final int ic_media_play=0x7f020082;
-        public static final int ic_media_route_disabled_mono_dark=0x7f020083;
-        public static final int ic_media_route_off_mono_dark=0x7f020084;
-        public static final int ic_media_route_on_0_mono_dark=0x7f020085;
-        public static final int ic_media_route_on_1_mono_dark=0x7f020086;
-        public static final int ic_media_route_on_2_mono_dark=0x7f020087;
-        public static final int ic_media_route_on_mono_dark=0x7f020088;
-        public static final int ic_pause_dark=0x7f020089;
-        public static final int ic_pause_light=0x7f02008a;
-        public static final int ic_play_dark=0x7f02008b;
-        public static final int ic_play_light=0x7f02008c;
-        public static final int ic_plusone_medium_off_client=0x7f02008d;
-        public static final int ic_plusone_small_off_client=0x7f02008e;
-        public static final int ic_plusone_standard_off_client=0x7f02008f;
-        public static final int ic_plusone_tall_off_client=0x7f020090;
-        public static final int ic_setting_dark=0x7f020091;
-        public static final int ic_setting_light=0x7f020092;
-        public static final int markers=0x7f020093;
-        public static final int mr_ic_audio_vol=0x7f020094;
-        public static final int mr_ic_media_route_connecting_mono_dark=0x7f020095;
-        public static final int mr_ic_media_route_connecting_mono_light=0x7f020096;
-        public static final int mr_ic_media_route_mono_dark=0x7f020097;
-        public static final int mr_ic_media_route_mono_light=0x7f020098;
-        public static final int mr_ic_pause_dark=0x7f020099;
-        public static final int mr_ic_pause_light=0x7f02009a;
-        public static final int mr_ic_play_dark=0x7f02009b;
-        public static final int mr_ic_play_light=0x7f02009c;
-        public static final int mr_ic_settings_dark=0x7f02009d;
-        public static final int mr_ic_settings_light=0x7f02009e;
-        public static final int notification_template_icon_bg=0x7f0200a8;
-        public static final int orange=0x7f02009f;
-        public static final int orange_red=0x7f0200a0;
-        public static final int orange_red_title=0x7f0200a1;
-        public static final int powered_by_google_dark=0x7f0200a2;
-        public static final int powered_by_google_light=0x7f0200a3;
-        public static final int red=0x7f0200a4;
-        public static final int search=0x7f0200a5;
-        public static final int splash=0x7f0200a6;
-        public static final int splash_image=0x7f0200a7;
+        public static final int alert=0x7f020048;
+        public static final int blue=0x7f020049;
+        public static final int blue_orange=0x7f02004a;
+        public static final int blue_orange_title=0x7f02004b;
+        public static final int border=0x7f02004c;
+        public static final int cast_ic_notification_0=0x7f02004d;
+        public static final int cast_ic_notification_1=0x7f02004e;
+        public static final int cast_ic_notification_2=0x7f02004f;
+        public static final int cast_ic_notification_connecting=0x7f020050;
+        public static final int cast_ic_notification_on=0x7f020051;
+        public static final int common_full_open_on_phone=0x7f020052;
+        public static final int common_ic_googleplayservices=0x7f020053;
+        public static final int common_signin_btn_icon_dark=0x7f020054;
+        public static final int common_signin_btn_icon_disabled_dark=0x7f020055;
+        public static final int common_signin_btn_icon_disabled_focus_dark=0x7f020056;
+        public static final int common_signin_btn_icon_disabled_focus_light=0x7f020057;
+        public static final int common_signin_btn_icon_disabled_light=0x7f020058;
+        public static final int common_signin_btn_icon_focus_dark=0x7f020059;
+        public static final int common_signin_btn_icon_focus_light=0x7f02005a;
+        public static final int common_signin_btn_icon_light=0x7f02005b;
+        public static final int common_signin_btn_icon_normal_dark=0x7f02005c;
+        public static final int common_signin_btn_icon_normal_light=0x7f02005d;
+        public static final int common_signin_btn_icon_pressed_dark=0x7f02005e;
+        public static final int common_signin_btn_icon_pressed_light=0x7f02005f;
+        public static final int common_signin_btn_text_dark=0x7f020060;
+        public static final int common_signin_btn_text_disabled_dark=0x7f020061;
+        public static final int common_signin_btn_text_disabled_focus_dark=0x7f020062;
+        public static final int common_signin_btn_text_disabled_focus_light=0x7f020063;
+        public static final int common_signin_btn_text_disabled_light=0x7f020064;
+        public static final int common_signin_btn_text_focus_dark=0x7f020065;
+        public static final int common_signin_btn_text_focus_light=0x7f020066;
+        public static final int common_signin_btn_text_light=0x7f020067;
+        public static final int common_signin_btn_text_normal_dark=0x7f020068;
+        public static final int common_signin_btn_text_normal_light=0x7f020069;
+        public static final int common_signin_btn_text_pressed_dark=0x7f02006a;
+        public static final int common_signin_btn_text_pressed_light=0x7f02006b;
+        public static final int empty_marker=0x7f02006c;
+        public static final int fav_off=0x7f02006d;
+        public static final int fav_on=0x7f02006e;
+        public static final int favorite=0x7f02006f;
+        public static final int green=0x7f020070;
+        public static final int green_blue=0x7f020071;
+        public static final int green_blue_title=0x7f020072;
+        public static final int green_circle=0x7f020073;
+        public static final int green_line=0x7f020074;
+        public static final int green_orange=0x7f020075;
+        public static final int green_orange_title=0x7f020076;
+        public static final int green_red=0x7f020077;
+        public static final int green_red_title=0x7f020078;
+        public static final int ic_cast_dark=0x7f020079;
+        public static final int ic_cast_disabled_light=0x7f02007a;
+        public static final int ic_cast_light=0x7f02007b;
+        public static final int ic_cast_off_light=0x7f02007c;
+        public static final int ic_cast_on_0_light=0x7f02007d;
+        public static final int ic_cast_on_1_light=0x7f02007e;
+        public static final int ic_cast_on_2_light=0x7f02007f;
+        public static final int ic_cast_on_light=0x7f020080;
+        public static final int ic_launcher=0x7f020081;
+        public static final int ic_media_pause=0x7f020082;
+        public static final int ic_media_play=0x7f020083;
+        public static final int ic_media_route_disabled_mono_dark=0x7f020084;
+        public static final int ic_media_route_off_mono_dark=0x7f020085;
+        public static final int ic_media_route_on_0_mono_dark=0x7f020086;
+        public static final int ic_media_route_on_1_mono_dark=0x7f020087;
+        public static final int ic_media_route_on_2_mono_dark=0x7f020088;
+        public static final int ic_media_route_on_mono_dark=0x7f020089;
+        public static final int ic_pause_dark=0x7f02008a;
+        public static final int ic_pause_light=0x7f02008b;
+        public static final int ic_play_dark=0x7f02008c;
+        public static final int ic_play_light=0x7f02008d;
+        public static final int ic_plusone_medium_off_client=0x7f02008e;
+        public static final int ic_plusone_small_off_client=0x7f02008f;
+        public static final int ic_plusone_standard_off_client=0x7f020090;
+        public static final int ic_plusone_tall_off_client=0x7f020091;
+        public static final int ic_setting_dark=0x7f020092;
+        public static final int ic_setting_light=0x7f020093;
+        public static final int markers=0x7f020094;
+        public static final int mr_ic_audio_vol=0x7f020095;
+        public static final int mr_ic_media_route_connecting_mono_dark=0x7f020096;
+        public static final int mr_ic_media_route_connecting_mono_light=0x7f020097;
+        public static final int mr_ic_media_route_mono_dark=0x7f020098;
+        public static final int mr_ic_media_route_mono_light=0x7f020099;
+        public static final int mr_ic_pause_dark=0x7f02009a;
+        public static final int mr_ic_pause_light=0x7f02009b;
+        public static final int mr_ic_play_dark=0x7f02009c;
+        public static final int mr_ic_play_light=0x7f02009d;
+        public static final int mr_ic_settings_dark=0x7f02009e;
+        public static final int mr_ic_settings_light=0x7f02009f;
+        public static final int notification_template_icon_bg=0x7f0200aa;
+        public static final int orange=0x7f0200a0;
+        public static final int orange_red=0x7f0200a1;
+        public static final int orange_red_title=0x7f0200a2;
+        public static final int powered_by_google_dark=0x7f0200a3;
+        public static final int powered_by_google_light=0x7f0200a4;
+        public static final int red=0x7f0200a5;
+        public static final int search=0x7f0200a6;
+        public static final int splash=0x7f0200a7;
+        public static final int splash_image=0x7f0200a8;
+        public static final int station_border=0x7f0200a9;
     }
     public static final class id {
-        public static final int action0=0x7f0c0090;
+        public static final int action0=0x7f0c0099;
         public static final int action_bar=0x7f0c005e;
         public static final int action_bar_activity_content=0x7f0c0000;
         public static final int action_bar_container=0x7f0c005d;
@@ -2142,53 +2147,54 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f0c003f;
         public static final int action_bar_title=0x7f0c003e;
         public static final int action_context_bar=0x7f0c005f;
-        public static final int action_divider=0x7f0c0094;
+        public static final int action_divider=0x7f0c009d;
         public static final int action_menu_divider=0x7f0c0002;
         public static final int action_menu_presenter=0x7f0c0003;
         public static final int action_mode_bar=0x7f0c005b;
         public static final int action_mode_bar_stub=0x7f0c005a;
         public static final int action_mode_close_button=0x7f0c0040;
-        public static final int action_settings=0x7f0c00a2;
+        public static final int action_settings=0x7f0c00ac;
         public static final int activity_chooser_view_content=0x7f0c0041;
         public static final int adjust_height=0x7f0c001d;
         public static final int adjust_width=0x7f0c001e;
         public static final int alertTitle=0x7f0c004d;
         public static final int always=0x7f0c0022;
-        public static final int art=0x7f0c0087;
-        public static final int autocomplete=0x7f0c0075;
+        public static final int art=0x7f0c0090;
+        public static final int autocomplete=0x7f0c007a;
         public static final int beginning=0x7f0c001a;
         public static final int book_now=0x7f0c0031;
         public static final int btn_finish_dialog=0x7f0c0073;
         public static final int buttonPanel=0x7f0c0048;
-        public static final int buttons=0x7f0c008d;
+        public static final int buttons=0x7f0c0096;
         public static final int buyButton=0x7f0c002e;
         public static final int buy_now=0x7f0c0032;
         public static final int buy_with=0x7f0c0033;
         public static final int buy_with_google=0x7f0c0034;
-        public static final int cancel_action=0x7f0c0091;
+        public static final int cancel_action=0x7f0c009a;
         public static final int cast_notification_id=0x7f0c0004;
         public static final int checkbox=0x7f0c0056;
-        public static final int chronometer=0x7f0c0097;
+        public static final int chronometer=0x7f0c00a0;
         public static final int classic=0x7f0c0038;
+        public static final int close_image=0x7f0c0077;
         public static final int collapseActionView=0x7f0c0023;
         public static final int contentPanel=0x7f0c004e;
         public static final int custom=0x7f0c0054;
         public static final int customPanel=0x7f0c0053;
         public static final int decor_content_parent=0x7f0c005c;
         public static final int default_activity_button=0x7f0c0044;
-        public static final int default_control_frame=0x7f0c0086;
+        public static final int default_control_frame=0x7f0c008f;
         public static final int destination=0x7f0c006f;
         public static final int disableHome=0x7f0c000d;
-        public static final int disconnect=0x7f0c008e;
+        public static final int disconnect=0x7f0c0097;
         public static final int distance_away=0x7f0c0072;
         public static final int donate_with=0x7f0c0035;
         public static final int donate_with_google=0x7f0c0036;
         public static final int edit_query=0x7f0c0060;
         public static final int end=0x7f0c001b;
-        public static final int end_padder=0x7f0c009c;
+        public static final int end_padder=0x7f0c00a5;
         public static final int expand_activities_button=0x7f0c0042;
         public static final int expanded_menu=0x7f0c0055;
-        public static final int fav_image=0x7f0c00a0;
+        public static final int fav_image=0x7f0c00ab;
         public static final int google_wallet_classic=0x7f0c0039;
         public static final int google_wallet_grayscale=0x7f0c003a;
         public static final int google_wallet_monochrome=0x7f0c003b;
@@ -2201,27 +2207,28 @@ containing a value of this type.
         public static final int icon=0x7f0c0046;
         public static final int ifRoom=0x7f0c0024;
         public static final int image=0x7f0c0043;
-        public static final int imageViewSplash=0x7f0c009d;
-        public static final int info=0x7f0c009b;
-        public static final int info_fragment=0x7f0c007a;
-        public static final int info_image=0x7f0c00a1;
-        public static final int infowindow_layout=0x7f0c007b;
-        public static final int lb=0x7f0c0078;
-        public static final int line1=0x7f0c0095;
-        public static final int line3=0x7f0c0099;
+        public static final int imageViewSplash=0x7f0c00a6;
+        public static final int info=0x7f0c00a4;
+        public static final int info_fragment=0x7f0c0075;
+        public static final int infowindow_layout=0x7f0c007e;
+        public static final int lb=0x7f0c007c;
+        public static final int line=0x7f0c007f;
+        public static final int line1=0x7f0c009e;
+        public static final int line3=0x7f0c00a2;
+        public static final int linear_layout=0x7f0c00a8;
         public static final int listMode=0x7f0c000a;
         public static final int list_item=0x7f0c0045;
         public static final int logo_only=0x7f0c0037;
-        public static final int lt=0x7f0c0076;
+        public static final int lt=0x7f0c007b;
         public static final int map=0x7f0c0074;
-        public static final int marker_image=0x7f0c0080;
-        public static final int marker_title=0x7f0c007f;
+        public static final int marker_image=0x7f0c0089;
+        public static final int marker_title=0x7f0c0088;
         public static final int match_parent=0x7f0c0030;
-        public static final int media_actions=0x7f0c0093;
-        public static final int media_route_control_frame=0x7f0c0085;
-        public static final int media_route_list=0x7f0c0081;
-        public static final int media_route_volume_layout=0x7f0c008b;
-        public static final int media_route_volume_slider=0x7f0c008c;
+        public static final int media_actions=0x7f0c009c;
+        public static final int media_route_control_frame=0x7f0c008e;
+        public static final int media_route_list=0x7f0c008a;
+        public static final int media_route_volume_layout=0x7f0c0094;
+        public static final int media_route_volume_slider=0x7f0c0095;
         public static final int middle=0x7f0c001c;
         public static final int monochrome=0x7f0c003d;
         public static final int multiply=0x7f0c0014;
@@ -2229,15 +2236,14 @@ containing a value of this type.
         public static final int none=0x7f0c000f;
         public static final int normal=0x7f0c000b;
         public static final int parentPanel=0x7f0c004a;
-        public static final int play_pause=0x7f0c0088;
+        public static final int play_pause=0x7f0c0091;
         public static final int production=0x7f0c002a;
         public static final int progress_circular=0x7f0c0006;
         public static final int progress_horizontal=0x7f0c0007;
         public static final int radio=0x7f0c0058;
-        public static final int rb=0x7f0c0079;
-        public static final int remaining_stop=0x7f0c009f;
-        public static final int route_name=0x7f0c0083;
-        public static final int rt=0x7f0c0077;
+        public static final int rb=0x7f0c007d;
+        public static final int remaining_stop=0x7f0c00aa;
+        public static final int route_name=0x7f0c008c;
         public static final int sandbox=0x7f0c002b;
         public static final int satellite=0x7f0c0020;
         public static final int screen=0x7f0c0015;
@@ -2256,7 +2262,7 @@ containing a value of this type.
         public static final int search_voice_btn=0x7f0c006b;
         public static final int select_dialog_listview=0x7f0c006c;
         public static final int selectionDetails=0x7f0c002f;
-        public static final int settings=0x7f0c0084;
+        public static final int settings=0x7f0c008d;
         public static final int shortcut=0x7f0c0057;
         public static final int showCustom=0x7f0c0010;
         public static final int showHome=0x7f0c0011;
@@ -2267,29 +2273,38 @@ containing a value of this type.
         public static final int src_atop=0x7f0c0016;
         public static final int src_in=0x7f0c0017;
         public static final int src_over=0x7f0c0018;
-        public static final int station_fragment=0x7f0c007e;
-        public static final int station_info=0x7f0c007d;
-        public static final int station_name=0x7f0c007c;
-        public static final int status_bar_latest_event_content=0x7f0c0092;
-        public static final int stop=0x7f0c008f;
+        public static final int station_fragment=0x7f0c0079;
+        public static final int station_fragment_eight=0x7f0c0087;
+        public static final int station_fragment_five=0x7f0c0084;
+        public static final int station_fragment_four=0x7f0c0083;
+        public static final int station_fragment_one=0x7f0c0080;
+        public static final int station_fragment_seven=0x7f0c0086;
+        public static final int station_fragment_six=0x7f0c0085;
+        public static final int station_fragment_three=0x7f0c0082;
+        public static final int station_fragment_two=0x7f0c0081;
+        public static final int station_grid=0x7f0c00a9;
+        public static final int station_info=0x7f0c0078;
+        public static final int station_name=0x7f0c0076;
+        public static final int status_bar_latest_event_content=0x7f0c009b;
+        public static final int stop=0x7f0c0098;
         public static final int stop_info=0x7f0c006e;
         public static final int stop_name=0x7f0c006d;
         public static final int strict_sandbox=0x7f0c002c;
         public static final int submit_area=0x7f0c0069;
-        public static final int subtitle=0x7f0c008a;
+        public static final int subtitle=0x7f0c0093;
         public static final int tabMode=0x7f0c000c;
         public static final int terrain=0x7f0c0021;
         public static final int test=0x7f0c002d;
-        public static final int text=0x7f0c009a;
-        public static final int text2=0x7f0c0098;
+        public static final int text=0x7f0c00a3;
+        public static final int text2=0x7f0c00a1;
         public static final int textSpacerNoButtons=0x7f0c0051;
-        public static final int textView1=0x7f0c009e;
-        public static final int text_wrapper=0x7f0c0089;
-        public static final int time=0x7f0c0096;
+        public static final int textView1=0x7f0c00a7;
+        public static final int text_wrapper=0x7f0c0092;
+        public static final int time=0x7f0c009f;
         public static final int timer=0x7f0c0070;
         public static final int timerChrono=0x7f0c0071;
         public static final int title=0x7f0c0047;
-        public static final int title_bar=0x7f0c0082;
+        public static final int title_bar=0x7f0c008b;
         public static final int title_template=0x7f0c004c;
         public static final int topPanel=0x7f0c004b;
         public static final int up=0x7f0c0009;
@@ -2334,27 +2349,28 @@ containing a value of this type.
         public static final int activity_dialog=0x7f030019;
         public static final int activity_favorite=0x7f03001a;
         public static final int activity_main=0x7f03001b;
-        public static final int autocomplete_layout=0x7f03001c;
-        public static final int infowindow_layout=0x7f03001d;
-        public static final int marker_layout=0x7f03001e;
-        public static final int mr_media_route_chooser_dialog=0x7f03001f;
-        public static final int mr_media_route_controller_material_dialog_b=0x7f030020;
-        public static final int mr_media_route_list_item=0x7f030021;
-        public static final int notification_media_action=0x7f030022;
-        public static final int notification_media_cancel_action=0x7f030023;
-        public static final int notification_template_big_media=0x7f030024;
-        public static final int notification_template_big_media_narrow=0x7f030025;
-        public static final int notification_template_lines=0x7f030026;
-        public static final int notification_template_media=0x7f030027;
-        public static final int notification_template_part_chronometer=0x7f030028;
-        public static final int notification_template_part_time=0x7f030029;
-        public static final int select_dialog_item_material=0x7f03002a;
-        public static final int select_dialog_multichoice_material=0x7f03002b;
-        public static final int select_dialog_singlechoice_material=0x7f03002c;
-        public static final int splash_layout=0x7f03002d;
-        public static final int station_layout=0x7f03002e;
-        public static final int support_simple_spinner_dropdown_item=0x7f03002f;
-        public static final int test_layout=0x7f030030;
+        public static final int alert_layout=0x7f03001c;
+        public static final int autocomplete_layout=0x7f03001d;
+        public static final int infowindow_layout=0x7f03001e;
+        public static final int marker_layout=0x7f03001f;
+        public static final int mr_media_route_chooser_dialog=0x7f030020;
+        public static final int mr_media_route_controller_material_dialog_b=0x7f030021;
+        public static final int mr_media_route_list_item=0x7f030022;
+        public static final int notification_media_action=0x7f030023;
+        public static final int notification_media_cancel_action=0x7f030024;
+        public static final int notification_template_big_media=0x7f030025;
+        public static final int notification_template_big_media_narrow=0x7f030026;
+        public static final int notification_template_lines=0x7f030027;
+        public static final int notification_template_media=0x7f030028;
+        public static final int notification_template_part_chronometer=0x7f030029;
+        public static final int notification_template_part_time=0x7f03002a;
+        public static final int select_dialog_item_material=0x7f03002b;
+        public static final int select_dialog_multichoice_material=0x7f03002c;
+        public static final int select_dialog_singlechoice_material=0x7f03002d;
+        public static final int splash_layout=0x7f03002e;
+        public static final int station_layout=0x7f03002f;
+        public static final int support_simple_spinner_dropdown_item=0x7f030030;
+        public static final int test_layout=0x7f030031;
     }
     public static final class menu {
         public static final int display_message=0x7f0d0000;
@@ -2820,33 +2836,33 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionBar_background edu.umb.cs443:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundSplit edu.umb.cs443:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundStacked edu.umb.cs443:backgroundStacked}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetEnd edu.umb.cs443:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetLeft edu.umb.cs443:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetRight edu.umb.cs443:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetStart edu.umb.cs443:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_customNavigationLayout edu.umb.cs443:customNavigationLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_displayOptions edu.umb.cs443:displayOptions}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_divider edu.umb.cs443:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_elevation edu.umb.cs443:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_height edu.umb.cs443:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_hideOnContentScroll edu.umb.cs443:hideOnContentScroll}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeAsUpIndicator edu.umb.cs443:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeLayout edu.umb.cs443:homeLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_icon edu.umb.cs443:icon}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle edu.umb.cs443:indeterminateProgressStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_itemPadding edu.umb.cs443:itemPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_logo edu.umb.cs443:logo}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_navigationMode edu.umb.cs443:navigationMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_popupTheme edu.umb.cs443:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarPadding edu.umb.cs443:progressBarPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarStyle edu.umb.cs443:progressBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitle edu.umb.cs443:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitleTextStyle edu.umb.cs443:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_title edu.umb.cs443:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_titleTextStyle edu.umb.cs443:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_background edu.umb.subway:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundSplit edu.umb.subway:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundStacked edu.umb.subway:backgroundStacked}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetEnd edu.umb.subway:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetLeft edu.umb.subway:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetRight edu.umb.subway:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetStart edu.umb.subway:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_customNavigationLayout edu.umb.subway:customNavigationLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_displayOptions edu.umb.subway:displayOptions}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_divider edu.umb.subway:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_elevation edu.umb.subway:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_height edu.umb.subway:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_hideOnContentScroll edu.umb.subway:hideOnContentScroll}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeAsUpIndicator edu.umb.subway:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeLayout edu.umb.subway:homeLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_icon edu.umb.subway:icon}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle edu.umb.subway:indeterminateProgressStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_itemPadding edu.umb.subway:itemPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_logo edu.umb.subway:logo}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_navigationMode edu.umb.subway:navigationMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_popupTheme edu.umb.subway:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarPadding edu.umb.subway:progressBarPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarStyle edu.umb.subway:progressBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitle edu.umb.subway:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitleTextStyle edu.umb.subway:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_title edu.umb.subway:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_titleTextStyle edu.umb.subway:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionBar_background
            @see #ActionBar_backgroundSplit
@@ -2886,17 +2902,17 @@ containing a value of this type.
             0x7f010021, 0x7f010022, 0x7f01009c
         };
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#background}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#background}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:background
+          @attr name edu.umb.subway:background
         */
         public static final int ActionBar_background = 10;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2904,11 +2920,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name edu.umb.cs443:backgroundSplit
+          @attr name edu.umb.subway:backgroundSplit
         */
         public static final int ActionBar_backgroundSplit = 12;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#backgroundStacked}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#backgroundStacked}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2916,11 +2932,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name edu.umb.cs443:backgroundStacked
+          @attr name edu.umb.subway:backgroundStacked
         */
         public static final int ActionBar_backgroundStacked = 11;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2932,11 +2948,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:contentInsetEnd
+          @attr name edu.umb.subway:contentInsetEnd
         */
         public static final int ActionBar_contentInsetEnd = 21;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2948,11 +2964,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:contentInsetLeft
+          @attr name edu.umb.subway:contentInsetLeft
         */
         public static final int ActionBar_contentInsetLeft = 22;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2964,11 +2980,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:contentInsetRight
+          @attr name edu.umb.subway:contentInsetRight
         */
         public static final int ActionBar_contentInsetRight = 23;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2980,21 +2996,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:contentInsetStart
+          @attr name edu.umb.subway:contentInsetStart
         */
         public static final int ActionBar_contentInsetStart = 20;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#customNavigationLayout}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#customNavigationLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:customNavigationLayout
+          @attr name edu.umb.subway:customNavigationLayout
         */
         public static final int ActionBar_customNavigationLayout = 13;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#displayOptions}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#displayOptions}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3012,21 +3028,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>showCustom</code></td><td>0x10</td><td></td></tr>
 <tr><td><code>disableHome</code></td><td>0x20</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:displayOptions
+          @attr name edu.umb.subway:displayOptions
         */
         public static final int ActionBar_displayOptions = 3;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#divider}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#divider}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:divider
+          @attr name edu.umb.subway:divider
         */
         public static final int ActionBar_divider = 9;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#elevation}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#elevation}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3038,11 +3054,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:elevation
+          @attr name edu.umb.subway:elevation
         */
         public static final int ActionBar_elevation = 24;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#height}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#height}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3054,11 +3070,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:height
+          @attr name edu.umb.subway:height
         */
         public static final int ActionBar_height = 0;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#hideOnContentScroll}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#hideOnContentScroll}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3068,51 +3084,51 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:hideOnContentScroll
+          @attr name edu.umb.subway:hideOnContentScroll
         */
         public static final int ActionBar_hideOnContentScroll = 19;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:homeAsUpIndicator
+          @attr name edu.umb.subway:homeAsUpIndicator
         */
         public static final int ActionBar_homeAsUpIndicator = 26;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#homeLayout}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#homeLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:homeLayout
+          @attr name edu.umb.subway:homeLayout
         */
         public static final int ActionBar_homeLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#icon}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#icon}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:icon
+          @attr name edu.umb.subway:icon
         */
         public static final int ActionBar_icon = 7;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#indeterminateProgressStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#indeterminateProgressStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:indeterminateProgressStyle
+          @attr name edu.umb.subway:indeterminateProgressStyle
         */
         public static final int ActionBar_indeterminateProgressStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#itemPadding}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#itemPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3124,21 +3140,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:itemPadding
+          @attr name edu.umb.subway:itemPadding
         */
         public static final int ActionBar_itemPadding = 18;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#logo}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#logo}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:logo
+          @attr name edu.umb.subway:logo
         */
         public static final int ActionBar_logo = 8;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#navigationMode}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#navigationMode}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3152,21 +3168,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>listMode</code></td><td>1</td><td></td></tr>
 <tr><td><code>tabMode</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:navigationMode
+          @attr name edu.umb.subway:navigationMode
         */
         public static final int ActionBar_navigationMode = 2;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#popupTheme}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:popupTheme
+          @attr name edu.umb.subway:popupTheme
         */
         public static final int ActionBar_popupTheme = 25;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#progressBarPadding}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#progressBarPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3178,21 +3194,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:progressBarPadding
+          @attr name edu.umb.subway:progressBarPadding
         */
         public static final int ActionBar_progressBarPadding = 17;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#progressBarStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#progressBarStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:progressBarStyle
+          @attr name edu.umb.subway:progressBarStyle
         */
         public static final int ActionBar_progressBarStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#subtitle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3202,21 +3218,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:subtitle
+          @attr name edu.umb.subway:subtitle
         */
         public static final int ActionBar_subtitle = 4;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:subtitleTextStyle
+          @attr name edu.umb.subway:subtitleTextStyle
         */
         public static final int ActionBar_subtitleTextStyle = 6;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#title}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#title}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3226,17 +3242,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:title
+          @attr name edu.umb.subway:title
         */
         public static final int ActionBar_title = 1;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:titleTextStyle
+          @attr name edu.umb.subway:titleTextStyle
         */
         public static final int ActionBar_titleTextStyle = 5;
         /** Attributes that can be used with a ActionBarLayout.
@@ -3288,12 +3304,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionMode_background edu.umb.cs443:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_backgroundSplit edu.umb.cs443:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_closeItemLayout edu.umb.cs443:closeItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_height edu.umb.cs443:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_subtitleTextStyle edu.umb.cs443:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_titleTextStyle edu.umb.cs443:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_background edu.umb.subway:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_backgroundSplit edu.umb.subway:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_closeItemLayout edu.umb.subway:closeItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_height edu.umb.subway:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_subtitleTextStyle edu.umb.subway:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_titleTextStyle edu.umb.subway:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionMode_background
            @see #ActionMode_backgroundSplit
@@ -3307,17 +3323,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010015, 0x7f010023
         };
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#background}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#background}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:background
+          @attr name edu.umb.subway:background
         */
         public static final int ActionMode_background = 3;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -3325,21 +3341,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name edu.umb.cs443:backgroundSplit
+          @attr name edu.umb.subway:backgroundSplit
         */
         public static final int ActionMode_backgroundSplit = 4;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#closeItemLayout}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#closeItemLayout}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:closeItemLayout
+          @attr name edu.umb.subway:closeItemLayout
         */
         public static final int ActionMode_closeItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#height}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#height}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -3351,27 +3367,27 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:height
+          @attr name edu.umb.subway:height
         */
         public static final int ActionMode_height = 0;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:subtitleTextStyle
+          @attr name edu.umb.subway:subtitleTextStyle
         */
         public static final int ActionMode_subtitleTextStyle = 2;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:titleTextStyle
+          @attr name edu.umb.subway:titleTextStyle
         */
         public static final int ActionMode_titleTextStyle = 1;
         /** Attributes that can be used with a ActivityChooserView.
@@ -3380,8 +3396,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable edu.umb.cs443:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActivityChooserView_initialActivityCount edu.umb.cs443:initialActivityCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable edu.umb.subway:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_initialActivityCount edu.umb.subway:initialActivityCount}</code></td><td></td></tr>
            </table>
            @see #ActivityChooserView_expandActivityOverflowButtonDrawable
            @see #ActivityChooserView_initialActivityCount
@@ -3390,17 +3406,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010024, 0x7f010025
         };
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#expandActivityOverflowButtonDrawable}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#expandActivityOverflowButtonDrawable}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:expandActivityOverflowButtonDrawable
+          @attr name edu.umb.subway:expandActivityOverflowButtonDrawable
         */
         public static final int ActivityChooserView_expandActivityOverflowButtonDrawable = 1;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#initialActivityCount}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#initialActivityCount}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
@@ -3410,7 +3426,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:initialActivityCount
+          @attr name edu.umb.subway:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
         /** Attributes that can be used with a AdsAttrs.
@@ -3419,9 +3435,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AdsAttrs_adSize edu.umb.cs443:adSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #AdsAttrs_adSizes edu.umb.cs443:adSizes}</code></td><td></td></tr>
-           <tr><td><code>{@link #AdsAttrs_adUnitId edu.umb.cs443:adUnitId}</code></td><td></td></tr>
+           <tr><td><code>{@link #AdsAttrs_adSize edu.umb.subway:adSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #AdsAttrs_adSizes edu.umb.subway:adSizes}</code></td><td></td></tr>
+           <tr><td><code>{@link #AdsAttrs_adUnitId edu.umb.subway:adUnitId}</code></td><td></td></tr>
            </table>
            @see #AdsAttrs_adSize
            @see #AdsAttrs_adSizes
@@ -3431,7 +3447,7 @@ containing a value of this type.
             0x7f010026, 0x7f010027, 0x7f010028
         };
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#adSize}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#adSize}
           attribute's value can be found in the {@link #AdsAttrs} array.
 
 
@@ -3441,11 +3457,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:adSize
+          @attr name edu.umb.subway:adSize
         */
         public static final int AdsAttrs_adSize = 0;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#adSizes}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#adSizes}
           attribute's value can be found in the {@link #AdsAttrs} array.
 
 
@@ -3455,11 +3471,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:adSizes
+          @attr name edu.umb.subway:adSizes
         */
         public static final int AdsAttrs_adSizes = 1;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#adUnitId}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#adUnitId}
           attribute's value can be found in the {@link #AdsAttrs} array.
 
 
@@ -3469,7 +3485,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:adUnitId
+          @attr name edu.umb.subway:adUnitId
         */
         public static final int AdsAttrs_adUnitId = 2;
         /** Attributes that can be used with a AlertDialog.
@@ -3479,11 +3495,11 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AlertDialog_android_layout android:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout edu.umb.cs443:buttonPanelSideLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listItemLayout edu.umb.cs443:listItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listLayout edu.umb.cs443:listLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout edu.umb.cs443:multiChoiceItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout edu.umb.cs443:singleChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout edu.umb.subway:buttonPanelSideLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listItemLayout edu.umb.subway:listItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listLayout edu.umb.subway:listLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout edu.umb.subway:multiChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout edu.umb.subway:singleChoiceItemLayout}</code></td><td></td></tr>
            </table>
            @see #AlertDialog_android_layout
            @see #AlertDialog_buttonPanelSideLayout
@@ -3503,53 +3519,53 @@ containing a value of this type.
         */
         public static final int AlertDialog_android_layout = 0;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#buttonPanelSideLayout}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#buttonPanelSideLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:buttonPanelSideLayout
+          @attr name edu.umb.subway:buttonPanelSideLayout
         */
         public static final int AlertDialog_buttonPanelSideLayout = 1;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#listItemLayout}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#listItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:listItemLayout
+          @attr name edu.umb.subway:listItemLayout
         */
         public static final int AlertDialog_listItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#listLayout}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#listLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:listLayout
+          @attr name edu.umb.subway:listLayout
         */
         public static final int AlertDialog_listLayout = 2;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#multiChoiceItemLayout}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#multiChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:multiChoiceItemLayout
+          @attr name edu.umb.subway:multiChoiceItemLayout
         */
         public static final int AlertDialog_multiChoiceItemLayout = 3;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#singleChoiceItemLayout}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#singleChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:singleChoiceItemLayout
+          @attr name edu.umb.subway:singleChoiceItemLayout
         */
         public static final int AlertDialog_singleChoiceItemLayout = 4;
         /** Attributes that can be used with a AppCompatTextView.
@@ -3559,7 +3575,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AppCompatTextView_android_textAppearance android:textAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTextView_textAllCaps edu.umb.cs443:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTextView_textAllCaps edu.umb.subway:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #AppCompatTextView_android_textAppearance
            @see #AppCompatTextView_textAllCaps
@@ -3574,14 +3590,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AppCompatTextView_android_textAppearance = 0;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#textAllCaps}
           attribute's value can be found in the {@link #AppCompatTextView} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name edu.umb.cs443:textAllCaps
+          @attr name edu.umb.subway:textAllCaps
         */
         public static final int AppCompatTextView_textAllCaps = 1;
         /** Attributes that can be used with a ButtonBarLayout.
@@ -3590,7 +3606,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ButtonBarLayout_allowStacking edu.umb.cs443:allowStacking}</code></td><td></td></tr>
+           <tr><td><code>{@link #ButtonBarLayout_allowStacking edu.umb.subway:allowStacking}</code></td><td></td></tr>
            </table>
            @see #ButtonBarLayout_allowStacking
          */
@@ -3598,7 +3614,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01002f
         };
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#allowStacking}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#allowStacking}
           attribute's value can be found in the {@link #ButtonBarLayout} array.
 
 
@@ -3608,7 +3624,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:allowStacking
+          @attr name edu.umb.subway:allowStacking
         */
         public static final int ButtonBarLayout_allowStacking = 0;
         /** Attributes that can be used with a CompoundButton.
@@ -3618,8 +3634,8 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #CompoundButton_android_button android:button}</code></td><td></td></tr>
-           <tr><td><code>{@link #CompoundButton_buttonTint edu.umb.cs443:buttonTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #CompoundButton_buttonTintMode edu.umb.cs443:buttonTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #CompoundButton_buttonTint edu.umb.subway:buttonTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #CompoundButton_buttonTintMode edu.umb.subway:buttonTintMode}</code></td><td></td></tr>
            </table>
            @see #CompoundButton_android_button
            @see #CompoundButton_buttonTint
@@ -3635,7 +3651,7 @@ containing a value of this type.
         */
         public static final int CompoundButton_android_button = 0;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#buttonTint}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#buttonTint}
           attribute's value can be found in the {@link #CompoundButton} array.
 
 
@@ -3646,11 +3662,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:buttonTint
+          @attr name edu.umb.subway:buttonTint
         */
         public static final int CompoundButton_buttonTint = 1;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#buttonTintMode}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#buttonTintMode}
           attribute's value can be found in the {@link #CompoundButton} array.
 
 
@@ -3666,7 +3682,7 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:buttonTintMode
+          @attr name edu.umb.subway:buttonTintMode
         */
         public static final int CompoundButton_buttonTintMode = 2;
         /** Attributes that can be used with a CustomWalletTheme.
@@ -3675,7 +3691,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CustomWalletTheme_windowTransitionStyle edu.umb.cs443:windowTransitionStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #CustomWalletTheme_windowTransitionStyle edu.umb.subway:windowTransitionStyle}</code></td><td></td></tr>
            </table>
            @see #CustomWalletTheme_windowTransitionStyle
          */
@@ -3683,7 +3699,7 @@ containing a value of this type.
             0x7f010032
         };
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#windowTransitionStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#windowTransitionStyle}
           attribute's value can be found in the {@link #CustomWalletTheme} array.
 
 
@@ -3696,7 +3712,7 @@ containing a value of this type.
 <tr><td><code>slide</code></td><td>1</td><td></td></tr>
 <tr><td><code>none</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:windowTransitionStyle
+          @attr name edu.umb.subway:windowTransitionStyle
         */
         public static final int CustomWalletTheme_windowTransitionStyle = 0;
         /** Attributes that can be used with a DrawerArrowToggle.
@@ -3705,14 +3721,14 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength edu.umb.cs443:arrowHeadLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength edu.umb.cs443:arrowShaftLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_barLength edu.umb.cs443:barLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_color edu.umb.cs443:color}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_drawableSize edu.umb.cs443:drawableSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars edu.umb.cs443:gapBetweenBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_spinBars edu.umb.cs443:spinBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_thickness edu.umb.cs443:thickness}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength edu.umb.subway:arrowHeadLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength edu.umb.subway:arrowShaftLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_barLength edu.umb.subway:barLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_color edu.umb.subway:color}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_drawableSize edu.umb.subway:drawableSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars edu.umb.subway:gapBetweenBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_spinBars edu.umb.subway:spinBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_thickness edu.umb.subway:thickness}</code></td><td></td></tr>
            </table>
            @see #DrawerArrowToggle_arrowHeadLength
            @see #DrawerArrowToggle_arrowShaftLength
@@ -3728,7 +3744,7 @@ containing a value of this type.
             0x7f010037, 0x7f010038, 0x7f010039, 0x7f01003a
         };
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#arrowHeadLength}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#arrowHeadLength}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3740,11 +3756,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:arrowHeadLength
+          @attr name edu.umb.subway:arrowHeadLength
         */
         public static final int DrawerArrowToggle_arrowHeadLength = 4;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#arrowShaftLength}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#arrowShaftLength}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3756,11 +3772,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:arrowShaftLength
+          @attr name edu.umb.subway:arrowShaftLength
         */
         public static final int DrawerArrowToggle_arrowShaftLength = 5;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#barLength}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#barLength}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3772,11 +3788,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:barLength
+          @attr name edu.umb.subway:barLength
         */
         public static final int DrawerArrowToggle_barLength = 6;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#color}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#color}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3787,11 +3803,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:color
+          @attr name edu.umb.subway:color
         */
         public static final int DrawerArrowToggle_color = 0;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#drawableSize}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#drawableSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3803,11 +3819,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:drawableSize
+          @attr name edu.umb.subway:drawableSize
         */
         public static final int DrawerArrowToggle_drawableSize = 2;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#gapBetweenBars}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#gapBetweenBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3819,11 +3835,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:gapBetweenBars
+          @attr name edu.umb.subway:gapBetweenBars
         */
         public static final int DrawerArrowToggle_gapBetweenBars = 3;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#spinBars}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#spinBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3833,11 +3849,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:spinBars
+          @attr name edu.umb.subway:spinBars
         */
         public static final int DrawerArrowToggle_spinBars = 1;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#thickness}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#thickness}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3849,7 +3865,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:thickness
+          @attr name edu.umb.subway:thickness
         */
         public static final int DrawerArrowToggle_thickness = 7;
         /** Attributes that can be used with a LinearLayoutCompat.
@@ -3863,10 +3879,10 @@ containing a value of this type.
            <tr><td><code>{@link #LinearLayoutCompat_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_orientation android:orientation}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_weightSum android:weightSum}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_divider edu.umb.cs443:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding edu.umb.cs443:dividerPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild edu.umb.cs443:measureWithLargestChild}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_showDividers edu.umb.cs443:showDividers}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_divider edu.umb.subway:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding edu.umb.subway:dividerPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild edu.umb.subway:measureWithLargestChild}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_showDividers edu.umb.subway:showDividers}</code></td><td></td></tr>
            </table>
            @see #LinearLayoutCompat_android_baselineAligned
            @see #LinearLayoutCompat_android_baselineAlignedChildIndex
@@ -3914,17 +3930,17 @@ containing a value of this type.
         */
         public static final int LinearLayoutCompat_android_weightSum = 4;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#divider}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#divider}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:divider
+          @attr name edu.umb.subway:divider
         */
         public static final int LinearLayoutCompat_divider = 5;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#dividerPadding}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#dividerPadding}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -3936,11 +3952,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:dividerPadding
+          @attr name edu.umb.subway:dividerPadding
         */
         public static final int LinearLayoutCompat_dividerPadding = 8;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#measureWithLargestChild}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#measureWithLargestChild}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -3950,11 +3966,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:measureWithLargestChild
+          @attr name edu.umb.subway:measureWithLargestChild
         */
         public static final int LinearLayoutCompat_measureWithLargestChild = 6;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#showDividers}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#showDividers}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -3969,7 +3985,7 @@ containing a value of this type.
 <tr><td><code>middle</code></td><td>2</td><td></td></tr>
 <tr><td><code>end</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:showDividers
+          @attr name edu.umb.subway:showDividers
         */
         public static final int LinearLayoutCompat_showDividers = 7;
         /** Attributes that can be used with a LinearLayoutCompat_Layout.
@@ -4048,9 +4064,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #LoadingImageView_circleCrop edu.umb.cs443:circleCrop}</code></td><td></td></tr>
-           <tr><td><code>{@link #LoadingImageView_imageAspectRatio edu.umb.cs443:imageAspectRatio}</code></td><td></td></tr>
-           <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust edu.umb.cs443:imageAspectRatioAdjust}</code></td><td></td></tr>
+           <tr><td><code>{@link #LoadingImageView_circleCrop edu.umb.subway:circleCrop}</code></td><td></td></tr>
+           <tr><td><code>{@link #LoadingImageView_imageAspectRatio edu.umb.subway:imageAspectRatio}</code></td><td></td></tr>
+           <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust edu.umb.subway:imageAspectRatioAdjust}</code></td><td></td></tr>
            </table>
            @see #LoadingImageView_circleCrop
            @see #LoadingImageView_imageAspectRatio
@@ -4060,7 +4076,7 @@ containing a value of this type.
             0x7f01003e, 0x7f01003f, 0x7f010040
         };
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#circleCrop}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#circleCrop}
           attribute's value can be found in the {@link #LoadingImageView} array.
 
 
@@ -4070,11 +4086,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:circleCrop
+          @attr name edu.umb.subway:circleCrop
         */
         public static final int LoadingImageView_circleCrop = 2;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#imageAspectRatio}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#imageAspectRatio}
           attribute's value can be found in the {@link #LoadingImageView} array.
 
 
@@ -4084,11 +4100,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:imageAspectRatio
+          @attr name edu.umb.subway:imageAspectRatio
         */
         public static final int LoadingImageView_imageAspectRatio = 1;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#imageAspectRatioAdjust}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#imageAspectRatioAdjust}
           attribute's value can be found in the {@link #LoadingImageView} array.
 
 
@@ -4102,7 +4118,7 @@ containing a value of this type.
 <tr><td><code>adjust_width</code></td><td>1</td><td></td></tr>
 <tr><td><code>adjust_height</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:imageAspectRatioAdjust
+          @attr name edu.umb.subway:imageAspectRatioAdjust
         */
         public static final int LoadingImageView_imageAspectRatioAdjust = 0;
         /** Attributes that can be used with a MapAttrs.
@@ -4111,23 +4127,23 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MapAttrs_ambientEnabled edu.umb.cs443:ambientEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraBearing edu.umb.cs443:cameraBearing}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLat edu.umb.cs443:cameraTargetLat}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLng edu.umb.cs443:cameraTargetLng}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTilt edu.umb.cs443:cameraTilt}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraZoom edu.umb.cs443:cameraZoom}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_liteMode edu.umb.cs443:liteMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_mapType edu.umb.cs443:mapType}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiCompass edu.umb.cs443:uiCompass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiMapToolbar edu.umb.cs443:uiMapToolbar}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiRotateGestures edu.umb.cs443:uiRotateGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiScrollGestures edu.umb.cs443:uiScrollGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiTiltGestures edu.umb.cs443:uiTiltGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomControls edu.umb.cs443:uiZoomControls}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomGestures edu.umb.cs443:uiZoomGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_useViewLifecycle edu.umb.cs443:useViewLifecycle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_zOrderOnTop edu.umb.cs443:zOrderOnTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_ambientEnabled edu.umb.subway:ambientEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraBearing edu.umb.subway:cameraBearing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLat edu.umb.subway:cameraTargetLat}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLng edu.umb.subway:cameraTargetLng}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTilt edu.umb.subway:cameraTilt}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraZoom edu.umb.subway:cameraZoom}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_liteMode edu.umb.subway:liteMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_mapType edu.umb.subway:mapType}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiCompass edu.umb.subway:uiCompass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiMapToolbar edu.umb.subway:uiMapToolbar}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiRotateGestures edu.umb.subway:uiRotateGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiScrollGestures edu.umb.subway:uiScrollGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiTiltGestures edu.umb.subway:uiTiltGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomControls edu.umb.subway:uiZoomControls}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomGestures edu.umb.subway:uiZoomGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_useViewLifecycle edu.umb.subway:useViewLifecycle}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_zOrderOnTop edu.umb.subway:zOrderOnTop}</code></td><td></td></tr>
            </table>
            @see #MapAttrs_ambientEnabled
            @see #MapAttrs_cameraBearing
@@ -4155,7 +4171,7 @@ containing a value of this type.
             0x7f010051
         };
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#ambientEnabled}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#ambientEnabled}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4165,11 +4181,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:ambientEnabled
+          @attr name edu.umb.subway:ambientEnabled
         */
         public static final int MapAttrs_ambientEnabled = 16;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#cameraBearing}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#cameraBearing}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4179,11 +4195,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:cameraBearing
+          @attr name edu.umb.subway:cameraBearing
         */
         public static final int MapAttrs_cameraBearing = 1;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#cameraTargetLat}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#cameraTargetLat}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4193,11 +4209,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:cameraTargetLat
+          @attr name edu.umb.subway:cameraTargetLat
         */
         public static final int MapAttrs_cameraTargetLat = 2;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#cameraTargetLng}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#cameraTargetLng}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4207,11 +4223,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:cameraTargetLng
+          @attr name edu.umb.subway:cameraTargetLng
         */
         public static final int MapAttrs_cameraTargetLng = 3;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#cameraTilt}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#cameraTilt}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4221,11 +4237,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:cameraTilt
+          @attr name edu.umb.subway:cameraTilt
         */
         public static final int MapAttrs_cameraTilt = 4;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#cameraZoom}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#cameraZoom}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4235,11 +4251,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:cameraZoom
+          @attr name edu.umb.subway:cameraZoom
         */
         public static final int MapAttrs_cameraZoom = 5;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#liteMode}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#liteMode}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4249,11 +4265,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:liteMode
+          @attr name edu.umb.subway:liteMode
         */
         public static final int MapAttrs_liteMode = 6;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#mapType}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#mapType}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4269,11 +4285,11 @@ containing a value of this type.
 <tr><td><code>terrain</code></td><td>3</td><td></td></tr>
 <tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:mapType
+          @attr name edu.umb.subway:mapType
         */
         public static final int MapAttrs_mapType = 0;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#uiCompass}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#uiCompass}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4283,11 +4299,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:uiCompass
+          @attr name edu.umb.subway:uiCompass
         */
         public static final int MapAttrs_uiCompass = 7;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#uiMapToolbar}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#uiMapToolbar}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4297,11 +4313,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:uiMapToolbar
+          @attr name edu.umb.subway:uiMapToolbar
         */
         public static final int MapAttrs_uiMapToolbar = 15;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#uiRotateGestures}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#uiRotateGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4311,11 +4327,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:uiRotateGestures
+          @attr name edu.umb.subway:uiRotateGestures
         */
         public static final int MapAttrs_uiRotateGestures = 8;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#uiScrollGestures}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#uiScrollGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4325,11 +4341,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:uiScrollGestures
+          @attr name edu.umb.subway:uiScrollGestures
         */
         public static final int MapAttrs_uiScrollGestures = 9;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#uiTiltGestures}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#uiTiltGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4339,11 +4355,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:uiTiltGestures
+          @attr name edu.umb.subway:uiTiltGestures
         */
         public static final int MapAttrs_uiTiltGestures = 10;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#uiZoomControls}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#uiZoomControls}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4353,11 +4369,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:uiZoomControls
+          @attr name edu.umb.subway:uiZoomControls
         */
         public static final int MapAttrs_uiZoomControls = 11;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#uiZoomGestures}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#uiZoomGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4367,11 +4383,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:uiZoomGestures
+          @attr name edu.umb.subway:uiZoomGestures
         */
         public static final int MapAttrs_uiZoomGestures = 12;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#useViewLifecycle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#useViewLifecycle}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4381,11 +4397,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:useViewLifecycle
+          @attr name edu.umb.subway:useViewLifecycle
         */
         public static final int MapAttrs_useViewLifecycle = 13;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#zOrderOnTop}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#zOrderOnTop}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -4395,7 +4411,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:zOrderOnTop
+          @attr name edu.umb.subway:zOrderOnTop
         */
         public static final int MapAttrs_zOrderOnTop = 14;
         /** Attributes that can be used with a MediaRouteButton.
@@ -4406,7 +4422,7 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #MediaRouteButton_android_minHeight android:minHeight}</code></td><td></td></tr>
            <tr><td><code>{@link #MediaRouteButton_android_minWidth android:minWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #MediaRouteButton_externalRouteEnabledDrawable edu.umb.cs443:externalRouteEnabledDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #MediaRouteButton_externalRouteEnabledDrawable edu.umb.subway:externalRouteEnabledDrawable}</code></td><td></td></tr>
            </table>
            @see #MediaRouteButton_android_minHeight
            @see #MediaRouteButton_android_minWidth
@@ -4428,13 +4444,13 @@ containing a value of this type.
         */
         public static final int MediaRouteButton_android_minWidth = 0;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#externalRouteEnabledDrawable}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#externalRouteEnabledDrawable}
           attribute's value can be found in the {@link #MediaRouteButton} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:externalRouteEnabledDrawable
+          @attr name edu.umb.subway:externalRouteEnabledDrawable
         */
         public static final int MediaRouteButton_externalRouteEnabledDrawable = 2;
         /** Attributes that can be used with a MenuGroup.
@@ -4503,9 +4519,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MenuItem_actionLayout edu.umb.cs443:actionLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionProviderClass edu.umb.cs443:actionProviderClass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionViewClass edu.umb.cs443:actionViewClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionLayout edu.umb.subway:actionLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionProviderClass edu.umb.subway:actionProviderClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionViewClass edu.umb.subway:actionViewClass}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_alphabeticShortcut android:alphabeticShortcut}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checked android:checked}</code></td><td></td></tr>
@@ -4519,7 +4535,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #MenuItem_android_title android:title}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_titleCondensed android:titleCondensed}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_visible android:visible}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_showAsAction edu.umb.cs443:showAsAction}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_showAsAction edu.umb.subway:showAsAction}</code></td><td></td></tr>
            </table>
            @see #MenuItem_actionLayout
            @see #MenuItem_actionProviderClass
@@ -4547,17 +4563,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010056
         };
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionLayout}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionLayout}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionLayout
+          @attr name edu.umb.subway:actionLayout
         */
         public static final int MenuItem_actionLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionProviderClass}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionProviderClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -4567,11 +4583,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:actionProviderClass
+          @attr name edu.umb.subway:actionProviderClass
         */
         public static final int MenuItem_actionProviderClass = 16;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionViewClass}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionViewClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -4581,7 +4597,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:actionViewClass
+          @attr name edu.umb.subway:actionViewClass
         */
         public static final int MenuItem_actionViewClass = 15;
         /**
@@ -4663,7 +4679,7 @@ containing a value of this type.
         */
         public static final int MenuItem_android_visible = 4;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#showAsAction}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#showAsAction}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -4679,7 +4695,7 @@ containing a value of this type.
 <tr><td><code>withText</code></td><td>4</td><td></td></tr>
 <tr><td><code>collapseActionView</code></td><td>8</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:showAsAction
+          @attr name edu.umb.subway:showAsAction
         */
         public static final int MenuItem_showAsAction = 13;
         /** Attributes that can be used with a MenuView.
@@ -4695,7 +4711,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuView_android_itemTextAppearance android:itemTextAppearance}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_verticalDivider android:verticalDivider}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuView_preserveIconSpacing edu.umb.cs443:preserveIconSpacing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuView_preserveIconSpacing edu.umb.subway:preserveIconSpacing}</code></td><td></td></tr>
            </table>
            @see #MenuView_android_headerBackground
            @see #MenuView_android_horizontalDivider
@@ -4753,7 +4769,7 @@ containing a value of this type.
         */
         public static final int MenuView_android_windowAnimationStyle = 0;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#preserveIconSpacing}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#preserveIconSpacing}
           attribute's value can be found in the {@link #MenuView} array.
 
 
@@ -4763,7 +4779,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:preserveIconSpacing
+          @attr name edu.umb.subway:preserveIconSpacing
         */
         public static final int MenuView_preserveIconSpacing = 7;
         /** Attributes that can be used with a PopupWindow.
@@ -4773,7 +4789,7 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #PopupWindow_android_popupBackground android:popupBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #PopupWindow_overlapAnchor edu.umb.cs443:overlapAnchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindow_overlapAnchor edu.umb.subway:overlapAnchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindow_android_popupBackground
            @see #PopupWindow_overlapAnchor
@@ -4788,7 +4804,7 @@ containing a value of this type.
         */
         public static final int PopupWindow_android_popupBackground = 0;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#overlapAnchor}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#overlapAnchor}
           attribute's value can be found in the {@link #PopupWindow} array.
 
 
@@ -4798,7 +4814,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:overlapAnchor
+          @attr name edu.umb.subway:overlapAnchor
         */
         public static final int PopupWindow_overlapAnchor = 1;
         /** Attributes that can be used with a PopupWindowBackgroundState.
@@ -4807,7 +4823,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor edu.umb.cs443:state_above_anchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor edu.umb.subway:state_above_anchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindowBackgroundState_state_above_anchor
          */
@@ -4815,7 +4831,7 @@ containing a value of this type.
             0x7f010059
         };
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#state_above_anchor}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#state_above_anchor}
           attribute's value can be found in the {@link #PopupWindowBackgroundState} array.
 
 
@@ -4825,7 +4841,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:state_above_anchor
+          @attr name edu.umb.subway:state_above_anchor
         */
         public static final int PopupWindowBackgroundState_state_above_anchor = 0;
         /** Attributes that can be used with a SearchView.
@@ -4838,19 +4854,19 @@ containing a value of this type.
            <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_closeIcon edu.umb.cs443:closeIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_commitIcon edu.umb.cs443:commitIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_defaultQueryHint edu.umb.cs443:defaultQueryHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_goIcon edu.umb.cs443:goIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_iconifiedByDefault edu.umb.cs443:iconifiedByDefault}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_layout edu.umb.cs443:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryBackground edu.umb.cs443:queryBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryHint edu.umb.cs443:queryHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_searchHintIcon edu.umb.cs443:searchHintIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_searchIcon edu.umb.cs443:searchIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_submitBackground edu.umb.cs443:submitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_suggestionRowLayout edu.umb.cs443:suggestionRowLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_voiceIcon edu.umb.cs443:voiceIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_closeIcon edu.umb.subway:closeIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_commitIcon edu.umb.subway:commitIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_defaultQueryHint edu.umb.subway:defaultQueryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_goIcon edu.umb.subway:goIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_iconifiedByDefault edu.umb.subway:iconifiedByDefault}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_layout edu.umb.subway:layout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryBackground edu.umb.subway:queryBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryHint edu.umb.subway:queryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_searchHintIcon edu.umb.subway:searchHintIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_searchIcon edu.umb.subway:searchIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_submitBackground edu.umb.subway:submitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_suggestionRowLayout edu.umb.subway:suggestionRowLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_voiceIcon edu.umb.subway:voiceIcon}</code></td><td></td></tr>
            </table>
            @see #SearchView_android_focusable
            @see #SearchView_android_imeOptions
@@ -4902,27 +4918,27 @@ containing a value of this type.
         */
         public static final int SearchView_android_maxWidth = 1;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#closeIcon}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#closeIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:closeIcon
+          @attr name edu.umb.subway:closeIcon
         */
         public static final int SearchView_closeIcon = 8;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#commitIcon}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#commitIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:commitIcon
+          @attr name edu.umb.subway:commitIcon
         */
         public static final int SearchView_commitIcon = 13;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#defaultQueryHint}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#defaultQueryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4932,21 +4948,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:defaultQueryHint
+          @attr name edu.umb.subway:defaultQueryHint
         */
         public static final int SearchView_defaultQueryHint = 7;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#goIcon}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#goIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:goIcon
+          @attr name edu.umb.subway:goIcon
         */
         public static final int SearchView_goIcon = 9;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#iconifiedByDefault}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#iconifiedByDefault}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4956,31 +4972,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:iconifiedByDefault
+          @attr name edu.umb.subway:iconifiedByDefault
         */
         public static final int SearchView_iconifiedByDefault = 5;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#layout}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#layout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:layout
+          @attr name edu.umb.subway:layout
         */
         public static final int SearchView_layout = 4;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#queryBackground}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#queryBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:queryBackground
+          @attr name edu.umb.subway:queryBackground
         */
         public static final int SearchView_queryBackground = 15;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#queryHint}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#queryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -4990,57 +5006,57 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:queryHint
+          @attr name edu.umb.subway:queryHint
         */
         public static final int SearchView_queryHint = 6;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#searchHintIcon}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#searchHintIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:searchHintIcon
+          @attr name edu.umb.subway:searchHintIcon
         */
         public static final int SearchView_searchHintIcon = 11;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#searchIcon}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#searchIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:searchIcon
+          @attr name edu.umb.subway:searchIcon
         */
         public static final int SearchView_searchIcon = 10;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#submitBackground}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#submitBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:submitBackground
+          @attr name edu.umb.subway:submitBackground
         */
         public static final int SearchView_submitBackground = 16;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#suggestionRowLayout}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#suggestionRowLayout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:suggestionRowLayout
+          @attr name edu.umb.subway:suggestionRowLayout
         */
         public static final int SearchView_suggestionRowLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#voiceIcon}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#voiceIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:voiceIcon
+          @attr name edu.umb.subway:voiceIcon
         */
         public static final int SearchView_voiceIcon = 12;
         /** Attributes that can be used with a Spinner.
@@ -5052,7 +5068,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #Spinner_android_dropDownWidth android:dropDownWidth}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_prompt android:prompt}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_popupTheme edu.umb.cs443:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_popupTheme edu.umb.subway:popupTheme}</code></td><td></td></tr>
            </table>
            @see #Spinner_android_dropDownWidth
            @see #Spinner_android_popupBackground
@@ -5081,13 +5097,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Spinner_android_prompt = 1;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#popupTheme}
           attribute's value can be found in the {@link #Spinner} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:popupTheme
+          @attr name edu.umb.subway:popupTheme
         */
         public static final int Spinner_popupTheme = 3;
         /** Attributes that can be used with a SwitchCompat.
@@ -5099,13 +5115,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #SwitchCompat_android_textOff android:textOff}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_textOn android:textOn}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_thumb android:thumb}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_showText edu.umb.cs443:showText}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_splitTrack edu.umb.cs443:splitTrack}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchMinWidth edu.umb.cs443:switchMinWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchPadding edu.umb.cs443:switchPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchTextAppearance edu.umb.cs443:switchTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_thumbTextPadding edu.umb.cs443:thumbTextPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_track edu.umb.cs443:track}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_showText edu.umb.subway:showText}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_splitTrack edu.umb.subway:splitTrack}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchMinWidth edu.umb.subway:switchMinWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchPadding edu.umb.subway:switchPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchTextAppearance edu.umb.subway:switchTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_thumbTextPadding edu.umb.subway:thumbTextPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_track edu.umb.subway:track}</code></td><td></td></tr>
            </table>
            @see #SwitchCompat_android_textOff
            @see #SwitchCompat_android_textOn
@@ -5142,7 +5158,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SwitchCompat_android_thumb = 2;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#showText}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#showText}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5152,11 +5168,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:showText
+          @attr name edu.umb.subway:showText
         */
         public static final int SwitchCompat_showText = 9;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#splitTrack}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#splitTrack}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5166,11 +5182,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:splitTrack
+          @attr name edu.umb.subway:splitTrack
         */
         public static final int SwitchCompat_splitTrack = 8;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#switchMinWidth}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#switchMinWidth}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5182,11 +5198,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:switchMinWidth
+          @attr name edu.umb.subway:switchMinWidth
         */
         public static final int SwitchCompat_switchMinWidth = 6;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#switchPadding}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#switchPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5198,21 +5214,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:switchPadding
+          @attr name edu.umb.subway:switchPadding
         */
         public static final int SwitchCompat_switchPadding = 7;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#switchTextAppearance}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#switchTextAppearance}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:switchTextAppearance
+          @attr name edu.umb.subway:switchTextAppearance
         */
         public static final int SwitchCompat_switchTextAppearance = 5;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#thumbTextPadding}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#thumbTextPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5224,17 +5240,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:thumbTextPadding
+          @attr name edu.umb.subway:thumbTextPadding
         */
         public static final int SwitchCompat_thumbTextPadding = 4;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#track}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#track}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:track
+          @attr name edu.umb.subway:track
         */
         public static final int SwitchCompat_track = 3;
         /** Attributes that can be used with a TextAppearance.
@@ -5251,7 +5267,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #TextAppearance_android_textSize android:textSize}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_textStyle android:textStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_typeface android:typeface}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextAppearance_textAllCaps edu.umb.cs443:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextAppearance_textAllCaps edu.umb.subway:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #TextAppearance_android_shadowColor
            @see #TextAppearance_android_shadowDx
@@ -5317,14 +5333,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int TextAppearance_android_typeface = 1;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#textAllCaps}
           attribute's value can be found in the {@link #TextAppearance} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name edu.umb.cs443:textAllCaps
+          @attr name edu.umb.subway:textAllCaps
         */
         public static final int TextAppearance_textAllCaps = 8;
         /** Attributes that can be used with a Theme.
@@ -5333,116 +5349,116 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #Theme_actionBarDivider edu.umb.cs443:actionBarDivider}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarItemBackground edu.umb.cs443:actionBarItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarPopupTheme edu.umb.cs443:actionBarPopupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarSize edu.umb.cs443:actionBarSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarSplitStyle edu.umb.cs443:actionBarSplitStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarStyle edu.umb.cs443:actionBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabBarStyle edu.umb.cs443:actionBarTabBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabStyle edu.umb.cs443:actionBarTabStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabTextStyle edu.umb.cs443:actionBarTabTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTheme edu.umb.cs443:actionBarTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarWidgetTheme edu.umb.cs443:actionBarWidgetTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionButtonStyle edu.umb.cs443:actionButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionDropDownStyle edu.umb.cs443:actionDropDownStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionMenuTextAppearance edu.umb.cs443:actionMenuTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionMenuTextColor edu.umb.cs443:actionMenuTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeBackground edu.umb.cs443:actionModeBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCloseButtonStyle edu.umb.cs443:actionModeCloseButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCloseDrawable edu.umb.cs443:actionModeCloseDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCopyDrawable edu.umb.cs443:actionModeCopyDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCutDrawable edu.umb.cs443:actionModeCutDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeFindDrawable edu.umb.cs443:actionModeFindDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModePasteDrawable edu.umb.cs443:actionModePasteDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModePopupWindowStyle edu.umb.cs443:actionModePopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeSelectAllDrawable edu.umb.cs443:actionModeSelectAllDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeShareDrawable edu.umb.cs443:actionModeShareDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeSplitBackground edu.umb.cs443:actionModeSplitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeStyle edu.umb.cs443:actionModeStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeWebSearchDrawable edu.umb.cs443:actionModeWebSearchDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionOverflowButtonStyle edu.umb.cs443:actionOverflowButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionOverflowMenuStyle edu.umb.cs443:actionOverflowMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_activityChooserViewStyle edu.umb.cs443:activityChooserViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogButtonGroupStyle edu.umb.cs443:alertDialogButtonGroupStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogCenterButtons edu.umb.cs443:alertDialogCenterButtons}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogStyle edu.umb.cs443:alertDialogStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogTheme edu.umb.cs443:alertDialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarDivider edu.umb.subway:actionBarDivider}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarItemBackground edu.umb.subway:actionBarItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarPopupTheme edu.umb.subway:actionBarPopupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarSize edu.umb.subway:actionBarSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarSplitStyle edu.umb.subway:actionBarSplitStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarStyle edu.umb.subway:actionBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabBarStyle edu.umb.subway:actionBarTabBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabStyle edu.umb.subway:actionBarTabStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabTextStyle edu.umb.subway:actionBarTabTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTheme edu.umb.subway:actionBarTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarWidgetTheme edu.umb.subway:actionBarWidgetTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionButtonStyle edu.umb.subway:actionButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionDropDownStyle edu.umb.subway:actionDropDownStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionMenuTextAppearance edu.umb.subway:actionMenuTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionMenuTextColor edu.umb.subway:actionMenuTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeBackground edu.umb.subway:actionModeBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCloseButtonStyle edu.umb.subway:actionModeCloseButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCloseDrawable edu.umb.subway:actionModeCloseDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCopyDrawable edu.umb.subway:actionModeCopyDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCutDrawable edu.umb.subway:actionModeCutDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeFindDrawable edu.umb.subway:actionModeFindDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModePasteDrawable edu.umb.subway:actionModePasteDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModePopupWindowStyle edu.umb.subway:actionModePopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeSelectAllDrawable edu.umb.subway:actionModeSelectAllDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeShareDrawable edu.umb.subway:actionModeShareDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeSplitBackground edu.umb.subway:actionModeSplitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeStyle edu.umb.subway:actionModeStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeWebSearchDrawable edu.umb.subway:actionModeWebSearchDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionOverflowButtonStyle edu.umb.subway:actionOverflowButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionOverflowMenuStyle edu.umb.subway:actionOverflowMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_activityChooserViewStyle edu.umb.subway:activityChooserViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogButtonGroupStyle edu.umb.subway:alertDialogButtonGroupStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogCenterButtons edu.umb.subway:alertDialogCenterButtons}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogStyle edu.umb.subway:alertDialogStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogTheme edu.umb.subway:alertDialogTheme}</code></td><td></td></tr>
            <tr><td><code>{@link #Theme_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #Theme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_autoCompleteTextViewStyle edu.umb.cs443:autoCompleteTextViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_borderlessButtonStyle edu.umb.cs443:borderlessButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarButtonStyle edu.umb.cs443:buttonBarButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarNegativeButtonStyle edu.umb.cs443:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarNeutralButtonStyle edu.umb.cs443:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarPositiveButtonStyle edu.umb.cs443:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarStyle edu.umb.cs443:buttonBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonStyle edu.umb.cs443:buttonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonStyleSmall edu.umb.cs443:buttonStyleSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_checkboxStyle edu.umb.cs443:checkboxStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_checkedTextViewStyle edu.umb.cs443:checkedTextViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorAccent edu.umb.cs443:colorAccent}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorButtonNormal edu.umb.cs443:colorButtonNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlActivated edu.umb.cs443:colorControlActivated}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlHighlight edu.umb.cs443:colorControlHighlight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlNormal edu.umb.cs443:colorControlNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorPrimary edu.umb.cs443:colorPrimary}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorPrimaryDark edu.umb.cs443:colorPrimaryDark}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorSwitchThumbNormal edu.umb.cs443:colorSwitchThumbNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_controlBackground edu.umb.cs443:controlBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dialogPreferredPadding edu.umb.cs443:dialogPreferredPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dialogTheme edu.umb.cs443:dialogTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dividerHorizontal edu.umb.cs443:dividerHorizontal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dividerVertical edu.umb.cs443:dividerVertical}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dropDownListViewStyle edu.umb.cs443:dropDownListViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight edu.umb.cs443:dropdownListPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextBackground edu.umb.cs443:editTextBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextColor edu.umb.cs443:editTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextStyle edu.umb.cs443:editTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_homeAsUpIndicator edu.umb.cs443:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_imageButtonStyle edu.umb.cs443:imageButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator edu.umb.cs443:listChoiceBackgroundIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listDividerAlertDialog edu.umb.cs443:listDividerAlertDialog}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPopupWindowStyle edu.umb.cs443:listPopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeight edu.umb.cs443:listPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeightLarge edu.umb.cs443:listPreferredItemHeightLarge}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeightSmall edu.umb.cs443:listPreferredItemHeightSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemPaddingLeft edu.umb.cs443:listPreferredItemPaddingLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemPaddingRight edu.umb.cs443:listPreferredItemPaddingRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelBackground edu.umb.cs443:panelBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListTheme edu.umb.cs443:panelMenuListTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListWidth edu.umb.cs443:panelMenuListWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_popupMenuStyle edu.umb.cs443:popupMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_popupWindowStyle edu.umb.cs443:popupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_radioButtonStyle edu.umb.cs443:radioButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_ratingBarStyle edu.umb.cs443:ratingBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_searchViewStyle edu.umb.cs443:searchViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_seekBarStyle edu.umb.cs443:seekBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_selectableItemBackground edu.umb.cs443:selectableItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_selectableItemBackgroundBorderless edu.umb.cs443:selectableItemBackgroundBorderless}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_spinnerDropDownItemStyle edu.umb.cs443:spinnerDropDownItemStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_spinnerStyle edu.umb.cs443:spinnerStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_switchStyle edu.umb.cs443:switchStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceLargePopupMenu edu.umb.cs443:textAppearanceLargePopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceListItem edu.umb.cs443:textAppearanceListItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceListItemSmall edu.umb.cs443:textAppearanceListItemSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSearchResultSubtitle edu.umb.cs443:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSearchResultTitle edu.umb.cs443:textAppearanceSearchResultTitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSmallPopupMenu edu.umb.cs443:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textColorAlertDialogListItem edu.umb.cs443:textColorAlertDialogListItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textColorSearchUrl edu.umb.cs443:textColorSearchUrl}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_toolbarNavigationButtonStyle edu.umb.cs443:toolbarNavigationButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_toolbarStyle edu.umb.cs443:toolbarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionBar edu.umb.cs443:windowActionBar}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionBarOverlay edu.umb.cs443:windowActionBarOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionModeOverlay edu.umb.cs443:windowActionModeOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedHeightMajor edu.umb.cs443:windowFixedHeightMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedHeightMinor edu.umb.cs443:windowFixedHeightMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedWidthMajor edu.umb.cs443:windowFixedWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedWidthMinor edu.umb.cs443:windowFixedWidthMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowMinWidthMajor edu.umb.cs443:windowMinWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowMinWidthMinor edu.umb.cs443:windowMinWidthMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowNoTitle edu.umb.cs443:windowNoTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_autoCompleteTextViewStyle edu.umb.subway:autoCompleteTextViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_borderlessButtonStyle edu.umb.subway:borderlessButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarButtonStyle edu.umb.subway:buttonBarButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarNegativeButtonStyle edu.umb.subway:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarNeutralButtonStyle edu.umb.subway:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarPositiveButtonStyle edu.umb.subway:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarStyle edu.umb.subway:buttonBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonStyle edu.umb.subway:buttonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonStyleSmall edu.umb.subway:buttonStyleSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_checkboxStyle edu.umb.subway:checkboxStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_checkedTextViewStyle edu.umb.subway:checkedTextViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorAccent edu.umb.subway:colorAccent}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorButtonNormal edu.umb.subway:colorButtonNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlActivated edu.umb.subway:colorControlActivated}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlHighlight edu.umb.subway:colorControlHighlight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlNormal edu.umb.subway:colorControlNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorPrimary edu.umb.subway:colorPrimary}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorPrimaryDark edu.umb.subway:colorPrimaryDark}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorSwitchThumbNormal edu.umb.subway:colorSwitchThumbNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_controlBackground edu.umb.subway:controlBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dialogPreferredPadding edu.umb.subway:dialogPreferredPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dialogTheme edu.umb.subway:dialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dividerHorizontal edu.umb.subway:dividerHorizontal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dividerVertical edu.umb.subway:dividerVertical}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dropDownListViewStyle edu.umb.subway:dropDownListViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight edu.umb.subway:dropdownListPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_editTextBackground edu.umb.subway:editTextBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_editTextColor edu.umb.subway:editTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_editTextStyle edu.umb.subway:editTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_homeAsUpIndicator edu.umb.subway:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_imageButtonStyle edu.umb.subway:imageButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator edu.umb.subway:listChoiceBackgroundIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listDividerAlertDialog edu.umb.subway:listDividerAlertDialog}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPopupWindowStyle edu.umb.subway:listPopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeight edu.umb.subway:listPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeightLarge edu.umb.subway:listPreferredItemHeightLarge}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeightSmall edu.umb.subway:listPreferredItemHeightSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemPaddingLeft edu.umb.subway:listPreferredItemPaddingLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemPaddingRight edu.umb.subway:listPreferredItemPaddingRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelBackground edu.umb.subway:panelBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListTheme edu.umb.subway:panelMenuListTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListWidth edu.umb.subway:panelMenuListWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_popupMenuStyle edu.umb.subway:popupMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_popupWindowStyle edu.umb.subway:popupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_radioButtonStyle edu.umb.subway:radioButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_ratingBarStyle edu.umb.subway:ratingBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_searchViewStyle edu.umb.subway:searchViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_seekBarStyle edu.umb.subway:seekBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_selectableItemBackground edu.umb.subway:selectableItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_selectableItemBackgroundBorderless edu.umb.subway:selectableItemBackgroundBorderless}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_spinnerDropDownItemStyle edu.umb.subway:spinnerDropDownItemStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_spinnerStyle edu.umb.subway:spinnerStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_switchStyle edu.umb.subway:switchStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceLargePopupMenu edu.umb.subway:textAppearanceLargePopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceListItem edu.umb.subway:textAppearanceListItem}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceListItemSmall edu.umb.subway:textAppearanceListItemSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSearchResultSubtitle edu.umb.subway:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSearchResultTitle edu.umb.subway:textAppearanceSearchResultTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSmallPopupMenu edu.umb.subway:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textColorAlertDialogListItem edu.umb.subway:textColorAlertDialogListItem}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textColorSearchUrl edu.umb.subway:textColorSearchUrl}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_toolbarNavigationButtonStyle edu.umb.subway:toolbarNavigationButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_toolbarStyle edu.umb.subway:toolbarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionBar edu.umb.subway:windowActionBar}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionBarOverlay edu.umb.subway:windowActionBarOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionModeOverlay edu.umb.subway:windowActionModeOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedHeightMajor edu.umb.subway:windowFixedHeightMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedHeightMinor edu.umb.subway:windowFixedHeightMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedWidthMajor edu.umb.subway:windowFixedWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedWidthMinor edu.umb.subway:windowFixedWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowMinWidthMajor edu.umb.subway:windowMinWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowMinWidthMinor edu.umb.subway:windowMinWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowNoTitle edu.umb.subway:windowNoTitle}</code></td><td></td></tr>
            </table>
            @see #Theme_actionBarDivider
            @see #Theme_actionBarItemBackground
@@ -5586,37 +5602,37 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f0100d8, 0x7f0100d9
         };
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionBarDivider}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionBarDivider}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionBarDivider
+          @attr name edu.umb.subway:actionBarDivider
         */
         public static final int Theme_actionBarDivider = 23;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionBarItemBackground}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionBarItemBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionBarItemBackground
+          @attr name edu.umb.subway:actionBarItemBackground
         */
         public static final int Theme_actionBarItemBackground = 24;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionBarPopupTheme}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionBarPopupTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionBarPopupTheme
+          @attr name edu.umb.subway:actionBarPopupTheme
         */
         public static final int Theme_actionBarPopupTheme = 17;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionBarSize}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionBarSize}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5636,111 +5652,111 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>wrap_content</code></td><td>0</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:actionBarSize
+          @attr name edu.umb.subway:actionBarSize
         */
         public static final int Theme_actionBarSize = 22;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionBarSplitStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionBarSplitStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionBarSplitStyle
+          @attr name edu.umb.subway:actionBarSplitStyle
         */
         public static final int Theme_actionBarSplitStyle = 19;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionBarStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionBarStyle
+          @attr name edu.umb.subway:actionBarStyle
         */
         public static final int Theme_actionBarStyle = 18;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionBarTabBarStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionBarTabBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionBarTabBarStyle
+          @attr name edu.umb.subway:actionBarTabBarStyle
         */
         public static final int Theme_actionBarTabBarStyle = 13;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionBarTabStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionBarTabStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionBarTabStyle
+          @attr name edu.umb.subway:actionBarTabStyle
         */
         public static final int Theme_actionBarTabStyle = 12;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionBarTabTextStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionBarTabTextStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionBarTabTextStyle
+          @attr name edu.umb.subway:actionBarTabTextStyle
         */
         public static final int Theme_actionBarTabTextStyle = 14;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionBarTheme}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionBarTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionBarTheme
+          @attr name edu.umb.subway:actionBarTheme
         */
         public static final int Theme_actionBarTheme = 20;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionBarWidgetTheme}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionBarWidgetTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionBarWidgetTheme
+          @attr name edu.umb.subway:actionBarWidgetTheme
         */
         public static final int Theme_actionBarWidgetTheme = 21;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionButtonStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionButtonStyle
+          @attr name edu.umb.subway:actionButtonStyle
         */
         public static final int Theme_actionButtonStyle = 49;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionDropDownStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionDropDownStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionDropDownStyle
+          @attr name edu.umb.subway:actionDropDownStyle
         */
         public static final int Theme_actionDropDownStyle = 45;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionMenuTextAppearance}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionMenuTextAppearance}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionMenuTextAppearance
+          @attr name edu.umb.subway:actionMenuTextAppearance
         */
         public static final int Theme_actionMenuTextAppearance = 25;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionMenuTextColor}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionMenuTextColor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5748,181 +5764,181 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name edu.umb.cs443:actionMenuTextColor
+          @attr name edu.umb.subway:actionMenuTextColor
         */
         public static final int Theme_actionMenuTextColor = 26;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionModeBackground}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionModeBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionModeBackground
+          @attr name edu.umb.subway:actionModeBackground
         */
         public static final int Theme_actionModeBackground = 29;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionModeCloseButtonStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionModeCloseButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionModeCloseButtonStyle
+          @attr name edu.umb.subway:actionModeCloseButtonStyle
         */
         public static final int Theme_actionModeCloseButtonStyle = 28;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionModeCloseDrawable}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionModeCloseDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionModeCloseDrawable
+          @attr name edu.umb.subway:actionModeCloseDrawable
         */
         public static final int Theme_actionModeCloseDrawable = 31;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionModeCopyDrawable}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionModeCopyDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionModeCopyDrawable
+          @attr name edu.umb.subway:actionModeCopyDrawable
         */
         public static final int Theme_actionModeCopyDrawable = 33;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionModeCutDrawable}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionModeCutDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionModeCutDrawable
+          @attr name edu.umb.subway:actionModeCutDrawable
         */
         public static final int Theme_actionModeCutDrawable = 32;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionModeFindDrawable}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionModeFindDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionModeFindDrawable
+          @attr name edu.umb.subway:actionModeFindDrawable
         */
         public static final int Theme_actionModeFindDrawable = 37;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionModePasteDrawable}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionModePasteDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionModePasteDrawable
+          @attr name edu.umb.subway:actionModePasteDrawable
         */
         public static final int Theme_actionModePasteDrawable = 34;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionModePopupWindowStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionModePopupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionModePopupWindowStyle
+          @attr name edu.umb.subway:actionModePopupWindowStyle
         */
         public static final int Theme_actionModePopupWindowStyle = 39;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionModeSelectAllDrawable}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionModeSelectAllDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionModeSelectAllDrawable
+          @attr name edu.umb.subway:actionModeSelectAllDrawable
         */
         public static final int Theme_actionModeSelectAllDrawable = 35;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionModeShareDrawable}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionModeShareDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionModeShareDrawable
+          @attr name edu.umb.subway:actionModeShareDrawable
         */
         public static final int Theme_actionModeShareDrawable = 36;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionModeSplitBackground}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionModeSplitBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionModeSplitBackground
+          @attr name edu.umb.subway:actionModeSplitBackground
         */
         public static final int Theme_actionModeSplitBackground = 30;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionModeStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionModeStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionModeStyle
+          @attr name edu.umb.subway:actionModeStyle
         */
         public static final int Theme_actionModeStyle = 27;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionModeWebSearchDrawable}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionModeWebSearchDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionModeWebSearchDrawable
+          @attr name edu.umb.subway:actionModeWebSearchDrawable
         */
         public static final int Theme_actionModeWebSearchDrawable = 38;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionOverflowButtonStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionOverflowButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionOverflowButtonStyle
+          @attr name edu.umb.subway:actionOverflowButtonStyle
         */
         public static final int Theme_actionOverflowButtonStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#actionOverflowMenuStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#actionOverflowMenuStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:actionOverflowMenuStyle
+          @attr name edu.umb.subway:actionOverflowMenuStyle
         */
         public static final int Theme_actionOverflowMenuStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#activityChooserViewStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#activityChooserViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:activityChooserViewStyle
+          @attr name edu.umb.subway:activityChooserViewStyle
         */
         public static final int Theme_activityChooserViewStyle = 57;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#alertDialogButtonGroupStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#alertDialogButtonGroupStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:alertDialogButtonGroupStyle
+          @attr name edu.umb.subway:alertDialogButtonGroupStyle
         */
         public static final int Theme_alertDialogButtonGroupStyle = 92;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#alertDialogCenterButtons}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#alertDialogCenterButtons}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5932,27 +5948,27 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:alertDialogCenterButtons
+          @attr name edu.umb.subway:alertDialogCenterButtons
         */
         public static final int Theme_alertDialogCenterButtons = 93;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#alertDialogStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#alertDialogStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:alertDialogStyle
+          @attr name edu.umb.subway:alertDialogStyle
         */
         public static final int Theme_alertDialogStyle = 91;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#alertDialogTheme}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#alertDialogTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:alertDialogTheme
+          @attr name edu.umb.subway:alertDialogTheme
         */
         public static final int Theme_alertDialogTheme = 94;
         /**
@@ -5968,117 +5984,117 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_android_windowIsFloating = 0;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#autoCompleteTextViewStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#autoCompleteTextViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:autoCompleteTextViewStyle
+          @attr name edu.umb.subway:autoCompleteTextViewStyle
         */
         public static final int Theme_autoCompleteTextViewStyle = 99;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#borderlessButtonStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#borderlessButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:borderlessButtonStyle
+          @attr name edu.umb.subway:borderlessButtonStyle
         */
         public static final int Theme_borderlessButtonStyle = 54;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#buttonBarButtonStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#buttonBarButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:buttonBarButtonStyle
+          @attr name edu.umb.subway:buttonBarButtonStyle
         */
         public static final int Theme_buttonBarButtonStyle = 51;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#buttonBarNegativeButtonStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#buttonBarNegativeButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:buttonBarNegativeButtonStyle
+          @attr name edu.umb.subway:buttonBarNegativeButtonStyle
         */
         public static final int Theme_buttonBarNegativeButtonStyle = 97;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#buttonBarNeutralButtonStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#buttonBarNeutralButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:buttonBarNeutralButtonStyle
+          @attr name edu.umb.subway:buttonBarNeutralButtonStyle
         */
         public static final int Theme_buttonBarNeutralButtonStyle = 98;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#buttonBarPositiveButtonStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#buttonBarPositiveButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:buttonBarPositiveButtonStyle
+          @attr name edu.umb.subway:buttonBarPositiveButtonStyle
         */
         public static final int Theme_buttonBarPositiveButtonStyle = 96;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#buttonBarStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#buttonBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:buttonBarStyle
+          @attr name edu.umb.subway:buttonBarStyle
         */
         public static final int Theme_buttonBarStyle = 50;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#buttonStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#buttonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:buttonStyle
+          @attr name edu.umb.subway:buttonStyle
         */
         public static final int Theme_buttonStyle = 100;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#buttonStyleSmall}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#buttonStyleSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:buttonStyleSmall
+          @attr name edu.umb.subway:buttonStyleSmall
         */
         public static final int Theme_buttonStyleSmall = 101;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#checkboxStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#checkboxStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:checkboxStyle
+          @attr name edu.umb.subway:checkboxStyle
         */
         public static final int Theme_checkboxStyle = 102;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#checkedTextViewStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#checkedTextViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:checkedTextViewStyle
+          @attr name edu.umb.subway:checkedTextViewStyle
         */
         public static final int Theme_checkedTextViewStyle = 103;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#colorAccent}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#colorAccent}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6089,11 +6105,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:colorAccent
+          @attr name edu.umb.subway:colorAccent
         */
         public static final int Theme_colorAccent = 84;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#colorButtonNormal}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#colorButtonNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6104,11 +6120,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:colorButtonNormal
+          @attr name edu.umb.subway:colorButtonNormal
         */
         public static final int Theme_colorButtonNormal = 88;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#colorControlActivated}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#colorControlActivated}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6119,11 +6135,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:colorControlActivated
+          @attr name edu.umb.subway:colorControlActivated
         */
         public static final int Theme_colorControlActivated = 86;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#colorControlHighlight}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#colorControlHighlight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6134,11 +6150,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:colorControlHighlight
+          @attr name edu.umb.subway:colorControlHighlight
         */
         public static final int Theme_colorControlHighlight = 87;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#colorControlNormal}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#colorControlNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6149,11 +6165,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:colorControlNormal
+          @attr name edu.umb.subway:colorControlNormal
         */
         public static final int Theme_colorControlNormal = 85;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#colorPrimary}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#colorPrimary}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6164,11 +6180,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:colorPrimary
+          @attr name edu.umb.subway:colorPrimary
         */
         public static final int Theme_colorPrimary = 82;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#colorPrimaryDark}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#colorPrimaryDark}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6179,11 +6195,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:colorPrimaryDark
+          @attr name edu.umb.subway:colorPrimaryDark
         */
         public static final int Theme_colorPrimaryDark = 83;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#colorSwitchThumbNormal}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#colorSwitchThumbNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6194,21 +6210,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:colorSwitchThumbNormal
+          @attr name edu.umb.subway:colorSwitchThumbNormal
         */
         public static final int Theme_colorSwitchThumbNormal = 89;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#controlBackground}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#controlBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:controlBackground
+          @attr name edu.umb.subway:controlBackground
         */
         public static final int Theme_controlBackground = 90;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#dialogPreferredPadding}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#dialogPreferredPadding}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6220,51 +6236,51 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:dialogPreferredPadding
+          @attr name edu.umb.subway:dialogPreferredPadding
         */
         public static final int Theme_dialogPreferredPadding = 43;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#dialogTheme}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#dialogTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:dialogTheme
+          @attr name edu.umb.subway:dialogTheme
         */
         public static final int Theme_dialogTheme = 42;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#dividerHorizontal}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#dividerHorizontal}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:dividerHorizontal
+          @attr name edu.umb.subway:dividerHorizontal
         */
         public static final int Theme_dividerHorizontal = 56;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#dividerVertical}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#dividerVertical}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:dividerVertical
+          @attr name edu.umb.subway:dividerVertical
         */
         public static final int Theme_dividerVertical = 55;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#dropDownListViewStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#dropDownListViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:dropDownListViewStyle
+          @attr name edu.umb.subway:dropDownListViewStyle
         */
         public static final int Theme_dropDownListViewStyle = 74;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#dropdownListPreferredItemHeight}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#dropdownListPreferredItemHeight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6276,21 +6292,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:dropdownListPreferredItemHeight
+          @attr name edu.umb.subway:dropdownListPreferredItemHeight
         */
         public static final int Theme_dropdownListPreferredItemHeight = 46;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#editTextBackground}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#editTextBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:editTextBackground
+          @attr name edu.umb.subway:editTextBackground
         */
         public static final int Theme_editTextBackground = 63;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#editTextColor}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#editTextColor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6298,71 +6314,71 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name edu.umb.cs443:editTextColor
+          @attr name edu.umb.subway:editTextColor
         */
         public static final int Theme_editTextColor = 62;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#editTextStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#editTextStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:editTextStyle
+          @attr name edu.umb.subway:editTextStyle
         */
         public static final int Theme_editTextStyle = 104;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:homeAsUpIndicator
+          @attr name edu.umb.subway:homeAsUpIndicator
         */
         public static final int Theme_homeAsUpIndicator = 48;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#imageButtonStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#imageButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:imageButtonStyle
+          @attr name edu.umb.subway:imageButtonStyle
         */
         public static final int Theme_imageButtonStyle = 64;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#listChoiceBackgroundIndicator}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#listChoiceBackgroundIndicator}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:listChoiceBackgroundIndicator
+          @attr name edu.umb.subway:listChoiceBackgroundIndicator
         */
         public static final int Theme_listChoiceBackgroundIndicator = 81;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#listDividerAlertDialog}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#listDividerAlertDialog}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:listDividerAlertDialog
+          @attr name edu.umb.subway:listDividerAlertDialog
         */
         public static final int Theme_listDividerAlertDialog = 44;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#listPopupWindowStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#listPopupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:listPopupWindowStyle
+          @attr name edu.umb.subway:listPopupWindowStyle
         */
         public static final int Theme_listPopupWindowStyle = 75;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#listPreferredItemHeight}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#listPreferredItemHeight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6374,11 +6390,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:listPreferredItemHeight
+          @attr name edu.umb.subway:listPreferredItemHeight
         */
         public static final int Theme_listPreferredItemHeight = 69;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#listPreferredItemHeightLarge}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#listPreferredItemHeightLarge}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6390,11 +6406,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:listPreferredItemHeightLarge
+          @attr name edu.umb.subway:listPreferredItemHeightLarge
         */
         public static final int Theme_listPreferredItemHeightLarge = 71;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#listPreferredItemHeightSmall}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#listPreferredItemHeightSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6406,11 +6422,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:listPreferredItemHeightSmall
+          @attr name edu.umb.subway:listPreferredItemHeightSmall
         */
         public static final int Theme_listPreferredItemHeightSmall = 70;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#listPreferredItemPaddingLeft}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#listPreferredItemPaddingLeft}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6422,11 +6438,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:listPreferredItemPaddingLeft
+          @attr name edu.umb.subway:listPreferredItemPaddingLeft
         */
         public static final int Theme_listPreferredItemPaddingLeft = 72;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#listPreferredItemPaddingRight}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#listPreferredItemPaddingRight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6438,31 +6454,31 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:listPreferredItemPaddingRight
+          @attr name edu.umb.subway:listPreferredItemPaddingRight
         */
         public static final int Theme_listPreferredItemPaddingRight = 73;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#panelBackground}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#panelBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:panelBackground
+          @attr name edu.umb.subway:panelBackground
         */
         public static final int Theme_panelBackground = 78;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#panelMenuListTheme}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#panelMenuListTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:panelMenuListTheme
+          @attr name edu.umb.subway:panelMenuListTheme
         */
         public static final int Theme_panelMenuListTheme = 80;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#panelMenuListWidth}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#panelMenuListWidth}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6474,181 +6490,181 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:panelMenuListWidth
+          @attr name edu.umb.subway:panelMenuListWidth
         */
         public static final int Theme_panelMenuListWidth = 79;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#popupMenuStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#popupMenuStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:popupMenuStyle
+          @attr name edu.umb.subway:popupMenuStyle
         */
         public static final int Theme_popupMenuStyle = 60;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#popupWindowStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#popupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:popupWindowStyle
+          @attr name edu.umb.subway:popupWindowStyle
         */
         public static final int Theme_popupWindowStyle = 61;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#radioButtonStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#radioButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:radioButtonStyle
+          @attr name edu.umb.subway:radioButtonStyle
         */
         public static final int Theme_radioButtonStyle = 105;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#ratingBarStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#ratingBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:ratingBarStyle
+          @attr name edu.umb.subway:ratingBarStyle
         */
         public static final int Theme_ratingBarStyle = 106;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#searchViewStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#searchViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:searchViewStyle
+          @attr name edu.umb.subway:searchViewStyle
         */
         public static final int Theme_searchViewStyle = 68;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#seekBarStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#seekBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:seekBarStyle
+          @attr name edu.umb.subway:seekBarStyle
         */
         public static final int Theme_seekBarStyle = 107;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#selectableItemBackground}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#selectableItemBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:selectableItemBackground
+          @attr name edu.umb.subway:selectableItemBackground
         */
         public static final int Theme_selectableItemBackground = 52;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#selectableItemBackgroundBorderless}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#selectableItemBackgroundBorderless}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:selectableItemBackgroundBorderless
+          @attr name edu.umb.subway:selectableItemBackgroundBorderless
         */
         public static final int Theme_selectableItemBackgroundBorderless = 53;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#spinnerDropDownItemStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#spinnerDropDownItemStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:spinnerDropDownItemStyle
+          @attr name edu.umb.subway:spinnerDropDownItemStyle
         */
         public static final int Theme_spinnerDropDownItemStyle = 47;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#spinnerStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#spinnerStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:spinnerStyle
+          @attr name edu.umb.subway:spinnerStyle
         */
         public static final int Theme_spinnerStyle = 108;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#switchStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#switchStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:switchStyle
+          @attr name edu.umb.subway:switchStyle
         */
         public static final int Theme_switchStyle = 109;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#textAppearanceLargePopupMenu}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#textAppearanceLargePopupMenu}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:textAppearanceLargePopupMenu
+          @attr name edu.umb.subway:textAppearanceLargePopupMenu
         */
         public static final int Theme_textAppearanceLargePopupMenu = 40;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#textAppearanceListItem}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#textAppearanceListItem}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:textAppearanceListItem
+          @attr name edu.umb.subway:textAppearanceListItem
         */
         public static final int Theme_textAppearanceListItem = 76;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#textAppearanceListItemSmall}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#textAppearanceListItemSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:textAppearanceListItemSmall
+          @attr name edu.umb.subway:textAppearanceListItemSmall
         */
         public static final int Theme_textAppearanceListItemSmall = 77;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#textAppearanceSearchResultSubtitle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#textAppearanceSearchResultSubtitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:textAppearanceSearchResultSubtitle
+          @attr name edu.umb.subway:textAppearanceSearchResultSubtitle
         */
         public static final int Theme_textAppearanceSearchResultSubtitle = 66;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#textAppearanceSearchResultTitle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#textAppearanceSearchResultTitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:textAppearanceSearchResultTitle
+          @attr name edu.umb.subway:textAppearanceSearchResultTitle
         */
         public static final int Theme_textAppearanceSearchResultTitle = 65;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#textAppearanceSmallPopupMenu}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#textAppearanceSmallPopupMenu}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:textAppearanceSmallPopupMenu
+          @attr name edu.umb.subway:textAppearanceSmallPopupMenu
         */
         public static final int Theme_textAppearanceSmallPopupMenu = 41;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#textColorAlertDialogListItem}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#textColorAlertDialogListItem}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6656,11 +6672,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name edu.umb.cs443:textColorAlertDialogListItem
+          @attr name edu.umb.subway:textColorAlertDialogListItem
         */
         public static final int Theme_textColorAlertDialogListItem = 95;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#textColorSearchUrl}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#textColorSearchUrl}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6668,31 +6684,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name edu.umb.cs443:textColorSearchUrl
+          @attr name edu.umb.subway:textColorSearchUrl
         */
         public static final int Theme_textColorSearchUrl = 67;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#toolbarNavigationButtonStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#toolbarNavigationButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:toolbarNavigationButtonStyle
+          @attr name edu.umb.subway:toolbarNavigationButtonStyle
         */
         public static final int Theme_toolbarNavigationButtonStyle = 59;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#toolbarStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#toolbarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:toolbarStyle
+          @attr name edu.umb.subway:toolbarStyle
         */
         public static final int Theme_toolbarStyle = 58;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#windowActionBar}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#windowActionBar}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6702,11 +6718,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:windowActionBar
+          @attr name edu.umb.subway:windowActionBar
         */
         public static final int Theme_windowActionBar = 2;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#windowActionBarOverlay}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#windowActionBarOverlay}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6716,11 +6732,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:windowActionBarOverlay
+          @attr name edu.umb.subway:windowActionBarOverlay
         */
         public static final int Theme_windowActionBarOverlay = 4;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#windowActionModeOverlay}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#windowActionModeOverlay}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6730,11 +6746,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:windowActionModeOverlay
+          @attr name edu.umb.subway:windowActionModeOverlay
         */
         public static final int Theme_windowActionModeOverlay = 5;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#windowFixedHeightMajor}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#windowFixedHeightMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6749,11 +6765,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:windowFixedHeightMajor
+          @attr name edu.umb.subway:windowFixedHeightMajor
         */
         public static final int Theme_windowFixedHeightMajor = 9;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#windowFixedHeightMinor}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#windowFixedHeightMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6768,11 +6784,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:windowFixedHeightMinor
+          @attr name edu.umb.subway:windowFixedHeightMinor
         */
         public static final int Theme_windowFixedHeightMinor = 7;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#windowFixedWidthMajor}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#windowFixedWidthMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6787,11 +6803,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:windowFixedWidthMajor
+          @attr name edu.umb.subway:windowFixedWidthMajor
         */
         public static final int Theme_windowFixedWidthMajor = 6;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#windowFixedWidthMinor}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#windowFixedWidthMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6806,11 +6822,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:windowFixedWidthMinor
+          @attr name edu.umb.subway:windowFixedWidthMinor
         */
         public static final int Theme_windowFixedWidthMinor = 8;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#windowMinWidthMajor}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#windowMinWidthMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6825,11 +6841,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:windowMinWidthMajor
+          @attr name edu.umb.subway:windowMinWidthMajor
         */
         public static final int Theme_windowMinWidthMajor = 10;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#windowMinWidthMinor}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#windowMinWidthMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6844,11 +6860,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:windowMinWidthMinor
+          @attr name edu.umb.subway:windowMinWidthMinor
         */
         public static final int Theme_windowMinWidthMinor = 11;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#windowNoTitle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#windowNoTitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -6858,7 +6874,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:windowNoTitle
+          @attr name edu.umb.subway:windowNoTitle
         */
         public static final int Theme_windowNoTitle = 3;
         /** Attributes that can be used with a Toolbar.
@@ -6869,29 +6885,29 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #Toolbar_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #Toolbar_android_minHeight android:minHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseContentDescription edu.umb.cs443:collapseContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseIcon edu.umb.cs443:collapseIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetEnd edu.umb.cs443:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetLeft edu.umb.cs443:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetRight edu.umb.cs443:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetStart edu.umb.cs443:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_logo edu.umb.cs443:logo}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_logoDescription edu.umb.cs443:logoDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_maxButtonHeight edu.umb.cs443:maxButtonHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationContentDescription edu.umb.cs443:navigationContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationIcon edu.umb.cs443:navigationIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_popupTheme edu.umb.cs443:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitle edu.umb.cs443:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitleTextAppearance edu.umb.cs443:subtitleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitleTextColor edu.umb.cs443:subtitleTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_title edu.umb.cs443:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginBottom edu.umb.cs443:titleMarginBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginEnd edu.umb.cs443:titleMarginEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginStart edu.umb.cs443:titleMarginStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginTop edu.umb.cs443:titleMarginTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMargins edu.umb.cs443:titleMargins}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleTextAppearance edu.umb.cs443:titleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleTextColor edu.umb.cs443:titleTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseContentDescription edu.umb.subway:collapseContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseIcon edu.umb.subway:collapseIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetEnd edu.umb.subway:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetLeft edu.umb.subway:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetRight edu.umb.subway:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetStart edu.umb.subway:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_logo edu.umb.subway:logo}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_logoDescription edu.umb.subway:logoDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_maxButtonHeight edu.umb.subway:maxButtonHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationContentDescription edu.umb.subway:navigationContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationIcon edu.umb.subway:navigationIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_popupTheme edu.umb.subway:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitle edu.umb.subway:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitleTextAppearance edu.umb.subway:subtitleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitleTextColor edu.umb.subway:subtitleTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_title edu.umb.subway:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginBottom edu.umb.subway:titleMarginBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginEnd edu.umb.subway:titleMarginEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginStart edu.umb.subway:titleMarginStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginTop edu.umb.subway:titleMarginTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMargins edu.umb.subway:titleMargins}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleTextAppearance edu.umb.subway:titleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleTextColor edu.umb.subway:titleTextColor}</code></td><td></td></tr>
            </table>
            @see #Toolbar_android_gravity
            @see #Toolbar_android_minHeight
@@ -6941,7 +6957,7 @@ containing a value of this type.
         */
         public static final int Toolbar_android_minHeight = 1;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#collapseContentDescription}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#collapseContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6951,21 +6967,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:collapseContentDescription
+          @attr name edu.umb.subway:collapseContentDescription
         */
         public static final int Toolbar_collapseContentDescription = 19;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#collapseIcon}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#collapseIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:collapseIcon
+          @attr name edu.umb.subway:collapseIcon
         */
         public static final int Toolbar_collapseIcon = 18;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6977,11 +6993,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:contentInsetEnd
+          @attr name edu.umb.subway:contentInsetEnd
         */
         public static final int Toolbar_contentInsetEnd = 6;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6993,11 +7009,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:contentInsetLeft
+          @attr name edu.umb.subway:contentInsetLeft
         */
         public static final int Toolbar_contentInsetLeft = 7;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7009,11 +7025,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:contentInsetRight
+          @attr name edu.umb.subway:contentInsetRight
         */
         public static final int Toolbar_contentInsetRight = 8;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7025,21 +7041,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:contentInsetStart
+          @attr name edu.umb.subway:contentInsetStart
         */
         public static final int Toolbar_contentInsetStart = 5;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#logo}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#logo}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:logo
+          @attr name edu.umb.subway:logo
         */
         public static final int Toolbar_logo = 4;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#logoDescription}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#logoDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7049,11 +7065,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:logoDescription
+          @attr name edu.umb.subway:logoDescription
         */
         public static final int Toolbar_logoDescription = 22;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#maxButtonHeight}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#maxButtonHeight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7065,11 +7081,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:maxButtonHeight
+          @attr name edu.umb.subway:maxButtonHeight
         */
         public static final int Toolbar_maxButtonHeight = 17;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#navigationContentDescription}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#navigationContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7079,31 +7095,31 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:navigationContentDescription
+          @attr name edu.umb.subway:navigationContentDescription
         */
         public static final int Toolbar_navigationContentDescription = 21;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#navigationIcon}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#navigationIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:navigationIcon
+          @attr name edu.umb.subway:navigationIcon
         */
         public static final int Toolbar_navigationIcon = 20;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#popupTheme}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:popupTheme
+          @attr name edu.umb.subway:popupTheme
         */
         public static final int Toolbar_popupTheme = 9;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#subtitle}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7113,21 +7129,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:subtitle
+          @attr name edu.umb.subway:subtitle
         */
         public static final int Toolbar_subtitle = 3;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#subtitleTextAppearance}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#subtitleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:subtitleTextAppearance
+          @attr name edu.umb.subway:subtitleTextAppearance
         */
         public static final int Toolbar_subtitleTextAppearance = 11;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#subtitleTextColor}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#subtitleTextColor}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7138,11 +7154,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:subtitleTextColor
+          @attr name edu.umb.subway:subtitleTextColor
         */
         public static final int Toolbar_subtitleTextColor = 24;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#title}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#title}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7152,11 +7168,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:title
+          @attr name edu.umb.subway:title
         */
         public static final int Toolbar_title = 2;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#titleMarginBottom}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#titleMarginBottom}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7168,11 +7184,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:titleMarginBottom
+          @attr name edu.umb.subway:titleMarginBottom
         */
         public static final int Toolbar_titleMarginBottom = 16;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#titleMarginEnd}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#titleMarginEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7184,11 +7200,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:titleMarginEnd
+          @attr name edu.umb.subway:titleMarginEnd
         */
         public static final int Toolbar_titleMarginEnd = 14;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#titleMarginStart}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#titleMarginStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7200,11 +7216,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:titleMarginStart
+          @attr name edu.umb.subway:titleMarginStart
         */
         public static final int Toolbar_titleMarginStart = 13;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#titleMarginTop}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#titleMarginTop}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7216,11 +7232,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:titleMarginTop
+          @attr name edu.umb.subway:titleMarginTop
         */
         public static final int Toolbar_titleMarginTop = 15;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#titleMargins}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#titleMargins}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7232,21 +7248,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:titleMargins
+          @attr name edu.umb.subway:titleMargins
         */
         public static final int Toolbar_titleMargins = 12;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#titleTextAppearance}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#titleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:titleTextAppearance
+          @attr name edu.umb.subway:titleTextAppearance
         */
         public static final int Toolbar_titleTextAppearance = 10;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#titleTextColor}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#titleTextColor}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -7257,7 +7273,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:titleTextColor
+          @attr name edu.umb.subway:titleTextColor
         */
         public static final int Toolbar_titleTextColor = 23;
         /** Attributes that can be used with a View.
@@ -7268,9 +7284,9 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td></td></tr>
            <tr><td><code>{@link #View_android_theme android:theme}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingEnd edu.umb.cs443:paddingEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingStart edu.umb.cs443:paddingStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_theme edu.umb.cs443:theme}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingEnd edu.umb.subway:paddingEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingStart edu.umb.subway:paddingStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_theme edu.umb.subway:theme}</code></td><td></td></tr>
            </table>
            @see #View_android_focusable
            @see #View_android_theme
@@ -7295,7 +7311,7 @@ containing a value of this type.
         */
         public static final int View_android_theme = 0;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#paddingEnd}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#paddingEnd}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -7307,11 +7323,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:paddingEnd
+          @attr name edu.umb.subway:paddingEnd
         */
         public static final int View_paddingEnd = 3;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#paddingStart}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#paddingStart}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -7323,17 +7339,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:paddingStart
+          @attr name edu.umb.subway:paddingStart
         */
         public static final int View_paddingStart = 2;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#theme}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#theme}
           attribute's value can be found in the {@link #View} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:theme
+          @attr name edu.umb.subway:theme
         */
         public static final int View_theme = 4;
         /** Attributes that can be used with a ViewBackgroundHelper.
@@ -7343,8 +7359,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #ViewBackgroundHelper_android_background android:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint edu.umb.cs443:backgroundTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode edu.umb.cs443:backgroundTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint edu.umb.subway:backgroundTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode edu.umb.subway:backgroundTintMode}</code></td><td></td></tr>
            </table>
            @see #ViewBackgroundHelper_android_background
            @see #ViewBackgroundHelper_backgroundTint
@@ -7360,7 +7376,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ViewBackgroundHelper_android_background = 0;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#backgroundTint}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#backgroundTint}
           attribute's value can be found in the {@link #ViewBackgroundHelper} array.
 
 
@@ -7371,11 +7387,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:backgroundTint
+          @attr name edu.umb.subway:backgroundTint
         */
         public static final int ViewBackgroundHelper_backgroundTint = 1;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#backgroundTintMode}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#backgroundTintMode}
           attribute's value can be found in the {@link #ViewBackgroundHelper} array.
 
 
@@ -7391,7 +7407,7 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:backgroundTintMode
+          @attr name edu.umb.subway:backgroundTintMode
         */
         public static final int ViewBackgroundHelper_backgroundTintMode = 2;
         /** Attributes that can be used with a ViewStubCompat.
@@ -7435,10 +7451,10 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_appTheme edu.umb.cs443:appTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_environment edu.umb.cs443:environment}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_fragmentMode edu.umb.cs443:fragmentMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_fragmentStyle edu.umb.cs443:fragmentStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_appTheme edu.umb.subway:appTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_environment edu.umb.subway:environment}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_fragmentMode edu.umb.subway:fragmentMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_fragmentStyle edu.umb.subway:fragmentStyle}</code></td><td></td></tr>
            </table>
            @see #WalletFragmentOptions_appTheme
            @see #WalletFragmentOptions_environment
@@ -7449,7 +7465,7 @@ containing a value of this type.
             0x7f0100ee, 0x7f0100ef, 0x7f0100f0, 0x7f0100f1
         };
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#appTheme}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#appTheme}
           attribute's value can be found in the {@link #WalletFragmentOptions} array.
 
 
@@ -7462,11 +7478,11 @@ containing a value of this type.
 <tr><td><code>holo_dark</code></td><td>0</td><td></td></tr>
 <tr><td><code>holo_light</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:appTheme
+          @attr name edu.umb.subway:appTheme
         */
         public static final int WalletFragmentOptions_appTheme = 0;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#environment}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#environment}
           attribute's value can be found in the {@link #WalletFragmentOptions} array.
 
 
@@ -7481,11 +7497,11 @@ containing a value of this type.
 <tr><td><code>sandbox</code></td><td>0</td><td></td></tr>
 <tr><td><code>strict_sandbox</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:environment
+          @attr name edu.umb.subway:environment
         */
         public static final int WalletFragmentOptions_environment = 1;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#fragmentMode}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#fragmentMode}
           attribute's value can be found in the {@link #WalletFragmentOptions} array.
 
 
@@ -7498,17 +7514,17 @@ containing a value of this type.
 <tr><td><code>buyButton</code></td><td>1</td><td></td></tr>
 <tr><td><code>selectionDetails</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:fragmentMode
+          @attr name edu.umb.subway:fragmentMode
         */
         public static final int WalletFragmentOptions_fragmentMode = 3;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#fragmentStyle}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#fragmentStyle}
           attribute's value can be found in the {@link #WalletFragmentOptions} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:fragmentStyle
+          @attr name edu.umb.subway:fragmentStyle
         */
         public static final int WalletFragmentOptions_fragmentStyle = 2;
         /** Attributes that can be used with a WalletFragmentStyle.
@@ -7517,17 +7533,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonAppearance edu.umb.cs443:buyButtonAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonHeight edu.umb.cs443:buyButtonHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonText edu.umb.cs443:buyButtonText}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonWidth edu.umb.cs443:buyButtonWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsBackground edu.umb.cs443:maskedWalletDetailsBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonBackground edu.umb.cs443:maskedWalletDetailsButtonBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance edu.umb.cs443:maskedWalletDetailsButtonTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance edu.umb.cs443:maskedWalletDetailsHeaderTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoImageType edu.umb.cs443:maskedWalletDetailsLogoImageType}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoTextColor edu.umb.cs443:maskedWalletDetailsLogoTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsTextAppearance edu.umb.cs443:maskedWalletDetailsTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonAppearance edu.umb.subway:buyButtonAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonHeight edu.umb.subway:buyButtonHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonText edu.umb.subway:buyButtonText}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonWidth edu.umb.subway:buyButtonWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsBackground edu.umb.subway:maskedWalletDetailsBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonBackground edu.umb.subway:maskedWalletDetailsButtonBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance edu.umb.subway:maskedWalletDetailsButtonTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance edu.umb.subway:maskedWalletDetailsHeaderTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoImageType edu.umb.subway:maskedWalletDetailsLogoImageType}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoTextColor edu.umb.subway:maskedWalletDetailsLogoTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsTextAppearance edu.umb.subway:maskedWalletDetailsTextAppearance}</code></td><td></td></tr>
            </table>
            @see #WalletFragmentStyle_buyButtonAppearance
            @see #WalletFragmentStyle_buyButtonHeight
@@ -7547,7 +7563,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f0100fa, 0x7f0100fb, 0x7f0100fc
         };
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#buyButtonAppearance}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#buyButtonAppearance}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -7564,11 +7580,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>grayscale</code></td><td>2</td><td></td></tr>
 <tr><td><code>monochrome</code></td><td>3</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:buyButtonAppearance
+          @attr name edu.umb.subway:buyButtonAppearance
         */
         public static final int WalletFragmentStyle_buyButtonAppearance = 3;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#buyButtonHeight}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#buyButtonHeight}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -7589,11 +7605,11 @@ containing a value of this type.
 <tr><td><code>match_parent</code></td><td>-1</td><td></td></tr>
 <tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:buyButtonHeight
+          @attr name edu.umb.subway:buyButtonHeight
         */
         public static final int WalletFragmentStyle_buyButtonHeight = 0;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#buyButtonText}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#buyButtonText}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -7611,11 +7627,11 @@ containing a value of this type.
 <tr><td><code>book_now</code></td><td>3</td><td></td></tr>
 <tr><td><code>donate_with_google</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:buyButtonText
+          @attr name edu.umb.subway:buyButtonText
         */
         public static final int WalletFragmentStyle_buyButtonText = 2;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#buyButtonWidth}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#buyButtonWidth}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -7636,11 +7652,11 @@ containing a value of this type.
 <tr><td><code>match_parent</code></td><td>-1</td><td></td></tr>
 <tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:buyButtonWidth
+          @attr name edu.umb.subway:buyButtonWidth
         */
         public static final int WalletFragmentStyle_buyButtonWidth = 1;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#maskedWalletDetailsBackground}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#maskedWalletDetailsBackground}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -7648,11 +7664,11 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name edu.umb.cs443:maskedWalletDetailsBackground
+          @attr name edu.umb.subway:maskedWalletDetailsBackground
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsBackground = 6;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#maskedWalletDetailsButtonBackground}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#maskedWalletDetailsButtonBackground}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -7660,31 +7676,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name edu.umb.cs443:maskedWalletDetailsButtonBackground
+          @attr name edu.umb.subway:maskedWalletDetailsButtonBackground
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsButtonBackground = 8;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#maskedWalletDetailsButtonTextAppearance}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#maskedWalletDetailsButtonTextAppearance}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:maskedWalletDetailsButtonTextAppearance
+          @attr name edu.umb.subway:maskedWalletDetailsButtonTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance = 7;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#maskedWalletDetailsHeaderTextAppearance}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#maskedWalletDetailsHeaderTextAppearance}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:maskedWalletDetailsHeaderTextAppearance
+          @attr name edu.umb.subway:maskedWalletDetailsHeaderTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance = 5;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#maskedWalletDetailsLogoImageType}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#maskedWalletDetailsLogoImageType}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -7699,11 +7715,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>classic</code></td><td>1</td><td></td></tr>
 <tr><td><code>monochrome</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name edu.umb.cs443:maskedWalletDetailsLogoImageType
+          @attr name edu.umb.subway:maskedWalletDetailsLogoImageType
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsLogoImageType = 10;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#maskedWalletDetailsLogoTextColor}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#maskedWalletDetailsLogoTextColor}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -7714,17 +7730,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name edu.umb.cs443:maskedWalletDetailsLogoTextColor
+          @attr name edu.umb.subway:maskedWalletDetailsLogoTextColor
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsLogoTextColor = 9;
         /**
-          <p>This symbol is the offset where the {@link edu.umb.cs443.R.attr#maskedWalletDetailsTextAppearance}
+          <p>This symbol is the offset where the {@link edu.umb.subway.R.attr#maskedWalletDetailsTextAppearance}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name edu.umb.cs443:maskedWalletDetailsTextAppearance
+          @attr name edu.umb.subway:maskedWalletDetailsTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsTextAppearance = 4;
     };

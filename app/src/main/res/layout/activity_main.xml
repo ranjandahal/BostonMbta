@@ -11,13 +11,50 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:name="com.google.android.gms.maps.MapFragment" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/info_fragment"
+        android:layout_centerInParent="true"
+        android:visibility="visible">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/station_name"
+                android:textSize="@dimen/font_medium"
+                android:layout_centerInParent="true"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contextClickable="true"
+                android:layout_alignRight="@+id/station_name"
+                android:id="@+id/close_image"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/station_info"
+                android:textSize="@dimen/font_medium"
+                android:visibility="gone"/>
+        </RelativeLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/station_fragment">
+        </FrameLayout>
+    </FrameLayout>
+
     <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:map="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
     <AutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -34,46 +71,8 @@
         android:dropDownWidth="wrap_content"
         android:inputType="textAutoComplete|textAutoCorrect"
         android:visibility="gone"
+        android:textColor="@color/black"
         android:focusableInTouchMode="true" />
-    <!--<RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-    <Button
-        android:id="@+id/b1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="type"
-        android:onClick="b1"/>
-
-        <Button
-            android:id="@+id/b2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/b1"
-            android:layout_toRightOf="@+id/b1"
-            android:text="move"
-            android:onClick="b2"/>
-
-        <Button
-            android:id="@+id/b3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/b1"
-            android:layout_toRightOf="@+id/b2"
-            android:text="zoom"
-            android:onClick="b3"/>
-
-        <Button
-            android:id="@+id/b4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/b1"
-            android:layout_toRightOf="@+id/b3"
-            android:text="mark"
-            android:onClick="b4"/>
-
-</RelativeLayout>-->
     <ImageView
         android:text="LT"
         android:layout_marginTop="65dp"
@@ -84,60 +83,57 @@
         android:src="@drawable/search"
         android:id="@+id/lt"
         android:visibility="visible"/>
-    <!--<Button-->
-        <!--android:text="LT"-->
-        <!--android:layout_marginTop="50dp"-->
-        <!--android:layout_marginLeft="25dp"-->
-        <!--android:layout_width="50dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:onClick="showSearch"-->
-        <!--android:id="@+id/lt"/>-->
     <Button
-        android:text="RT"
+        android:text="N"
         android:layout_marginTop="65dp"
         android:layout_marginRight="25dp"
         android:layout_alignParentRight="true"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/rt"/>
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:id="@+id/normal"
+        android:onClick="setMapType"
+        android:background="@color/blue"
+        android:textColor="@color/white"/>
     <Button
-        android:text="LB"
-        android:layout_marginBottom="40dp"
-        android:layout_marginLeft="25dp"
-        android:layout_alignParentBottom="true"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/lb"/>
-    <Button
-        android:text="RB"
-        android:layout_marginBottom="40dp"
+        android:text="H"
+        android:layout_marginTop="0dp"
         android:layout_marginRight="25dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/rb"/>
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/info_fragment" >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/station_name"
-            android:textSize="@dimen/font_medium"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/station_info"
-            android:textSize="@dimen/font_medium"
-            android:visibility="gone"/>
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            android:id="@+id/station_fragment">
-        </FrameLayout>
-    </FrameLayout>
+        android:layout_below="@+id/normal"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:id="@+id/hybrid"
+        android:onClick="setMapType"
+        android:background="@color/white"/>
+    <Button
+        android:text="S"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/hybrid"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:id="@+id/satellite"
+        android:onClick="setMapType"
+        android:background="@color/white"/>
+
+        <Button
+            android:text="LB"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/lb"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/lt"
+            android:layout_alignStart="@+id/lt"
+            android:layout_marginBottom="34dp" />
+
+        <Button
+            android:text="RB"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/rb"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/normal"
+            android:layout_marginBottom="31dp" />
     </RelativeLayout>
 </RelativeLayout>

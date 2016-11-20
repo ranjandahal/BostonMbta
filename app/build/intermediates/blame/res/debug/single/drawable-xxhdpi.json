@@ -252,6 +252,10 @@
         "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable-xxhdpi\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
+        "merged": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\alert.png",
+        "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\drawable-xxhdpi\\alert.png"
+    },
+    {
         "merged": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\common_signin_btn_text_disabled_dark.9.png",
         "source": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.1.0\\res\\drawable-xxhdpi\\common_signin_btn_text_disabled_dark.9.png"
     },

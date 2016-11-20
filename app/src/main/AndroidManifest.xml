@@ -24,7 +24,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" android:launchMode="singleTask"></activity>
-        <activity android:name=".DialogActivity" android:launchMode="singleTask"></activity>
+        <activity android:name=".DialogActivity" android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light.Dialog"></activity>
+        <activity android:name=".AlertActivity" android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Dialog"></activity>
         <receiver
             android:name="edu.umb.subway.OutgoingReceiver"
             android:enabled="true"
@@ -39,7 +42,7 @@
             android:enabled="true"
             android:exported="false" >
             <intent-filter>
-                <action android:name="edu.umb.cs443.intent.action.TEST" >
+                <action android:name="edu.umb.subway.intent.action.TEST" >
                 </action>
             </intent-filter>
         </receiver>

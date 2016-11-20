@@ -1,72 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/light_blue"
-    android:padding="5dp">
+    android:padding="5dp"
+    android:id="@+id/linear_layout">
 
     <GridLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:useDefaultMargins="true"
         android:alignmentMode="alignBounds"
         android:columnOrderPreserved="false"
-        android:columnCount="6"
-        android:layout_gravity="center_vertical">
+        android:columnCount="7"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/station_grid">
         <TextView
             android:text="D Stop"
-            android:gravity="center_horizontal"
-            android:textSize="@dimen/font_small_medium"
-            android:layout_columnSpan="2"
+            android:gravity="left"
+            android:textSize="@dimen/font_medium_small"
+            android:layout_columnSpan="3"
             android:layout_column="0"
+            android:minWidth="210dp"
             android:id="@+id/destination"
             android:layout_gravity="center_horizontal"
-            android:textColor="@color/light_yellow"
+            android:textAlignment="gravity"
+            android:textColor="@color/white"
             />
         <TextView
             android:text="Timer"
             android:gravity="center_horizontal"
-            android:textSize="@dimen/font_small_medium"
+            android:textSize="@dimen/font_medium_small"
             android:layout_columnSpan="1"
-            android:layout_column="2"
+            android:layout_column="3"
             android:id="@+id/timer"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:layout_gravity="center_horizontal"
-            android:textColor="@color/light_yellow"
+            android:minWidth="85dp"
+            android:textColor="@color/white"
             />
         <TextView
             android:id="@+id/distance_away"
             android:text="D Away"
             android:gravity="center_horizontal"
-            android:textSize="@dimen/font_small_medium"
-            android:layout_columnSpan="1"
-            android:layout_column="3"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/light_yellow"
-            />
-        <TextView
-            android:text="R Stop"
-            android:id="@+id/remaining_stop"
-            android:gravity="center_horizontal"
-            android:textSize="@dimen/font_small_medium"
+            android:textSize="@dimen/font_medium_small"
             android:layout_columnSpan="1"
             android:layout_column="4"
+            android:maxWidth="110dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:layout_gravity="center_horizontal"
-            android:textColor="@color/light_yellow"
+            android:textColor="@color/white"
             />
-        <ImageButton android:background="@drawable/favorite"
+        <TextView
+            android:text=""
+            android:id="@+id/remaining_stop"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/font_medium_small"
+            android:layout_columnSpan="1"
+            android:layout_column="5"
+            android:maxWidth="50dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            />
+        <ImageButton android:background="@drawable/fav_on"
             android:id="@+id/fav_image"
             android:layout_gravity="center"
-            android:layout_width="20dip"
+            android:layout_width="30dip"
             android:layout_height="20dip"
+            android:maxWidth="30dp"
             android:layout_columnSpan="1"
-            android:layout_column="5" />
-        <ImageButton android:background="@drawable/favorite"
-            android:id="@+id/info_image"
-            android:layout_gravity="center"
-            android:layout_width="20dip"
-            android:layout_height="20dip"
-            android:layout_columnSpan="1"
-            android:layout_column="5" />
+            android:layout_column="6" />
     </GridLayout>
 </LinearLayout>
 

@@ -15,6 +15,7 @@ public class Stations {
     private  Stations instance = null;
     private String stationID;
     private String name;
+    private String shortName;
     private Double lat;
     private Double lng;
     private int rank;
@@ -28,12 +29,13 @@ public class Stations {
 
     private Stations()
     {}
-    public Stations(String stationID, String name, double lat,
+    public Stations(String stationID, String name, String shortName, double lat,
                     double lng, int rank, String color, String route,
                     float zoomLevel)
     {
         this.stationID = stationID;
         this.name = name;
+        this.shortName = shortName;
         this.lat = lat;
         this.lng = lng;
         this.rank = rank;
@@ -76,6 +78,10 @@ public class Stations {
     public  void setName(String name) {
         this.name = name;
     }
+
+    public String getShortName() {return shortName;}
+
+    public void setShortName(String shortName) {this.shortName = shortName;}
 
     public  int getRank() {
         return rank;

@@ -266,6 +266,7 @@
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
     <dimen name="font_large">44dp</dimen>
     <dimen name="font_medium">20dp</dimen>
+    <dimen name="font_medium_small">18dp</dimen>
     <dimen name="font_small">10dp</dimen>
     <dimen name="font_small_medium">15dp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
