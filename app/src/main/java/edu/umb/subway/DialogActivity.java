@@ -205,13 +205,16 @@ public class DialogActivity extends FragmentActivity {
                                             jsonTrip.getJSONObject(tripCounter).getInt("pre_away"),
                                             color,
                                             false);
-                                    stopInformationList.add(si);
                                     double curLat = 0, curLon = 0;
                                     try {
                                         JSONObject vehicleArray = jsonTrip.getJSONObject(tripCounter).getJSONObject("vehicle");
                                         curLat = jsonTrip.getJSONObject(tripCounter).getJSONObject("vehicle").getDouble("vehicle_lat");
                                         curLon = jsonTrip.getJSONObject(tripCounter).getJSONObject("vehicle").getDouble("vehicle_lon");
-                                    }catch (Exception e){}
+                                    }catch (Exception e){
+                                        //continue;
+                                    }
+
+                                    stopInformationList.add(si);
                                     stationFrag = new StationInfoFragment();
                                     Bundle bundle = new Bundle();
                                     bundle.putString("destination", si.getDestination());
