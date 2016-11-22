@@ -44,6 +44,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Handler;
 
 public class DialogActivity extends FragmentActivity {
     public final static String DEBUG_TAG = "edu.umb.cs443.MYMSG";
@@ -60,7 +61,7 @@ public class DialogActivity extends FragmentActivity {
     private Chronometer timerChrono;
     private List<StopInformation> stopInformationList;  // = new ArrayList<StopInformation>();;
     private List<String> alertList;
-
+    private Handler handler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,7 +89,7 @@ public class DialogActivity extends FragmentActivity {
 
         stationNameTextView.setText(stationName);
         stationNameTextView.setBackgroundColor(color);
-
+        //handler = new Handler();
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
@@ -101,6 +102,14 @@ public class DialogActivity extends FragmentActivity {
         }
     }
 
+//    public void scheduleSendLocation() {
+//        handler.postDelayed(new Runnable() {
+//            public void run() {
+//                sendLocation();          // this method will contain your almost-finished HTTP calls
+//                handler.postDelayed(this, FIVE_SECONDS);
+//            }
+//        }, FIVE_SECONDS);
+//    }
     /**
      * Callback method defined by the View
      *
@@ -323,11 +332,8 @@ public class DialogActivity extends FragmentActivity {
     }
 
     public void favoriteAction(View v){
-        if(favorite){
-            //favImage.setImageResource(R.drawable.fav_on);
-        }else {
-            //favImage.setImageResource(R.drawable.fav_off);
-        }
+        StationInfoFragment frg = new StationInfoFragment();
+        frg.favoriteAction(v);
     }
 
     private double distance(double lat1, double lon1, double lat2, double lon2) {

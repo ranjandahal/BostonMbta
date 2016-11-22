@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/infowindow_layout">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:id="@+id/station_name"
         android:textSize="@dimen/font_medium"
         android:padding="5dp"
@@ -17,7 +17,7 @@
     </TextView>
     <ImageButton android:background="@drawable/alert"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_width="30dip"
         android:layout_height="30dip"
         android:layout_columnSpan="1"
@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/station_info"
-        android:textSize="@dimen/font_medium"
+        android:textSize="@dimen/font_medium_small"
         android:visibility="gone"
         android:layout_gravity="center"
         android:layout_below="@id/line"

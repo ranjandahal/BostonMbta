@@ -22,8 +22,8 @@ public class StationInfoFragment extends Fragment {
     TextView timer;
     TextView distanceAway;
     TextView remainingStop;
-    ImageView favImage;
-    Boolean favorite;
+    private static ImageView favImage;
+    private static Boolean favorite;
 
     View view;
     @Override
@@ -55,7 +55,7 @@ public class StationInfoFragment extends Fragment {
         //ImageView infoImage = (ImageView)view.findViewById(R.id.info_image);
 
         destination.setText(savedInstanceState.getString("destination"));
-        distanceAway.setText(String.format("%.2f miles", savedInstanceState.getDouble("distanceAway") ));
+        distanceAway.setText(String.format("%.1f mile", savedInstanceState.getDouble("distanceAway") ));
         //remainingStop.setText("" + savedInstanceState.getInt("remStop"));
         Log.v("destination", destination.getText().toString());
         Log.v("timeAway", timer.getText().toString());
@@ -64,7 +64,7 @@ public class StationInfoFragment extends Fragment {
             favImage.setImageResource(R.drawable.fav_on);
         else
             favImage.setImageResource(R.drawable.fav_off);
-        favImage.setOnClickListener(new View.OnClickListener() {
+        /*favImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(favorite){
@@ -73,7 +73,7 @@ public class StationInfoFragment extends Fragment {
                     favImage.setImageResource(R.drawable.fav_off);
                 }
             }
-        });
+        });*/
         //infoImage.setImageResource(R.drawable.fav_off);
         new CountDownTimer(savedInstanceState.getInt("timeAway")*1000, 1000) {
             public void onTick(long millisUntilFinished) {
@@ -81,12 +81,13 @@ public class StationInfoFragment extends Fragment {
                         + String.format("%02d", (millisUntilFinished%(60*1000))/1000));
             }
             public void onFinish() {
-                timer.setText("Arrived!");
+                timer.setText("Arv!");
             }
         }.start();
     }
 
-    public void favoriteAction(View v){
+    public static void favoriteAction(View v){
+        favImage = (ImageView)v.findViewById(R.id.fav_image);
         if(favorite){
             favImage.setImageResource(R.drawable.fav_on);
         }else {

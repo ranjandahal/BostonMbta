@@ -7,7 +7,7 @@
     <dimen name="font_large">44dp</dimen>
     <dimen name="font_medium">20dp</dimen>
     <dimen name="font_medium_small">18dp</dimen>
-    <dimen name="font_small_medium">15dp</dimen>
+    <dimen name="font_small_medium">13dp</dimen>
     <dimen name="font_small">10dp</dimen>
 
 </resources>

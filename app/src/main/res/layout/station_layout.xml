@@ -4,11 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/light_blue"
-    android:padding="5dp"
+    android:padding="2dp"
     android:id="@+id/linear_layout">
 
     <GridLayout android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:useDefaultMargins="true"
         android:alignmentMode="alignBounds"
         android:columnOrderPreserved="false"
@@ -18,10 +18,10 @@
         <TextView
             android:text="D Stop"
             android:gravity="left"
-            android:textSize="@dimen/font_medium_small"
+            android:textSize="@dimen/font_small_medium"
             android:layout_columnSpan="3"
             android:layout_column="0"
-            android:minWidth="210dp"
+            android:minWidth="115dp"
             android:id="@+id/destination"
             android:layout_gravity="center_horizontal"
             android:textAlignment="gravity"
@@ -30,21 +30,21 @@
         <TextView
             android:text="Timer"
             android:gravity="center_horizontal"
-            android:textSize="@dimen/font_medium_small"
+            android:textSize="@dimen/font_small_medium"
             android:layout_columnSpan="1"
             android:layout_column="3"
             android:id="@+id/timer"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:layout_gravity="center_horizontal"
-            android:minWidth="85dp"
+            android:minWidth="60dp"
             android:textColor="@color/white"
             />
         <TextView
             android:id="@+id/distance_away"
             android:text="D Away"
             android:gravity="center_horizontal"
-            android:textSize="@dimen/font_medium_small"
+            android:textSize="@dimen/font_small_medium"
             android:layout_columnSpan="1"
             android:layout_column="4"
             android:maxWidth="110dp"
@@ -57,21 +57,29 @@
             android:text=""
             android:id="@+id/remaining_stop"
             android:gravity="center_horizontal"
-            android:textSize="@dimen/font_medium_small"
+            android:textSize="@dimen/font_small_medium"
             android:layout_columnSpan="1"
             android:layout_column="5"
             android:maxWidth="50dp"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/white"
             />
-        <ImageButton android:background="@drawable/fav_on"
+        <ImageButton
+            android:background="@null"
             android:id="@+id/fav_image"
             android:layout_gravity="center"
-            android:layout_width="30dip"
-            android:layout_height="20dip"
-            android:maxWidth="30dp"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:maxWidth="25dp"
             android:layout_columnSpan="1"
-            android:layout_column="6" />
+            android:layout_column="6"
+            android:onClick="favoriteAction"/>
     </GridLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey"
+        android:id="@+id/line"
+        android:layout_below="@+id/station_grid"/>
 </LinearLayout>
 
