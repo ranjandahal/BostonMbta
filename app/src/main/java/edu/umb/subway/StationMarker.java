@@ -58,7 +58,7 @@ public class StationMarker{
         if(colorName.equalsIgnoreCase("blue")) {
             return polylineOptions.addAll(blueLatLng)
                     .color(color)
-                    .width(25)
+                    .width(20)
                     .visible(true)
                     .zIndex(-1);
         }
@@ -66,13 +66,13 @@ public class StationMarker{
             if(route.equalsIgnoreCase("A"))
                 return polylineOptions.addAll(redLatLngA)
                     .color(color)
-                    .width(25)
+                    .width(20)
                     .visible(true)
                     .zIndex(-1);
             else if(route.equalsIgnoreCase("B"))
                 return polylineOptions.addAll(redLatLngB)
                         .color(color)
-                        .width(25)
+                        .width(20)
                         .visible(true)
                         .zIndex(-1);
         }
@@ -80,25 +80,25 @@ public class StationMarker{
             if(route.equalsIgnoreCase("B"))
                 return polylineOptions.addAll(greenLatLngB)
                     .color(color)
-                    .width(32)
+                    .width(20)
                     .visible(true)
                     .zIndex(-1);
             if(route.equalsIgnoreCase("C"))
                 return polylineOptions.addAll(greenLatLngC)
                         .color(color)
-                        .width(32)
+                        .width(20)
                         .visible(true)
                         .zIndex(-1);
             if(route.equalsIgnoreCase("D"))
                 return polylineOptions.addAll(greenLatLngD)
                         .color(color)
-                        .width(32)
+                        .width(20)
                         .visible(true)
                         .zIndex(-1);
             if(route.equalsIgnoreCase("E"))
                 return polylineOptions.addAll(greenLatLngE)
                         .color(color)
-                        .width(32)
+                        .width(20)
                         .visible(true)
                         .zIndex(-1);
         }

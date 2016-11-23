@@ -266,7 +266,7 @@ public class DialogActivity extends FragmentActivity {
                     }
                     //setFragments();
                 } else {
-                    stationInfoTextView.setText("No Subway connection available. See alert for more information.");
+                    stationInfoTextView.setText("One/No Subway schedule available. See alerts!");
                     stationInfoTextView.setVisibility(View.VISIBLE);
                 }
             }
@@ -278,7 +278,6 @@ public class DialogActivity extends FragmentActivity {
     }
 
     private void setFragments(){
-        //FrameLayout fmLayout = (FrameLayout)findViewById(R.id.info_fragment);
         FragmentManager fm = getSupportFragmentManager();
         TextView stationInfo = (TextView)findViewById(R.id.station_info);
         StationInfoFragment stationFrag;
@@ -295,9 +294,8 @@ public class DialogActivity extends FragmentActivity {
                 bundle.putInt("remStop", 2);
                 bundle.putInt("color", si.getColor());
                 bundle.putBoolean("favorite", si.isFavorite());
-                //bundle.putString("destination", si.getDestination());
-                //set Fragmentclass Arguments
                 stationFrag.setArguments(bundle);
+
                 if(count == 0)
                     fm.beginTransaction().add(R.id.station_fragment_one, stationFrag, "Station").commit();
                 else if(count == 1)
@@ -316,7 +314,6 @@ public class DialogActivity extends FragmentActivity {
                     fm.beginTransaction().add(R.id.station_fragment_eight, stationFrag, "Station").commit();
                 count++;
             }
-            //fm.beginTransaction().commit();
         }
         else {
             //stationName.setText(stationId[1]);
@@ -331,10 +328,10 @@ public class DialogActivity extends FragmentActivity {
         startActivity(dialogIntent);
     }
 
-    public void favoriteAction(View v){
+    /*public void favoriteAction(View v){
         StationInfoFragment frg = new StationInfoFragment();
         frg.favoriteAction(v);
-    }
+    }*/
 
     private double distance(double lat1, double lon1, double lat2, double lon2) {
         double theta = lon1 - lon2;
@@ -350,6 +347,7 @@ public class DialogActivity extends FragmentActivity {
     private double deg2rad(double deg) {
         return (deg * Math.PI / 180.0);
     }
+
     private double rad2deg(double rad) {
         return (rad * 180.0 / Math.PI);
     }

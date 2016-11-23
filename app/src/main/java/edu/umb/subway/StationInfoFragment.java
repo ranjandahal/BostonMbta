@@ -64,7 +64,7 @@ public class StationInfoFragment extends Fragment {
             favImage.setImageResource(R.drawable.fav_on);
         else
             favImage.setImageResource(R.drawable.fav_off);
-        /*favImage.setOnClickListener(new View.OnClickListener() {
+        favImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(favorite){
@@ -73,7 +73,7 @@ public class StationInfoFragment extends Fragment {
                     favImage.setImageResource(R.drawable.fav_off);
                 }
             }
-        });*/
+        });
         //infoImage.setImageResource(R.drawable.fav_off);
         new CountDownTimer(savedInstanceState.getInt("timeAway")*1000, 1000) {
             public void onTick(long millisUntilFinished) {

@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/station_info"
-        android:textSize="@dimen/font_medium_small"
+        android:textSize="@dimen/font_small_medium"
         android:visibility="gone"
         android:layout_gravity="center"
         android:layout_below="@id/line"

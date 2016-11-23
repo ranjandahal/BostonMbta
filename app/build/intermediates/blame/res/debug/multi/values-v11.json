@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+        "outputFile": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 90
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 484,
+                        "startOffset": 497,
                         "endColumn": 39,
-                        "endOffset": 519
+                        "endOffset": 532
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     "endOffset": 129
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 176,
+                        "startOffset": 181,
                         "endColumn": 38,
-                        "endOffset": 210
+                        "endOffset": 215
                     }
                 }
             },
@@ -49,13 +49,13 @@
                     "endOffset": 175
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 438,
+                        "startOffset": 450,
                         "endColumn": 45,
-                        "endOffset": 479
+                        "endOffset": 491
                     }
                 }
             },
@@ -68,13 +68,13 @@
                     "endOffset": 222
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 340,
+                        "startOffset": 350,
                         "endColumn": 46,
-                        "endOffset": 382
+                        "endOffset": 392
                     }
                 }
             },
@@ -87,13 +87,13 @@
                     "endOffset": 273
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 387,
+                        "startOffset": 398,
                         "endColumn": 50,
-                        "endOffset": 433
+                        "endOffset": 444
                     }
                 }
             },
@@ -106,13 +106,13 @@
                     "endOffset": 317
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 708,
+                        "startOffset": 728,
                         "endColumn": 43,
-                        "endOffset": 747
+                        "endOffset": 767
                     }
                 }
             },
@@ -125,13 +125,13 @@
                     "endOffset": 362
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 752,
+                        "startOffset": 773,
                         "endColumn": 44,
-                        "endOffset": 792
+                        "endOffset": 813
                     }
                 }
             },
@@ -144,13 +144,13 @@
                     "endOffset": 405
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 797,
+                        "startOffset": 819,
                         "endColumn": 42,
-                        "endOffset": 835
+                        "endOffset": 857
                     }
                 }
             },
@@ -163,13 +163,13 @@
                     "endOffset": 451
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
-                        "startOffset": 840,
+                        "startOffset": 863,
                         "endColumn": 45,
-                        "endOffset": 881
+                        "endOffset": 904
                     }
                 }
             },
@@ -182,13 +182,13 @@
                     "endOffset": 493
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 55,
+                        "startOffset": 57,
                         "endColumn": 41,
-                        "endOffset": 92
+                        "endOffset": 94
                     }
                 }
             },
@@ -201,13 +201,13 @@
                     "endOffset": 532
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 255,
+                        "startOffset": 262,
                         "endColumn": 38,
-                        "endOffset": 289
+                        "endOffset": 296
                     }
                 }
             },
@@ -220,13 +220,13 @@
                     "endOffset": 577
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 525,
+                        "startOffset": 540,
                         "endColumn": 44,
-                        "endOffset": 565
+                        "endOffset": 580
                     }
                 }
             },
@@ -239,13 +239,13 @@
                     "endOffset": 623
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 570,
+                        "startOffset": 586,
                         "endColumn": 45,
-                        "endOffset": 611
+                        "endOffset": 627
                     }
                 }
             },
@@ -258,13 +258,13 @@
                     "endOffset": 668
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 294,
+                        "startOffset": 302,
                         "endColumn": 44,
-                        "endOffset": 334
+                        "endOffset": 342
                     }
                 }
             },
@@ -277,13 +277,13 @@
                     "endOffset": 712
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 616,
+                        "startOffset": 633,
                         "endColumn": 43,
-                        "endOffset": 655
+                        "endOffset": 672
                     }
                 }
             },
@@ -296,13 +296,13 @@
                     "endOffset": 759
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 660,
+                        "startOffset": 678,
                         "endColumn": 46,
-                        "endOffset": 702
+                        "endOffset": 720
                     }
                 }
             },
@@ -315,13 +315,13 @@
                     "endOffset": 800
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 135,
+                        "startOffset": 139,
                         "endColumn": 40,
-                        "endOffset": 171
+                        "endOffset": 175
                     }
                 }
             },
@@ -334,13 +334,13 @@
                     "endOffset": 838
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 97,
+                        "startOffset": 100,
                         "endColumn": 37,
-                        "endOffset": 130
+                        "endOffset": 133
                     }
                 }
             },
@@ -353,13 +353,13 @@
                     "endOffset": 878
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\colors.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 215,
+                        "startOffset": 221,
                         "endColumn": 39,
-                        "endOffset": 250
+                        "endOffset": 256
                     }
                 }
             },
@@ -373,14 +373,14 @@
                     "endOffset": 1012
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\src\\main\\res\\values-v11\\styles.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\src\\main\\res\\values-v11\\styles.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 177,
+                        "startOffset": 183,
                         "endLine": 8,
                         "endColumn": 12,
-                        "endOffset": 306
+                        "endOffset": 314
                     }
                 }
             },
@@ -394,7 +394,7 @@
                     "endOffset": 1431
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -415,7 +415,7 @@
                     "endOffset": 1856
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -436,7 +436,7 @@
                     "endOffset": 2284
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -457,7 +457,7 @@
                     "endOffset": 2710
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -478,7 +478,7 @@
                     "endOffset": 3137
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 28,
                         "startColumn": 4,
@@ -499,7 +499,7 @@
                     "endOffset": 3562
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 34,
                         "startColumn": 4,
@@ -519,7 +519,7 @@
                     "endOffset": 3651
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 42,
                         "startColumn": 4,
@@ -538,7 +538,7 @@
                     "endOffset": 3752
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 43,
                         "startColumn": 4,
@@ -558,7 +558,7 @@
                     "endOffset": 4160
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 44,
                         "startColumn": 4,
@@ -579,7 +579,7 @@
                     "endOffset": 4580
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 49,
                         "startColumn": 4,
@@ -600,7 +600,7 @@
                     "endOffset": 4687
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 56,
                         "startColumn": 4,
@@ -621,7 +621,7 @@
                     "endOffset": 4816
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 58,
                         "startColumn": 4,
@@ -641,7 +641,7 @@
                     "endOffset": 4887
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 62,
                         "startColumn": 4,
@@ -660,7 +660,7 @@
                     "endOffset": 4970
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 63,
                         "startColumn": 4,
@@ -680,7 +680,7 @@
                     "endOffset": 8678
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 64,
                         "startColumn": 4,
@@ -701,7 +701,7 @@
                     "endOffset": 12526
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 115,
                         "startColumn": 4,
@@ -721,7 +721,7 @@
                     "endOffset": 12617
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 169,
                         "startColumn": 4,

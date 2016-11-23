@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldrtl-v23\\values-ldrtl-v23.xml",
+        "outputFile": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldrtl-v23\\values-ldrtl-v23.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 163
                 },
                 "from": {
-                    "file": "C:\\Users\\rdahal\\StudioProjects\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ldrtl-v23\\values-ldrtl-v23.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-ldrtl-v23\\values-ldrtl-v23.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

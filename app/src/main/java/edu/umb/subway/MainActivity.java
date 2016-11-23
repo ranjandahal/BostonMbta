@@ -53,24 +53,20 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private static LatLng currentLocation;
     private static boolean configChanged;
     private ImageView closeImage;
-
-    //private JSONObject jsonObject = null;
     private static List<Stations> stationsList;
     public static List<Marker> markerList;
-
 	private GoogleMap mMap;
-    //private int mtype=0;
-    //private GroundOverlayOptions overlayOptions;
     private Polyline polylineBlue, polylineGreenB,polylineGreenC,polylineGreenD,
                      polylineGreenE, polylineRedA, polylineRedB, polylineOrange;
 
     private StationMarker stationMarker;
-    private Button rightTopNormal, rightTopHybrid, rightTopSatellite, lb, rb;
-    private ImageView lt;
+    private Button rightTopNormal, rightTopHybrid, rightTopSatellite, lb;
+    private ImageView search, setting;
     //Database
     protected DBHandlerMbta myDBHelper;
     private AutoCompleteTextView autoCompleteTextView;
     private List<StopInformation> stopInformationList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,12 +101,12 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         MapFragment mFragment=((MapFragment) getFragmentManager().findFragmentById(R.id.map));
         mFragment.getMapAsync(this);
 
-        lt = (ImageView)findViewById(R.id.lt);
+        search = (ImageView)findViewById(R.id.search);
         rightTopNormal = (Button)findViewById(R.id.normal);
         rightTopHybrid = (Button)findViewById(R.id.hybrid);
         rightTopSatellite = (Button)findViewById(R.id.satellite);
         lb = (Button)findViewById(R.id.lb);
-        rb = (Button)findViewById(R.id.rb);
+        setting = (ImageView) findViewById(R.id.setting);
         autoCompleteTextView = (AutoCompleteTextView)findViewById(R.id.autocomplete);
 
         ArrayAdapter<Object> autocompleteAdapter = new ArrayAdapter<Object>(getApplicationContext(),
@@ -170,6 +166,16 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             hideSoftKeyboard();
         }
     }
+
+    protected void showSetting(View view){
+        Intent settingIntent = new Intent(this, Setting.class);
+        /*dialogIntent.putExtra("station_id", stationId[0]);
+        dialogIntent.putExtra("station_name", stationId[1]);
+        dialogIntent.putExtra("color", getColor(stationId[3]));
+        dialogIntent.putExtra("lat", marker.getPosition().latitude);
+        dialogIntent.putExtra("lon", marker.getPosition().longitude);*/
+        startActivity(settingIntent);
+    }
     /**
      * Save data when orientation changes to restore later.
      * @param outState
@@ -218,19 +224,19 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 for (Marker mk: markerList){
                     if(mk.getPosition().latitude != latLng.latitude && mk.getPosition().longitude != latLng.longitude){
                         if(rightTopNormal.getVisibility() == View.GONE){
-                            lt.setVisibility(View.VISIBLE);
+                            search.setVisibility(View.VISIBLE);
                             rightTopNormal.setVisibility(View.VISIBLE);
                             rightTopHybrid.setVisibility(View.VISIBLE);
                             rightTopSatellite.setVisibility(View.VISIBLE);
-                            rb.setVisibility(View.VISIBLE);
+                            setting.setVisibility(View.VISIBLE);
                             lb.setVisibility(View.VISIBLE);
                         }
                         else{
-                            lt.setVisibility(View.GONE);
+                            search.setVisibility(View.GONE);
                             rightTopNormal.setVisibility(View.GONE);
                             rightTopHybrid.setVisibility(View.GONE);
                             rightTopSatellite.setVisibility(View.GONE);
-                            rb.setVisibility(View.GONE);
+                            setting.setVisibility(View.GONE);
                             lb.setVisibility(View.GONE);
                         }
                         break;
@@ -305,6 +311,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         else
             mMap.animateCamera(CameraUpdateFactory.newLatLng(marker.getPosition()));
     }
+
     public int getColor(String color){
         if(color.contains("green"))
             return ContextCompat.getColor(getApplicationContext(), R.color.green);
@@ -421,11 +428,11 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
          * json data gets parsed to get temperature, log and lat values. A new AsyncTask
          * gets call inside this method to download image.
          *
-         * @param result Json data
+         * @param resusearch Json data
          */
-        protected void onPostExecute(JSONObject result) {
-            if (result != null) {
-                parseJSONObject(result);
+        protected void onPostExecute(JSONObject resusearch) {
+            if (resusearch != null) {
+                parseJSONObject(resusearch);
             } else {
                 Log.i(Properties.DEBUG_TAG, "returned bitmap is null");
             }

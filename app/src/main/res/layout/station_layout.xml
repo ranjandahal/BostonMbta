@@ -72,14 +72,13 @@
             android:layout_height="25dip"
             android:maxWidth="25dp"
             android:layout_columnSpan="1"
-            android:layout_column="6"
-            android:onClick="favoriteAction"/>
+            android:layout_column="6"/>
+            <!--android:onClick="favoriteAction"/>-->
     </GridLayout>
-    <View
+    <!--<View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/light_grey"
         android:id="@+id/line"
-        android:layout_below="@+id/station_grid"/>
+        android:layout_below="@+id/station_grid"/>-->
 </LinearLayout>
-
