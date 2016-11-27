@@ -121,7 +121,7 @@ public class StationMarker{
         Rect bounds = new Rect();
         String textToDraw;
         Paint.FontMetrics fm = new Paint.FontMetrics();
-        paint.setTextSize(35.0f);
+        paint.setTextSize(30.0f);
         paint.getFontMetrics(fm);
         paint.setTextAlign(Paint.Align.CENTER);
 
@@ -142,11 +142,11 @@ public class StationMarker{
             if(st.getColor().startsWith("blue")) {
                 blueLatLng.add(ltlg);
 
-                if(st.getColor().contains(",") && st.getColor().contains("orange")) {
+                if(st.getColor().contains(",orange")) {
                     paintMultiStop(canvas, paint, blue, orange, width, height);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.blue_orange);
                 }
-                else if(st.getColor().contains(",") && st.getColor().contains("green")) {
+                else if(st.getColor().contains(",green")) {
                     paintMultiStop(canvas, paint, blue, green, width, height);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.green_blue);
                 }
@@ -163,11 +163,11 @@ public class StationMarker{
                 if(st.getRoute().contains("A"))
                     redLatLngA.add(ltlg);
 
-                if(st.getColor().contains(",") && st.getColor().contains("orange")) {
+                if(st.getColor().contains(",orange")) {
                     paintMultiStop(canvas, paint, red, orange, width, height);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.orange_red);
                 }
-                else if(st.getColor().contains(",") && st.getColor().contains("green")) {
+                else if(st.getColor().contains(",green")) {
                     paintMultiStop(canvas, paint, red, green, width, height);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.green_red);
                 }
@@ -188,15 +188,15 @@ public class StationMarker{
                 if(st.getRoute().contains("E"))
                     greenLatLngE.add(ltlg);
 
-                if(st.getColor().contains(",") && st.getColor().contains("orange")) {
+                if(st.getColor().contains(",orange")) {
                     paintMultiStop(canvas, paint, green, orange, width, height);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.green_orange);
                 }
-                else if(st.getColor().contains(",") && st.getColor().contains("red")) {
+                else if(st.getColor().contains(",red")) {
                     paintMultiStop(canvas, paint, green, red, width, height);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.green_red);
                 }
-                else if(st.getColor().contains(",") && st.getColor().contains("blue")){
+                else if(st.getColor().contains(",blue")){
                     paintMultiStop(canvas, paint, green, blue, width, height);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.green_blue);
                 }
@@ -210,15 +210,15 @@ public class StationMarker{
             else if(st.getColor().startsWith("orange")){
                 orangeLatLng.add(ltlg);
 
-                if(st.getColor().contains(",") && st.getColor().contains("red")) {
+                if(st.getColor().contains(",red")) {
                     paintMultiStop(canvas, paint, orange, red, width, height);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.orange_red);
                 }
-                else if(st.getColor().contains(",") && st.getColor().contains("blue")) {
+                else if(st.getColor().contains(",blue")) {
                     paintMultiStop(canvas, paint, orange, blue, width, height);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.blue_orange);
                 }
-                else if(st.getColor().contains(",") && st.getColor().contains("green")) {
+                else if(st.getColor().contains(",green")) {
                     paintMultiStop(canvas, paint, orange, green, width, height);
                     bitmapStation = BitmapDescriptorFactory.fromResource(R.drawable.green_orange);
                 }
@@ -233,21 +233,19 @@ public class StationMarker{
             canvas.drawText(textToDraw, xPos, yPos, paint);
             marker = mMap.addMarker(new MarkerOptions()
                     .position(ltlg)
-                    .title(st.getStationID() + "," + st.getName() + "," + st.getZoomLevel()  + "," + st.getColor())
+                    .title(st.toString())
                     .icon(bitmapStation)
                     .anchor(0.5f, 0.5f));
 
             marker = mMap.addMarker(new MarkerOptions()
                     .position(ltlg)
-                    .title(st.getStationID() + "," + st.getName() + "," + st.getZoomLevel()  + "," + st.getColor())
+                    .title(st.toString())
                     //.zIndex(1)
                     .icon(BitmapDescriptorFactory.fromBitmap(bitmap))
                     .anchor(-0.08f,0)
-                    //.rotation(180.0f)
-                    //.alpha(0.7f)
                     .visible(false));
-
             markerList.add(marker);
+
         }
         return markerList;
     }

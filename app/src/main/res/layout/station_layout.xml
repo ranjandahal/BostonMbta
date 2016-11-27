@@ -21,7 +21,7 @@
             android:textSize="@dimen/font_small_medium"
             android:layout_columnSpan="3"
             android:layout_column="0"
-            android:minWidth="115dp"
+            android:minWidth="138dp"
             android:id="@+id/destination"
             android:layout_gravity="center_horizontal"
             android:textAlignment="gravity"
@@ -70,7 +70,6 @@
             android:layout_gravity="center"
             android:layout_width="25dip"
             android:layout_height="25dip"
-            android:maxWidth="25dp"
             android:layout_columnSpan="1"
             android:layout_column="6"/>
             <!--android:onClick="favoriteAction"/>-->

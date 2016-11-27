@@ -7,23 +7,38 @@ import java.util.List;
  */
 
 public class StopInformation {
+    private String stationId;
+    private String stationName;
     private String destination;
     private int timeAway;
     private int color;
     private boolean favorite;
+    private double distanceAway;
+    private int remainingStop;
 
     private StopInformation(){}
 
-    public StopInformation(String destination, int timeAway, int color, boolean favorite){
+    public StopInformation(String stationId, String stationName, String destination, int timeAway, int color,
+                           boolean favorite, double distanceAway, int remainingStop){
+        this.stationId = stationId;
+        this.stationName = stationName;
         this.destination = destination;
         this.timeAway = timeAway;
         this.color = color;
         this.favorite = favorite;
+        this.distanceAway = distanceAway;
+        this.remainingStop = remainingStop;
     }
 
-    public String getDestination() {
-        return destination;
-    }
+    public String getDestination() {return destination;}
+
+    public String getStationId() {return stationId;}
+
+    public void setStationId(String stationId) {this.stationId = stationId;}
+
+    public String getStationName() {return stationName;}
+
+    public void setStationName(String stationName) {this.stationName = stationName;}
 
     public void setDestination(String destination) {
         this.destination = destination;
@@ -48,6 +63,14 @@ public class StopInformation {
     public boolean isFavorite() { return favorite;}
 
     public void setFavorite(boolean favorite) { this.favorite = favorite;}
+
+    public double getDistanceAway() {return distanceAway;}
+
+    public void setDistanceAway(double distanceAway) {this.distanceAway = distanceAway;}
+
+    public int getRemainingStop() {return remainingStop;}
+
+    public void setRemainingStop(int remainingStop) {this.remainingStop = remainingStop;}
 
     public static boolean checkDuplicateDestination(List<StopInformation> stopInfomationList, String destination){
         for (StopInformation si:stopInfomationList) {

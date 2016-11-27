@@ -2,12 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="#f4f4f4" >
-
+    android:orientation="vertical">
+    <TextView
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@color/blue"
+        android:text="Favorite Stations List"
+        android:gravity="center"
+        android:textSize="@dimen/font_medium"
+        android:id="@+id/setting_title"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="gravity"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
     <ExpandableListView
-        android:id="@+id/lvExp"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"/>
-
+        android:id="@+id/favorite_station_listView"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
 </LinearLayout>

@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="350dp"
-    android:layout_height="200dp"
-    android:background="@color/dark_yellow"
-    android:padding="5dip">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content" android:orientation="vertical"
+    android:layout_width="fill_parent">
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="6dp"/>
-</LinearLayout>
+    <TableRow android:layout_width="fill_parent"
+        android:id="@+id/TableRow01"
+        android:layout_height="wrap_content">
 
+        <TextView android:textColor="#FFFFFF"
+            android:id="@+id/id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="id" android:textStyle="bold"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:typeface="monospace"
+            android:height="20sp" />
+        <TextView android:textColor="#FFFFFF"
+            android:id="@+id/categoryId"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="categoryId"
+            android:layout_weight="1"
+            android:height="20sp" />
+
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:gravity="right"
+            android:id="@+id/description"
+            android:text="description"
+            android:height="20sp" />
+    </TableRow>
+
+</TableLayout>

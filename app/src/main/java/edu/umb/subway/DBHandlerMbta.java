@@ -28,19 +28,17 @@ public class DBHandlerMbta extends SQLiteOpenHelper {
 
     //Defining the column names for the table
     private static final String stationId = "stationID";
-    private static final String favStationId = "favStationID";
     private static final String stationName = "stationName";
     private static final String stationShortName = "stationNameShort";
-    private static final String favStationName = "favStationName";
     private static final String slatitude = "lat";
     private static final String slongitude= "long";
     private static final String sRank = "rank";
     private static final String sColor= "color";
     private static final String sRoute= "route";
-    private static final String sDestination= "route";
     private static final String sZoomLevel = "zoomLevel";
-//    private static final String smessage= "message";
-//    private static final String sfavorite= "favorite";
+
+    private static final String sDestination= "destination";
+    private static final String sActive= "active";
 
     //
     public DBHandlerMbta(Context context){
@@ -69,10 +67,9 @@ public class DBHandlerMbta extends SQLiteOpenHelper {
             table = "CREATE TABLE " + DATABASE_TABLE_FAVORITE + "("
                     + stationId + " STRING, "
                     + stationName + " TEXT, "
-                    //+ favStationId + " STRING, "
-                    //+ favStationName + " TEXT, "
                     + sColor + " TEXT, "
                     + sDestination + " TEXT, "
+                    + sActive + " INTEGER DEFAULT 0, "
                     + "PRIMARY KEY (" + stationId + "," + sColor + "," + stationName + "," + sDestination + ")"
                     + " );";
 
@@ -118,7 +115,7 @@ public class DBHandlerMbta extends SQLiteOpenHelper {
         }
     }
 
-    public void addFavorite(String stId, String name, String color, String destination) {
+    public void addFavorite(String stId, String name, String color, String destination, int active) {
         SQLiteDatabase myAddStationdb = this.getWritableDatabase();
         try {
             ContentValues values = new ContentValues();
@@ -127,6 +124,7 @@ public class DBHandlerMbta extends SQLiteOpenHelper {
             values.put(stationName, name);
             values.put(sColor, color);
             values.put(sDestination, destination);
+            values.put(sActive, active);
             // Inserting Row
             myAddStationdb.insert(DATABASE_TABLE_FAVORITE, null, values);
         }catch(Exception ex) {
@@ -142,7 +140,7 @@ public class DBHandlerMbta extends SQLiteOpenHelper {
         SQLiteDatabase myGetStationdb = this.getReadableDatabase();
         Cursor cursor = myGetStationdb.query(
                 DATABASE_TABLE_STATION, new String[]
-                        {sid, stationName, slatitude,slongitude, sRank, sColor, sRoute, sZoomLevel}, sid + " = ?",
+                        {stationId, stationName, stationShortName, slatitude,slongitude, sRank, sColor, sRoute, sZoomLevel}, stationId + " = ?",
                 new String[] { sid }, null, null, null, null);
         if (cursor != null)
             cursor.moveToFirst();
@@ -156,28 +154,33 @@ public class DBHandlerMbta extends SQLiteOpenHelper {
                     cursor.getString(6), cursor.getString(7),
                     cursor.getFloat(8)
                 );
+        myGetStationdb.close();
         // return station
         return desireStation;
     }
 
-    public Stations getFavoriteStation(String sid, String sDestination) {
+    public FavoriteStations getFavoriteStation(String sid, String sDestination) {
         SQLiteDatabase myGetStationdb = this.getReadableDatabase();
-        Cursor cursor = myGetStationdb.query(
-                DATABASE_TABLE_STATION, new String[]
-                        {sid, stationName, sColor, sDestination}, sid + " = ?," + sDestination + " = ?",
-                new String[] { sid, sDestination}, null, null, null);
+
+        String selectQuery = "none";
+        selectQuery = "SELECT TOP 1 * FROM " + DATABASE_TABLE_FAVORITE + " WHERE stationId = '"
+                        + sid + "' AND destination ='" + sDestination + "' WHERE active = 1";
+
+        SQLiteDatabase allStationdb = this.getReadableDatabase(); //.getWritableDatabase();
+        Cursor cursor = allStationdb.rawQuery(selectQuery, null);
         if (cursor != null)
             cursor.moveToFirst();
         FavoriteStations desireStation = new FavoriteStations
                 (
                         cursor.getString(0), cursor.getString(1),
-                        cursor.getString(2), cursor.getString(3)
+                        cursor.getString(2), cursor.getString(3),
+                        cursor.getInt(4)
                 );
-        // return station
+        myGetStationdb.close();
         return desireStation;
     }
 
-        // Information about all Station
+    // Information about all Station
     public List<Stations> getAllStation(String color) {
         List<Stations> stationsList = new ArrayList<Stations>();
 
@@ -199,19 +202,27 @@ public class DBHandlerMbta extends SQLiteOpenHelper {
                           cursor.getFloat(8)));
             } while (cursor.moveToNext());
         }
+        allStationdb.close();
         // return contact list
         return stationsList;
     }
 
-    public List<FavoriteStations> getAllFavoriteStation(String stationName) {
+    public List<FavoriteStations> getAllFavoriteStation(String stationName, boolean all, boolean active) {
         List<FavoriteStations> favStationsList = new ArrayList<FavoriteStations>();
 
         // Select All Query
         String selectQuery = "none";
-        if (stationName.equals("none") || stationName.length() == 0)
+        if ((stationName.equals("none") || stationName.length() == 0) && all)
             selectQuery = "SELECT * FROM " + DATABASE_TABLE_FAVORITE + " ORDER BY " + DBHandlerMbta.stationName;
+        else if(active)
+            selectQuery = "SELECT * FROM " + DATABASE_TABLE_FAVORITE + " WHERE " + sActive +
+                            "= 1 ORDER BY " + DBHandlerMbta.stationName;
+        else if(!active)
+            selectQuery = "SELECT * FROM " + DATABASE_TABLE_FAVORITE + " WHERE " + sActive +
+                    "= 0 ORDER BY " + DBHandlerMbta.stationName;
         else
-            selectQuery = "SELECT * FROM " + DATABASE_TABLE_FAVORITE + " WHERE " + DBHandlerMbta.stationName + "= '" + stationName + "' ORDER BY " + favStationName;
+            selectQuery = "SELECT * FROM " + DATABASE_TABLE_FAVORITE + " WHERE " + DBHandlerMbta.stationName +
+                          "= '" + stationName + "' ORDER BY " + DBHandlerMbta.stationName;
 
         SQLiteDatabase allStationdb = this.getReadableDatabase(); //.getWritableDatabase();
         Cursor cursor = allStationdb.rawQuery(selectQuery, null);
@@ -220,32 +231,55 @@ public class DBHandlerMbta extends SQLiteOpenHelper {
             do {
                 favStationsList.add(new FavoriteStations(
                         cursor.getString(0),cursor.getString(1),
-                        cursor.getString(2), cursor.getString(3)));
+                        cursor.getString(2), cursor.getString(3),
+                        cursor.getInt(4)));
             } while (cursor.moveToNext());
         }
+        allStationdb.close();
         // return contact list
         return favStationsList;
     }
 
+    public int isFavorite(String stationId, String destination, boolean checkExist){
+        SQLiteDatabase myGetStationdb = this.getReadableDatabase();
+
+        String selectQuery = "none";
+        if(checkExist)
+            selectQuery = "SELECT " + sActive + " FROM " + DATABASE_TABLE_FAVORITE + " WHERE " + this.stationId + " = '"
+                        + stationId + "' AND " + sDestination + " ='" + destination + "' LIMIT 1";
+        else
+            selectQuery = "SELECT COUNT(*) FROM " + DATABASE_TABLE_FAVORITE + " WHERE " + this.stationId + " = '"
+                    + stationId + "' AND " + sDestination + " ='" + destination + "' AND " + sActive + " = 1";
+
+        Cursor cursor = myGetStationdb.rawQuery(selectQuery, null);
+        if (cursor != null && cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            int value = cursor.getInt(0);
+            myGetStationdb.close();
+            return cursor.getInt(0);
+        }
+        myGetStationdb.close();
+        return -1;
+    }
+
     // Updating a station
-    public int updateFavoriteStation(FavoriteStations stations) {
+    public int updateFavoriteStation(String stationId, String destination, int active) {
         SQLiteDatabase updateStationdb = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put(stationId, stations.getStationID());
-        values.put(stationName, stations.getName());
-        values.put(sColor,stations.getColor());
-        values.put(sRoute,stations.getDestination());
+        values.put(sActive,active);
     // updating row
-        return updateStationdb.update(DATABASE_TABLE_STATION, values, stationId + " = ?",
-                new String[]{String.valueOf(stations.getStationID())});
+        int result = updateStationdb.update(DATABASE_TABLE_FAVORITE, values, this.stationId + " = ? AND " + this.sDestination + " = ?",
+                new String[]{stationId, destination});
+        updateStationdb.close();
+        return  result;
     }
 
     //Deleting a station
-    public void deleteFavoriteStation(FavoriteStations stations) {
+    public void deleteFavoriteStation(String stationId) {
         SQLiteDatabase deleteStationdb = this.getWritableDatabase();
         deleteStationdb.delete(DATABASE_TABLE_STATION, stationId + " = ?",
-                new String[] { String.valueOf(stations.getStationID()) });
+                new String[] { stationId });
         deleteStationdb.close();
     }
 
@@ -262,8 +296,10 @@ public class DBHandlerMbta extends SQLiteOpenHelper {
         values.put(sColor,stations.getColor());
         values.put(sRoute,stations.getRoute());
         // updating row
-        return updateStationdb.update(DATABASE_TABLE_STATION, values, stationId + " = ?",
+        int result = updateStationdb.update(DATABASE_TABLE_STATION, values, stationId + " = ?",
                 new String[]{String.valueOf(stations.getStationID())});
+        updateStationdb.close();
+        return result;
     }
 
     //Deleting a station

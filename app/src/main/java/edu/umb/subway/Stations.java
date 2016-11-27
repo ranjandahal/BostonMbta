@@ -23,10 +23,6 @@ public class Stations {
     private  String color;
     private float zoomLevel;
 
-//    private  String webServiceName;
-//    private  String message;
-//    private  Boolean fsavorite;
-
     private Stations()
     {}
     public Stations(String stationID, String name, String shortName, double lat,
@@ -42,10 +38,6 @@ public class Stations {
         this.color = color;
         this.route = route;
         this.zoomLevel = zoomLevel;
-//        this.webServiceName = webServiceName;
-//        this.color = color;
-//        this.message = message;
-//        this.favorite = favorite;
     }
     public String getStationID() {
         return stationID;
@@ -131,5 +123,22 @@ public class Stations {
 
     public boolean equals(Stations st) {
         return this.name.equalsIgnoreCase(st.getName());
+    }
+
+    @Override
+    public String toString(){
+        return this.stationID + "," + this.name + "," + this.shortName + ","
+                + this.lat + "," + this.lng + "," + this.rank + ","
+                + this.color.replace(',','|') + "," + this.route + "," + this.zoomLevel;
+    }
+
+    public static Stations parseStation(String stationString){
+        try {
+            String[] stationValues = stationString.split(",");
+            return new Stations(stationValues[0], stationValues[1], stationValues[2], Double.parseDouble(stationValues[3]),
+                                Double.parseDouble(stationValues[4]), Integer.parseInt(stationValues[5]),
+                                stationValues[6], stationValues[7], Float.parseFloat(stationValues[8]));
+        }catch (Exception ex){}
+        return null;
     }
 }

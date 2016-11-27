@@ -1,16 +1,16 @@
 package edu.umb.subway;
 
+import android.app.PendingIntent;
 import android.content.Intent;
-import android.graphics.Point;
-import android.graphics.drawable.Drawable;
-import android.os.AsyncTask;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.res.ResourcesCompat;
 import android.util.Log;
-import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,56 +21,68 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.Geofence;
+import com.google.android.gms.location.GeofencingRequest;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-import org.json.JSONTokener;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 
-public class MainActivity extends FragmentActivity implements OnMapReadyCallback{//, GoogleMap.InfoWindowAdapter{
-    public String BASE_URL;
-    public String MBTA_KEY;
+public class MainActivity extends FragmentActivity
+        implements OnMapReadyCallback,GoogleApiClient.ConnectionCallbacks,
+                    GoogleApiClient.OnConnectionFailedListener,
+                    ResultCallback<Status> {
     private static float currentZoom;
     private static LatLng currentLocation;
     private static boolean configChanged;
-    private ImageView closeImage;
     private static List<Stations> stationsList;
     public static List<Marker> markerList;
 	private GoogleMap mMap;
-    private Polyline polylineBlue, polylineGreenB,polylineGreenC,polylineGreenD,
-                     polylineGreenE, polylineRedA, polylineRedB, polylineOrange;
-
     private StationMarker stationMarker;
-    private Button rightTopNormal, rightTopHybrid, rightTopSatellite, lb;
-    private ImageView search, setting;
+    private static Marker currentMarker;
+    private Button rightTopNormal, rightTopHybrid, rightTopSatellite;
+    private ImageView search, setting, favorite;
     //Database
     protected DBHandlerMbta myDBHelper;
     private AutoCompleteTextView autoCompleteTextView;
     private List<StopInformation> stopInformationList;
 
+    /************Geofence starts*************************/
+    final Handler myRunHandler = new Handler();
+    protected GoogleApiClient mGoogleApiClient;
+    protected ArrayList<Geofence> mGeofenceList;
+    private boolean mGeofencesAdded;
+    private PendingIntent mGeofencePendingIntent;
+    private SharedPreferences mSharedPreferences;
+    final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
+    private List<FavoriteStations> favoriteStationsList;
+    /************Geofence ends*************************/
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //setupPermission();
 
         //Restore saved values
         if (savedInstanceState != null) {
@@ -83,58 +95,77 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             currentZoom = Properties.MIN_ZOOM;
             configChanged = false;
         }
-        BASE_URL = getApplicationContext().getResources().getString(R.string.mbta_base_url);
-        MBTA_KEY = getApplicationContext().getResources().getString(R.string.mbta_key);
-        closeImage = (ImageView)findViewById(R.id.close_image);
-        closeImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((FrameLayout)findViewById(R.id.info_fragment)).setVisibility(View.GONE);
-            }
-        });
-        stopInformationList = new ArrayList<StopInformation>();
-        stationMarker = new StationMarker(ContextCompat.getColor(this,R.color.blue),ContextCompat.getColor(this,R.color.red),
-                                          ContextCompat.getColor(this,R.color.orange), ContextCompat.getColor(this,R.color.green));
-        myDBHelper = new DBHandlerMbta(getApplicationContext());
-        stationsList = myDBHelper.getAllStation("");
 
-        MapFragment mFragment=((MapFragment) getFragmentManager().findFragmentById(R.id.map));
+        MapFragment mFragment=(MapFragment) getFragmentManager().findFragmentById(R.id.map);
         mFragment.getMapAsync(this);
-
-        search = (ImageView)findViewById(R.id.search);
-        rightTopNormal = (Button)findViewById(R.id.normal);
-        rightTopHybrid = (Button)findViewById(R.id.hybrid);
-        rightTopSatellite = (Button)findViewById(R.id.satellite);
-        lb = (Button)findViewById(R.id.lb);
-        setting = (ImageView) findViewById(R.id.setting);
-        autoCompleteTextView = (AutoCompleteTextView)findViewById(R.id.autocomplete);
-
-        ArrayAdapter<Object> autocompleteAdapter = new ArrayAdapter<Object>(getApplicationContext(),
-                                                    R.layout.autocomplete_layout,
-                                                    myDBHelper.getStationsArray(stationsList));
-        autoCompleteTextView.setAdapter(autocompleteAdapter);
+        initializeViews();
 
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String stationName = autoCompleteTextView.getText().toString();
-
+                currentMarker.remove();
                 if (view != null) {
                     hideSoftKeyboard();
                     autoCompleteTextView.clearFocus();
                 }
-                for (Marker mk: markerList){
-                    if(mk.getTitle().split(",")[1].equalsIgnoreCase(stationName)){
-                        adjustZoomAndAnimateMap(mk);
-                        viewStationDetail(mk);
-                        autoCompleteTextView.setText("");
-                        break;
-                    }
-                }
+                stationClickAction(markerList, stationName);
             }
         });
     }
 
+    protected void stationClickAction(List<Marker> markerList, String stationName){
+        for (Marker marker: markerList){
+            if(marker.getTitle().split(",")[1].equalsIgnoreCase(stationName)){
+                //adjustZoomAndAnimateMap(mk);
+                setCurrentMarker(marker);
+                viewStationDetail(marker);
+                autoCompleteTextView.setText("");
+                break;
+            }
+        }
+    }
+
+    protected void initializeViews(){
+        myDBHelper = new DBHandlerMbta(getApplicationContext());
+
+        buildGoogleApiClient();
+        if (populateGeofenceList()) {
+            myRunHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    //Do something after 100ms
+                    addGeofencesHandler();
+                }
+            }, 5000);
+        }
+        stopInformationList = new ArrayList<StopInformation>();
+        stationMarker = new StationMarker(ContextCompat.getColor(this,R.color.blue),ContextCompat.getColor(this,R.color.red),
+                ContextCompat.getColor(this,R.color.orange), ContextCompat.getColor(this,R.color.green));
+        stationsList = myDBHelper.getAllStation("");
+
+        search = (ImageView)findViewById(R.id.search);
+        rightTopNormal = (Button)findViewById(R.id.normal);
+        rightTopHybrid = (Button)findViewById(R.id.hybrid);
+        rightTopSatellite = (Button)findViewById(R.id.satellite);
+        favorite = (ImageView)findViewById(R.id.favorite);
+        setting = (ImageView) findViewById(R.id.setting);
+
+        autoCompleteTextView = (AutoCompleteTextView)findViewById(R.id.autocomplete);
+
+        ArrayAdapter<Object> autocompleteAdapter = new ArrayAdapter<Object>(getApplicationContext(),
+                R.layout.autocomplete_layout,
+                myDBHelper.getStationsArray(stationsList));
+        autoCompleteTextView.setAdapter(autocompleteAdapter);
+    }
+
+    protected void setupPermission(){
+        int hasLocationPermission = checkSelfPermission(android.Manifest.permission.ACCESS_FINE_LOCATION);
+        if (hasLocationPermission != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[] {android.Manifest.permission.ACCESS_FINE_LOCATION},
+                    123);
+        }
+    }
     /**
      * Hides the soft keyboard
      */
@@ -155,8 +186,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     protected void showSearch(View view){
-        view.animate().alpha(1.0f)
-                .setDuration(400);
         if(autoCompleteTextView.getVisibility() == View.GONE) {
             autoCompleteTextView.setVisibility(View.VISIBLE);
             showSoftKeyboard(view);
@@ -165,16 +194,23 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             autoCompleteTextView.setVisibility(View.GONE);
             hideSoftKeyboard();
         }
+        view.animate().alpha(1.0f)
+                .setDuration(800);
     }
 
-    protected void showSetting(View view){
-        Intent settingIntent = new Intent(this, Setting.class);
+    protected void showSettings(View view){
+        Intent settingIntent = new Intent(this, SettingActivity.class);
         /*dialogIntent.putExtra("station_id", stationId[0]);
         dialogIntent.putExtra("station_name", stationId[1]);
         dialogIntent.putExtra("color", getColor(stationId[3]));
         dialogIntent.putExtra("lat", marker.getPosition().latitude);
         dialogIntent.putExtra("lon", marker.getPosition().longitude);*/
         startActivity(settingIntent);
+    }
+
+    protected void showFavorite(View view){
+        Intent favoriteIntent = new Intent(this, FavoriteActivity.class);
+        startActivity(favoriteIntent);
     }
     /**
      * Save data when orientation changes to restore later.
@@ -212,7 +248,13 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap map) {
         this.mMap = map;
-        mMap.setMyLocationEnabled(true);
+        if (checkSelfPermission(android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            mMap.setMyLocationEnabled(true);
+        }
+
+        //Dummy current marker
+        currentMarker = mMap.addMarker(new MarkerOptions().position(new LatLng(0,0)));
+
         if(configChanged)
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, currentZoom));
         else
@@ -221,43 +263,37 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {
-                for (Marker mk: markerList){
-                    if(mk.getPosition().latitude != latLng.latitude && mk.getPosition().longitude != latLng.longitude){
-                        if(rightTopNormal.getVisibility() == View.GONE){
-                            search.setVisibility(View.VISIBLE);
-                            rightTopNormal.setVisibility(View.VISIBLE);
-                            rightTopHybrid.setVisibility(View.VISIBLE);
-                            rightTopSatellite.setVisibility(View.VISIBLE);
-                            setting.setVisibility(View.VISIBLE);
-                            lb.setVisibility(View.VISIBLE);
-                        }
-                        else{
-                            search.setVisibility(View.GONE);
-                            rightTopNormal.setVisibility(View.GONE);
-                            rightTopHybrid.setVisibility(View.GONE);
-                            rightTopSatellite.setVisibility(View.GONE);
-                            setting.setVisibility(View.GONE);
-                            lb.setVisibility(View.GONE);
-                        }
-                        break;
-                    }
+                if(rightTopNormal.getVisibility() == View.GONE){
+                    search.setVisibility(View.VISIBLE);
+                    rightTopNormal.setVisibility(View.VISIBLE);
+                    rightTopHybrid.setVisibility(View.VISIBLE);
+                    rightTopSatellite.setVisibility(View.VISIBLE);
+                    setting.setVisibility(View.VISIBLE);
+                    favorite.setVisibility(View.VISIBLE);
+                }
+                else{
+                    search.setVisibility(View.GONE);
+                    rightTopNormal.setVisibility(View.GONE);
+                    rightTopHybrid.setVisibility(View.GONE);
+                    rightTopSatellite.setVisibility(View.GONE);
+                    setting.setVisibility(View.GONE);
+                    favorite.setVisibility(View.GONE);
                 }
             }
         });
-        Drawable drawable = ResourcesCompat.getDrawable(getResources(), R.drawable.empty_marker, null);
 
-        markerList = stationMarker.addMarkers(mMap, stationsList, drawable);
-        polylineBlue = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.blue), "blue", ""));
+        markerList = stationMarker.addMarkers(mMap, stationsList, ResourcesCompat.getDrawable(getResources(), R.drawable.empty_marker, null));
+        mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.blue), "blue", ""));
 
-        polylineRedA = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.red), "red", "A"));
-        polylineRedB = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.red), "red", "B"));
+        mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.red), "red", "A"));
+        mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.red), "red", "B"));
 
-        polylineGreenB = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.green), "green", "B"));
-        polylineGreenC = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.green), "green", "C"));
-        polylineGreenD = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.green), "green", "D"));
-        polylineGreenE = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.green), "green", "E"));
+        mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.green), "green", "B"));
+        mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.green), "green", "C"));
+        mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.green), "green", "D"));
+        mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.green), "green", "E"));
 
-        polylineOrange = mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.orange), "orange", ""));
+        mMap.addPolyline(stationMarker.getPolyLine(ContextCompat.getColor(this,R.color.orange), "orange", ""));
 
         mMap.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
             @Override
@@ -268,7 +304,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Properties.CENTER, Properties.MIN_ZOOM));
                 }
                 for (Marker mk: markerList){
-                    if(cameraPosition.zoom >= Float.parseFloat(mk.getTitle().split(",")[2])){
+                    String[] split = mk.getTitle().split(",");
+                    if(cameraPosition.zoom >= Float.parseFloat(mk.getTitle().split(",")[8])){
                         mk.setVisible(true);
                     }
                     else
@@ -288,7 +325,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
-                adjustZoomAndAnimateMap(marker);
+                currentMarker.remove();
+                //adjustZoomAndAnimateMap(marker);
+                setCurrentMarker(marker);
                 viewStationDetail(marker);
                 return true;
             }
@@ -302,6 +341,17 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
         Log.v("Lang-left", mMap.getProjection().getVisibleRegion().latLngBounds.toString());
+
+        Bundle bundle = getIntent().getExtras();
+        if (bundle.getString("station_name") != null){
+            stationClickAction(markerList, bundle.getString("station_name"));
+        }
+    }
+
+    public void setCurrentMarker(Marker marker){
+        currentMarker = mMap.addMarker(new MarkerOptions().position(marker.getPosition())
+                .anchor(0.5f, 1.0f).visible(true).title("")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.selected_station)));
     }
 
     public void adjustZoomAndAnimateMap(Marker marker){
@@ -325,163 +375,29 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void viewStationDetail(Marker marker){
+        int result = 0;
         marker.hideInfoWindow();
-
+        if(marker.getTitle().length() == 0)
+            return;
         String[] stationId = marker.getTitle().split(",");
         stopInformationList.clear();
-//        ConnectivityManager connMgr = (ConnectivityManager)
-//                getSystemService(Context.CONNECTIVITY_SERVICE);
-//        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-//        if (networkInfo != null && networkInfo.isConnected()) {
-//            new WebserviceCaller().execute(BASE_URL + "predictionsbystop?api_key=" + MBTA_KEY + "&stop=" + stationId[0] + "&format=json");
-//        }else {
-//            Toast.makeText(getApplicationContext(), "No network connection available", Toast.LENGTH_SHORT);
-//        }
         Intent dialogIntent = new Intent(this, DialogActivity.class);
         dialogIntent.putExtra("station_id", stationId[0]);
         dialogIntent.putExtra("station_name", stationId[1]);
-        dialogIntent.putExtra("color", getColor(stationId[3]));
+        dialogIntent.putExtra("color", getColor(stationId[6]));
         dialogIntent.putExtra("lat", marker.getPosition().latitude);
         dialogIntent.putExtra("lon", marker.getPosition().longitude);
-        startActivity(dialogIntent);
+        startActivityForResult(dialogIntent, result);
     }
 
-    private void setFragments(){
-        FrameLayout fmLayout = (FrameLayout)findViewById(R.id.info_fragment);
-        FragmentManager fm = getSupportFragmentManager();
-        TextView stationName = (TextView)findViewById(R.id.station_name);
-        TextView stationInfo = (TextView)findViewById(R.id.station_info);
-        StationInfoFragment stationFrag;
-        //String[] stationId = marker.getTitle().split(",");
-        if (stopInformationList.size() > 0) {
-            stationInfo.setVisibility(View.GONE);
-            for (StopInformation si: stopInformationList) {
-                stationFrag = new StationInfoFragment();
-                Bundle bundle = new Bundle();
-                bundle.putString("destination", si.getDestination());
-                bundle.putInt("timeAway", si.getTimeAway());
-                bundle.putInt("color", si.getColor());
-                bundle.putBoolean("favorite", si.isFavorite());
-                //bundle.putString("destination", si.getDestination());
-                //set Fragmentclass Arguments
-                stationFrag.setArguments(bundle);
-                fm.beginTransaction().add(R.id.station_fragment, stationFrag, "Station");
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // Check which request we're responding to
+        if (requestCode == Properties.REQUEST_CODE) {
+            // Make sure the request was successful
+            if (populateGeofenceList()) {
+                addGeofencesHandler();
             }
-            fm.beginTransaction().commit();
-        }
-        else {
-            //stationName.setText(stationId[1]);
-            stationInfo.setText("No information is found");
-            stationInfo.setVisibility(View.VISIBLE);
-        }
-        Display display = getWindowManager().getDefaultDisplay();
-        final Point size = new Point();
-        display.getSize(size);
-        int height = size.y;
-        int centerY=height/2;
-        //fmLayout.setLeft(fmLayout.getHeight()-centerY);
-        //fmLayout.setTop(fmLayout.getWidth()-size.x);
-        fmLayout.setVisibility(View.VISIBLE);
-        fmLayout.bringToFront();
-    }
-
-    /**
-     * Uses AsyncTask to create a task away from the main UI thread. This task
-     * takes json data url and download the content.
-     */
-    private class WebserviceCaller extends AsyncTask<String, Void, JSONObject> {
-        public JSONObject doInBackground(String... params) {
-            HttpURLConnection urlConnection = null;
-            URL url = null;
-            InputStream inStream = null;
-            String temp, response = "";
-            try {
-                url = new URL(params[0]);
-                urlConnection = (HttpURLConnection) url.openConnection();
-                urlConnection.setRequestMethod("GET");
-                urlConnection.connect();
-                inStream = urlConnection.getInputStream();
-                BufferedReader bReader = new BufferedReader(new InputStreamReader(inStream));
-                ;
-                while ((temp = bReader.readLine()) != null) {
-                    response += temp;
-                }
-                return (JSONObject) new JSONTokener(response).nextValue();
-            } catch (Exception e) {
-                Log.v("Error API call", e.getMessage());
-            } finally {
-                if (inStream != null) {
-                    try {
-                        // this will close the bReader as well
-                        inStream.close();
-                    } catch (IOException ignored) {
-                    }
-                }
-                if (urlConnection != null) {
-                    urlConnection.disconnect();
-                }
-            }
-            return null;
-        }
-
-        /**
-         * json data gets parsed to get temperature, log and lat values. A new AsyncTask
-         * gets call inside this method to download image.
-         *
-         * @param resusearch Json data
-         */
-        protected void onPostExecute(JSONObject resusearch) {
-            if (resusearch != null) {
-                parseJSONObject(resusearch);
-            } else {
-                Log.i(Properties.DEBUG_TAG, "returned bitmap is null");
-            }
-        }
-    }
-
-    /**
-     * Takes in Json data and parse it to usable information for this app purpose
-     *
-     * @param jsonObject
-     */
-    public void parseJSONObject(JSONObject jsonObject) {
-        try {
-            long time;
-            String routeId = "";
-            int color = 0;
-            String mode = jsonObject.getJSONArray("mode").getJSONObject(0).getString("mode_name").toString();
-            if (mode.equalsIgnoreCase("subway")) {
-                JSONArray jsonRoute = jsonObject.getJSONArray("mode").getJSONObject(0).getJSONArray("route");
-                for (int routeCounter = 0; routeCounter < jsonRoute.length(); routeCounter++) {
-                    routeId = jsonRoute.getJSONObject(routeCounter).getString("route_id");
-                    JSONArray jsonDirection = jsonRoute.getJSONObject(routeCounter).getJSONArray("direction");
-                    for (int directionCounter = 0; directionCounter < jsonDirection.length(); directionCounter++) {
-                        JSONArray jsonTrip = jsonDirection.getJSONObject(directionCounter).getJSONArray("trip");
-                        for (int tripCounter = 0; tripCounter < jsonTrip.length(); tripCounter++) {
-                            if(!StopInformation.checkDuplicateDestination(stopInformationList,
-                                        jsonTrip.getJSONObject(tripCounter).getString("trip_headsign"))){
-                                if(routeId.toLowerCase().contains("green"))
-                                    color = ContextCompat.getColor(getApplicationContext(), R.color.green);
-                                else if(routeId.toLowerCase().contains("red"))
-                                    color = ContextCompat.getColor(getApplicationContext(), R.color.red);
-                                else if(routeId.toLowerCase().contains("orange"))
-                                    color = ContextCompat.getColor(getApplicationContext(), R.color.orange);
-                                else if(routeId.toLowerCase().contains("blue"))
-                                    color = ContextCompat.getColor(getApplicationContext(), R.color.blue);
-                                stopInformationList.add(
-                                        new StopInformation(
-                                                jsonTrip.getJSONObject(tripCounter).getString("trip_headsign"),
-                                                jsonTrip.getJSONObject(tripCounter).getInt("pre_away"),
-                                                color,
-                                                false));
-                            }
-                        }
-                    }
-                }
-            }
-            setFragments();
-        } catch (Exception e) {
-            Log.v("Error JSON parse", e.getMessage());
         }
     }
 
@@ -511,4 +427,197 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         inactiveTwo.setTextColor(ContextCompat.getColor(this,R.color.black));
         inactiveTwo.setBackgroundResource(R.color.white);
     }
+
+    // Asks for permission
+    /*private void askPermission() {
+        ActivityCompat.requestPermissions(
+                this,
+                new String[] { Manifest.permission.ACCESS_FINE_LOCATION },
+                REQ_PERMISSION
+        );
+    }*/
+    /******************************************************************************************/
+    //GEOFENCING CODES STARTS
+
+    protected synchronized void buildGoogleApiClient() {
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .build();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mGoogleApiClient.connect();
+//        if (!mGoogleApiClient.isConnecting() || !mGoogleApiClient.isConnected()) {
+//            mGoogleApiClient.connect();
+//        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+//        mGoogleApiClient.disconnect();
+        if (mGoogleApiClient.isConnecting() || mGoogleApiClient.isConnected()) {
+            mGoogleApiClient.disconnect();
+        }
+    }
+
+    @Override
+    public void onConnected(Bundle connectionHint) {
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult result) {
+    }
+
+    @Override
+    public void onConnectionSuspended(int cause) {
+    }
+
+    private GeofencingRequest getGeofencingRequest() {
+        GeofencingRequest.Builder builder = new GeofencingRequest.Builder();
+        builder.setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER);
+        builder.addGeofences(mGeofenceList);
+        return builder.build();
+    }
+
+    /**
+     * Adds geofences, which sets alerts to be notified when the device enters or exits one of the
+     * specified geofences. Handles the success or failure results returned by addGeofences().
+     */
+    public void addGeofencesHandler() {
+        if (!mGoogleApiClient.isConnected()) {
+            Toast.makeText(this, getString(R.string.not_connected), Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        try {
+            LocationServices.GeofencingApi.addGeofences(
+                    mGoogleApiClient,
+                    getGeofencingRequest(),
+                    getGeofencePendingIntent()
+            ).setResultCallback(this); // Result processed in onResult().
+        } catch (SecurityException securityException) {
+            // Catch exception generated if the app does not use ACCESS_FINE_LOCATION permission.
+            logSecurityException(securityException);
+        }
+    }
+
+    /**
+     * Removes geofences, which stops further notifications when the device enters or exits
+     * previously registered geofences.
+     */
+    public void removeGeofencesHandler() {
+        int status;
+        if (!mGoogleApiClient.isConnected()) {
+            return;
+        }
+        try {
+            List<String> geofenceRequestIdList = new ArrayList<>();
+            Stations stations;
+            List<FavoriteStations> nonFavoriteStationsList = new ArrayList<>();
+            nonFavoriteStationsList = myDBHelper.getAllFavoriteStation("none", false, false);
+
+            if(nonFavoriteStationsList.size() == 0)
+                return;
+
+            for (FavoriteStations st : nonFavoriteStationsList) {
+                stations = myDBHelper.getStation(st.getStationID());
+                geofenceRequestIdList.add(stations.getStationID() + "," + stations.getName() + "," + st.getDestination());
+            }
+
+            // Remove geofences.
+            LocationServices.GeofencingApi.removeGeofences(
+                    mGoogleApiClient,
+                    // This is the same pending intent that was used in addGeofences().
+                    geofenceRequestIdList
+            ).setResultCallback(this); // Result processed in onResult().
+        } catch (SecurityException securityException) {
+            // Catch exception generated if the app does not use ACCESS_FINE_LOCATION permission.
+            logSecurityException(securityException);
+        }
+    }
+
+    private void logSecurityException(SecurityException securityException) {
+        Log.e("GEOFENCING", "Invalid location permission. " +
+                "You need to use ACCESS_FINE_LOCATION with geofences", securityException);
+    }
+
+    /**
+     * Runs when the result of calling addGeofences() and removeGeofences() becomes available.
+     * Either method can complete successfully or with an error.
+     * <p>
+     * Since this activity implements the {@link ResultCallback} interface, we are required to
+     * define this method.
+     *
+     * @param status The Status returned through a PendingIntent when addGeofences() or
+     *               removeGeofences() get called.
+     */
+    public void onResult(Status status) {
+        if (status.isSuccess()) {
+            // Update state and save in shared preferences.
+            mGeofencesAdded = !mGeofencesAdded;
+            SharedPreferences.Editor editor = mSharedPreferences.edit();
+            editor.putBoolean(Constants.GEOFENCES_ADDED_KEY, mGeofencesAdded);
+            editor.apply();
+        } else {
+        }
+    }
+
+    /**
+     * Gets a PendingIntent to send with the request to add or remove Geofences. Location Services
+     * issues the Intent inside this PendingIntent whenever a geofence transition occurs for the
+     * current list of geofences.
+     *
+     * @return A PendingIntent for the IntentService that handles geofence transitions.
+     */
+    private PendingIntent getGeofencePendingIntent() {
+        // Reuse the PendingIntent if we already have it.
+        if (mGeofencePendingIntent != null) {
+            return mGeofencePendingIntent;
+        }
+        Intent intent = new Intent(this, GeoFenceMbtaIntent.class);
+        // We use FLAG_UPDATE_CURRENT so that we get the same pending intent back when calling
+        // addGeofences() and removeGeofences().
+        return PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+    }
+
+    /**
+     * This sample hard codes geofence data. A real app might dynamically create geofences based on
+     * the user's location.
+     */
+    public boolean populateGeofenceList() {
+        removeGeofencesHandler();
+
+        mGeofenceList = new ArrayList<Geofence>();
+        mGeofencePendingIntent = null;
+        mSharedPreferences = getSharedPreferences(Constants.SHARED_PREFERENCES_NAME, MODE_PRIVATE);
+        mGeofencesAdded = mSharedPreferences.getBoolean(Constants.GEOFENCES_ADDED_KEY, false);
+
+        Stations stations;
+        favoriteStationsList = new ArrayList<>();
+        favoriteStationsList = myDBHelper.getAllFavoriteStation("none", false, true);
+
+        if(favoriteStationsList.size() == 0)
+            return false;
+
+        for (FavoriteStations st : favoriteStationsList) {
+            stations = myDBHelper.getStation(st.getStationID());
+            mGeofenceList.add(new Geofence.Builder()
+                    .setRequestId(stations.getStationID() + "," + stations.getName() + "," + st.getDestination())
+                    .setCircularRegion(
+                            stations.getLat(),
+                            stations.getLng(),
+                            Constants.GEOFENCE_RADIUS_IN_METERS
+                    )
+                    .setExpirationDuration(Constants.GEOFENCE_EXPIRATION_IN_MILLISECONDS)
+                    .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER)
+                    .build());
+        }
+        return true;
+    }
+    /**********************GEOFENCING CODES ENDS ************************************************/
 }

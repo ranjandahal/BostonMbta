@@ -6,10 +6,12 @@ package edu.umb.subway;
 
 public class FavoriteStations extends Stations{
     private String destination;
+    private int active;
 
-    public FavoriteStations(String sid, String cStationName, String color, String destination ){
+    public FavoriteStations(String sid, String cStationName, String color, String destination, int active ){
         super(sid,cStationName,"", 0.0,0.0,0,color,"",0.0f);
         this.destination = destination;
+        this.active = active;
     }
 
     public String getDestination() {
@@ -19,4 +21,8 @@ public class FavoriteStations extends Stations{
     public void setDestination(String destination) {
         this.destination = destination;
     }
+
+    public int getActive() {return active;}
+
+    public void setActive(int active) {this.active = active;}
 }

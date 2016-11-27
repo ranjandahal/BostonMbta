@@ -42,33 +42,28 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Handler;
 
 public class DialogActivity extends FragmentActivity {
-    public final static String DEBUG_TAG = "edu.umb.cs443.MYMSG";
     private String stationName;
     private String stationId;
-    private String baseURL;
-    private String mbtaKey;
     private int color;
-    private Boolean favorite;
     private Double desLat, desLon;
     private static String jsonString = "";
     private JSONObject jsonObject = null;
-    private TextView stationNameTextView, stationInfoTextView, destination, distanceAway, timer;
-    private Chronometer timerChrono;
-    private List<StopInformation> stopInformationList;  // = new ArrayList<StopInformation>();;
-    private List<String> alertList;
-    private Handler handler;
+    private TextView stationNameTextView, stationInfoTextView;
+    private List<StopInformation> stopInformationList;
+    private Thread webServiveThread;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Bundle bundle = getIntent().getExtras();
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        //setContentView(R.layout.activity_dialog);
         setContentView(R.layout.infowindow_layout);
 
         stationId = bundle.getString("station_id");
@@ -76,40 +71,47 @@ public class DialogActivity extends FragmentActivity {
         color = bundle.getInt("color");
         desLat = bundle.getDouble("lat");
         desLon = bundle.getDouble("lon");
-        baseURL = getResources().getString(R.string.mbta_base_url);
-        mbtaKey = getResources().getString(R.string.mbta_key);
         stopInformationList = new ArrayList<StopInformation>();
-        alertList = new ArrayList<String>();
         stationNameTextView = (TextView) findViewById(R.id.station_name);
         stationInfoTextView = (TextView) findViewById(R.id.station_info);
-        destination = (TextView) findViewById(R.id.destination);
-        distanceAway = (TextView) findViewById(R.id.distance_away);
-        timer = (TextView) findViewById(R.id.timer);
-        timerChrono = (Chronometer) findViewById(R.id.timerChrono);
 
         stationNameTextView.setText(stationName);
         stationNameTextView.setBackgroundColor(color);
-        //handler = new Handler();
+
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
-            new WebserviceCaller().execute("predictionsbystop", "&stop=", stationId);
+            webServiveThread = new Thread (webServiceRunnable);
+            webServiveThread.start();
         } else {
             stationInfoTextView.setText("No network connection available");
             stationInfoTextView.setVisibility(View.VISIBLE);
-            Toast.makeText(getApplicationContext(), "No network connection available", Toast.LENGTH_SHORT);
         }
     }
 
-//    public void scheduleSendLocation() {
-//        handler.postDelayed(new Runnable() {
-//            public void run() {
-//                sendLocation();          // this method will contain your almost-finished HTTP calls
-//                handler.postDelayed(this, FIVE_SECONDS);
-//            }
-//        }, FIVE_SECONDS);
-//    }
+    private Runnable webServiceRunnable = new Runnable () {
+        public void run() {
+            try {
+                while (true) {
+                    new WebserviceCaller().execute("predictionsbystop", "&stop=", stationId);
+                    webServiveThread.sleep(Properties.REFRESH_TIME);
+                }
+            } catch (InterruptedException e){
+                e.printStackTrace();
+            }
+        }
+    };
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        //Interrupt thread when dialog is stopped.
+        try {
+            webServiveThread.interrupt();
+        }catch (Exception e){}
+    }
+
     /**
      * Callback method defined by the View
      *
@@ -123,13 +125,13 @@ public class DialogActivity extends FragmentActivity {
      * Uses AsyncTask to create a task away from the main UI thread. This task
      * takes json data url and download the content.
      */
-    private class WebserviceCaller extends AsyncTask<String, Void, JSONObject> {
+    public class WebserviceCaller extends AsyncTask<String, Void, JSONObject> {
         public JSONObject doInBackground(String... params) {
             HttpURLConnection urlConnection = null;
             URL url = null;
             InputStream inStream = null;
             try {
-                url = new URL(baseURL + params[0] + "?api_key=" + mbtaKey + params[1] + params[2] + "&format=json");
+                url = new URL(Properties.BASE_URL + params[0] + "?api_key=" + Properties.MBTA_KEY + params[1] + params[2] + "&format=json");
                 urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("GET");
                 urlConnection.connect();
@@ -167,7 +169,7 @@ public class DialogActivity extends FragmentActivity {
             if (result != null) {
                 parseJSONObject(result);
             } else {
-                Log.i(DEBUG_TAG, "returned bitmap is null");
+                Log.i(Properties.DEBUG_TAG, "returned bitmap is null");
             }
         }
     }
@@ -179,14 +181,12 @@ public class DialogActivity extends FragmentActivity {
      */
     public void parseJSONObject(JSONObject jsonObject) {
         try {
-            long time;
-            String routeId = "";
+            String direction = "", destination = "";
             int color = 0;
             StopInformation si;
             FragmentManager fm = getSupportFragmentManager();
-            TextView stationInfo = (TextView) findViewById(R.id.station_info);
             StationInfoFragment stationFrag;
-
+            stopInformationList.clear();
             JSONArray modeArray = jsonObject.getJSONArray("mode");
             int count = 0;
             for (int modeCounter = 0; modeCounter < modeArray.length(); modeCounter++) {
@@ -194,26 +194,23 @@ public class DialogActivity extends FragmentActivity {
                 if (mode.equalsIgnoreCase("subway")) {
                     JSONArray jsonRoute = jsonObject.getJSONArray("mode").getJSONObject(modeCounter).getJSONArray("route");
                     for (int routeCounter = 0; routeCounter < jsonRoute.length(); routeCounter++) {
-                        routeId = jsonRoute.getJSONObject(routeCounter).getString("route_id");
+                        color = getColor(jsonRoute.getJSONObject(routeCounter).getString("route_id").toLowerCase());
                         JSONArray jsonDirection = jsonRoute.getJSONObject(routeCounter).getJSONArray("direction");
                         for (int directionCounter = 0; directionCounter < jsonDirection.length(); directionCounter++) {
                             JSONArray jsonTrip = jsonDirection.getJSONObject(directionCounter).getJSONArray("trip");
+                            direction = jsonDirection.getJSONObject(directionCounter).getInt("direction_id") == 0? Properties.OUTBOUND:Properties.INBOUND;
                             for (int tripCounter = 0; tripCounter < jsonTrip.length(); tripCounter++) {
-                                if (!StopInformation.checkDuplicateDestination(stopInformationList,
-                                        jsonTrip.getJSONObject(tripCounter).getString("trip_headsign"))) {
-                                    if (routeId.toLowerCase().contains("green"))
-                                        color = ContextCompat.getColor(getApplicationContext(), R.color.green);
-                                    else if (routeId.toLowerCase().contains("red"))
-                                        color = ContextCompat.getColor(getApplicationContext(), R.color.red);
-                                    else if (routeId.toLowerCase().contains("orange"))
-                                        color = ContextCompat.getColor(getApplicationContext(), R.color.orange);
-                                    else if (routeId.toLowerCase().contains("blue"))
-                                        color = ContextCompat.getColor(getApplicationContext(), R.color.blue);
-
-                                    si = new StopInformation(jsonTrip.getJSONObject(tripCounter).getString("trip_headsign"),
-                                            jsonTrip.getJSONObject(tripCounter).getInt("pre_away"),
-                                            color,
-                                            false);
+                                String addDestination = "";
+                                if(jsonTrip.getJSONObject(tripCounter).getString("trip_headsign").contains("Alewife") &&
+                                        jsonTrip.getJSONObject(tripCounter).getString("trip_name").contains("from Braintree")
+                                        && stationName.contains("JFK"))
+                                    addDestination = "(Braintree)";
+                                else if(jsonTrip.getJSONObject(tripCounter).getString("trip_headsign").contains("Alewife") &&
+                                        jsonTrip.getJSONObject(tripCounter).getString("trip_name").contains("from Ashmont")
+                                        && stationName.contains("JFK"))
+                                    addDestination = "(Ashmont)";
+                                destination = jsonTrip.getJSONObject(tripCounter).getString("trip_headsign")+ addDestination + direction;
+                                if (!StopInformation.checkDuplicateDestination(stopInformationList, destination)) {
                                     double curLat = 0, curLon = 0;
                                     try {
                                         JSONObject vehicleArray = jsonTrip.getJSONObject(tripCounter).getJSONObject("vehicle");
@@ -223,102 +220,63 @@ public class DialogActivity extends FragmentActivity {
                                         //continue;
                                     }
 
+                                    si = new StopInformation(stationId, stationName, destination,
+                                            jsonTrip.getJSONObject(tripCounter).getInt("pre_away"),
+                                            color, false, curLat != 0?distance(curLat, curLon, desLat, desLon):0, 2);
+
                                     stopInformationList.add(si);
                                     stationFrag = new StationInfoFragment();
                                     Bundle bundle = new Bundle();
+                                    bundle.putString("station_id", si.getStationId());
+                                    bundle.putString("station_name", si.getStationName());
                                     bundle.putString("destination", si.getDestination());
                                     bundle.putInt("timeAway", si.getTimeAway());
-                                    bundle.putDouble("distanceAway", curLat != 0?distance(curLat, curLon, desLat, desLon):0);
-                                    bundle.putInt("remStop", 2);
+                                    bundle.putDouble("distanceAway", si.getDistanceAway());
+                                    bundle.putInt("remStop", si.getRemainingStop());
                                     bundle.putInt("color", si.getColor());
                                     bundle.putBoolean("favorite", si.isFavorite());
 
                                     //set Fragmentclass Arguments
                                     stationFrag.setArguments(bundle);
                                     if (count == 0)
-                                        fm.beginTransaction().add(R.id.station_fragment_one, stationFrag, "Station_one")
+                                        fm.beginTransaction().replace(R.id.station_fragment_one, stationFrag, "Station_one")
                                                 .commit();
                                     else if (count == 1)
-                                        fm.beginTransaction().add(R.id.station_fragment_two, stationFrag, "Station_two")
+                                        fm.beginTransaction().replace(R.id.station_fragment_two, stationFrag, "Station_two")
                                                 .commit();
                                     else if (count == 2)
-                                        fm.beginTransaction().add(R.id.station_fragment_three, stationFrag, "Station_three")
+                                        fm.beginTransaction().replace(R.id.station_fragment_three, stationFrag, "Station_three")
                                                 .commit();
                                     else if (count == 3)
-                                        fm.beginTransaction().add(R.id.station_fragment_four, stationFrag, "Station_four")
+                                        fm.beginTransaction().replace(R.id.station_fragment_four, stationFrag, "Station_four")
                                                 .commit();
                                     else if (count == 4)
-                                        fm.beginTransaction().add(R.id.station_fragment_five, stationFrag, "Station_five")
+                                        fm.beginTransaction().replace(R.id.station_fragment_five, stationFrag, "Station_five")
                                                 .commit();
                                     else if (count == 5)
-                                        fm.beginTransaction().add(R.id.station_fragment_six, stationFrag, "Station_six")
+                                        fm.beginTransaction().replace(R.id.station_fragment_six, stationFrag, "Station_six")
                                                 .commit();
                                     else if (count == 6)
-                                        fm.beginTransaction().add(R.id.station_fragment_seven, stationFrag, "Station_seven")
+                                        fm.beginTransaction().replace(R.id.station_fragment_seven, stationFrag, "Station_seven")
                                                 .commit();
                                     else if (count == 7)
-                                        fm.beginTransaction().add(R.id.station_fragment_eight, stationFrag, "Station_eight")
+                                        fm.beginTransaction().replace(R.id.station_fragment_eight, stationFrag, "Station_eight")
                                                 .commit();
                                     count++;
                                 }
                             }
                         }
                     }
-                    //setFragments();
-                } else {
-                    stationInfoTextView.setText("One/No Subway schedule available. See alerts!");
-                    stationInfoTextView.setVisibility(View.VISIBLE);
                 }
+                stationInfoTextView.setVisibility(View.GONE);
+            }
+            if(stopInformationList.size() == 0){
+                stationInfoTextView.setText("One/No Subway schedule available. See alerts!");
+                stationInfoTextView.setVisibility(View.VISIBLE);
             }
             jsonString = jsonObject.getJSONArray("alert_headers").toString();
-            Log.v("test", "test");
         }catch(Exception e){
             Log.v("Error JSON parse", e.getMessage());
-        }
-    }
-
-    private void setFragments(){
-        FragmentManager fm = getSupportFragmentManager();
-        TextView stationInfo = (TextView)findViewById(R.id.station_info);
-        StationInfoFragment stationFrag;
-        //String[] stationId = marker.getTitle().split(",");
-        if (stopInformationList.size() > 0) {
-            //stationInfo.setVisibility(View.GONE);
-            int count = 0;
-            for (StopInformation si: stopInformationList) {
-                stationFrag = new StationInfoFragment();
-                Bundle bundle = new Bundle();
-                bundle.putString("destination", si.getDestination());
-                bundle.putInt("timeAway", si.getTimeAway());
-                bundle.putInt("distanceAway", 200);
-                bundle.putInt("remStop", 2);
-                bundle.putInt("color", si.getColor());
-                bundle.putBoolean("favorite", si.isFavorite());
-                stationFrag.setArguments(bundle);
-
-                if(count == 0)
-                    fm.beginTransaction().add(R.id.station_fragment_one, stationFrag, "Station").commit();
-                else if(count == 1)
-                    fm.beginTransaction().add(R.id.station_fragment_two, stationFrag, "Station").commit();
-                else if(count == 2)
-                    fm.beginTransaction().add(R.id.station_fragment_three, stationFrag, "Station").commit();
-                else if(count == 3)
-                    fm.beginTransaction().add(R.id.station_fragment_four, stationFrag, "Station").commit();
-                else if(count == 4)
-                    fm.beginTransaction().add(R.id.station_fragment_five, stationFrag, "Station").commit();
-                else if(count == 5)
-                    fm.beginTransaction().add(R.id.station_fragment_six, stationFrag, "Station").commit();
-                else if(count == 6)
-                    fm.beginTransaction().add(R.id.station_fragment_seven, stationFrag, "Station").commit();
-                else if(count == 7)
-                    fm.beginTransaction().add(R.id.station_fragment_eight, stationFrag, "Station").commit();
-                count++;
-            }
-        }
-        else {
-            //stationName.setText(stationId[1]);
-            stationInfo.setText("No information is found");
-            stationInfo.setVisibility(View.VISIBLE);
         }
     }
 
@@ -327,11 +285,6 @@ public class DialogActivity extends FragmentActivity {
         dialogIntent.putExtra("alert_json", jsonString);
         startActivity(dialogIntent);
     }
-
-    /*public void favoriteAction(View v){
-        StationInfoFragment frg = new StationInfoFragment();
-        frg.favoriteAction(v);
-    }*/
 
     private double distance(double lat1, double lon1, double lat2, double lon2) {
         double theta = lon1 - lon2;
@@ -350,5 +303,17 @@ public class DialogActivity extends FragmentActivity {
 
     private double rad2deg(double rad) {
         return (rad * 180.0 / Math.PI);
+    }
+
+    public int getColor(String color){
+        if(color.contains("green"))
+            return ContextCompat.getColor(getApplicationContext(), R.color.green);
+        else if(color.contains("red"))
+            return ContextCompat.getColor(getApplicationContext(), R.color.red);
+        else if(color.contains("orange"))
+            return ContextCompat.getColor(getApplicationContext(), R.color.orange);
+        else if(color.contains("blue"))
+            return ContextCompat.getColor(getApplicationContext(), R.color.blue);
+        return 0;
     }
 }

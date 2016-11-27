@@ -11,13 +11,13 @@
                     "endOffset": 106
                 },
                 "from": {
-                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-port\\values-port.xml",
+                    "file": "C:\\Users\\Ranjan\\Desktop\\UMASS\\CS446 Android Development\\GoogleMap\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-port\\values-port.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 287,
+                        "startOffset": 55,
                         "endColumn": 55,
-                        "endOffset": 338
+                        "endOffset": 106
                     }
                 }
             }
