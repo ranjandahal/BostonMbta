@@ -1,5 +1,5 @@
 
-# Project Title
+# BostonMbta
 
 A mobile application for Boston MBTA subway map and schedule
 
